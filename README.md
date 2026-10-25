@@ -41,7 +41,7 @@ En production, cette variable doit désigner une URL joignable depuis le navigat
 - L’interface est parcourable sans connexion frontend ; cela ne désactive ni ne remplace les contrôles d’accès que l’API doit appliquer.
 - Plusieurs pages publiques et visualisations sont disponibles, mais certaines données et certains dashboards dépendent de l’API ou restent en démonstration/indisponibles.
 - Le formulaire Vue de déclaration de traitement ne met pas encore en œuvre l’e-mail vérifié, la preuve du double consentement ni le parcours de gestion ultérieure. Ces exigences et le contrat API proposé sont documentés dans [`documentation/TREATMENT_MANAGEMENT_API.md`](./documentation/TREATMENT_MANAGEMENT_API.md). La page RGPD distingue cet état actuel des exigences à venir.
-- Le frontend peut être construit et servi avec Docker Compose. Le dépôt Git autonome doit encore être créé en suivant le guide de déploiement.
+- Le frontend peut être construit et servi avec Docker Compose. Le dépôt Git autonome est disponible sur GitHub ; `main` contient la base et les évolutions sont proposées par pull request vers `develop`.
 
 ## Documentation
 
@@ -49,6 +49,7 @@ En production, cette variable doit désigner une URL joignable depuis le navigat
 - [`documentation/README.md`](./documentation/README.md) — architecture, périmètre et statut du frontend Vue.
 - [`documentation/CHANGELOG.md`](./documentation/CHANGELOG.md) — journal des évolutions et de leur statut.
 - [`documentation/TREATMENT_MANAGEMENT_API.md`](./documentation/TREATMENT_MANAGEMENT_API.md) — parcours cible des traitements, du consentement et des alertes, à valider avec l’équipe backend.
+- [`documentation/ASSETS.md`](./documentation/ASSETS.md) — images locales utilisées par l’interface et leurs sources.
 - [`documentation/DOCKER_AND_GIT.md`](./documentation/DOCKER_AND_GIT.md) — conteneurisation locale et création du dépôt Git indépendant.
 
 ## Docker
@@ -60,7 +61,7 @@ docker compose build
 docker compose up -d
 ```
 
-Le frontend est ensuite disponible par défaut sur `http://localhost:8080`. La configuration Docker et les étapes pour créer le dépôt Git indépendant sont décrites dans [`documentation/DOCKER_AND_GIT.md`](./documentation/DOCKER_AND_GIT.md).
+Le frontend est ensuite disponible par défaut sur `http://localhost:8080`. La configuration Docker et le flux de branches Git sont décrits dans [`documentation/DOCKER_AND_GIT.md`](./documentation/DOCKER_AND_GIT.md).
 
 ## Sécurité et données personnelles
 

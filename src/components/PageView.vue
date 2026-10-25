@@ -131,7 +131,7 @@ const isSearch = computed(() => props.page === 'search');
       </div>
       <div class="hero-art" aria-hidden="true">
         <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
-        <div class="hero-symbol"><Heart :size="76" stroke-width="1.4" /></div>
+        <img class="hero-photo" src="/images/community-health-worker-togo.jpg" alt="" width="260" height="260">
         <div class="floating-card floating-card-top"><Shield :size="22" /><span>Accès équitable</span></div>
         <div class="floating-card floating-card-bottom"><BarChart3 :size="22" /><span>Données & prévention</span></div>
       </div>

@@ -420,6 +420,8 @@
     "awareness": {
       "title": "Sensibilisation à l’épilepsie",
       "intro": "Comprendre l’épilepsie et réduire la stigmatisation aide à mieux accompagner les personnes concernées.",
+      "imageAlt": "Des femmes réunies lors d’une activité de santé communautaire.",
+      "imageCredit": "Photo : USAID Africa Bureau — domaine public",
       "cards": {
         "1": { "title": "Comprendre l’épilepsie", "description": "L’épilepsie est une affection neurologique. Ses manifestations et les besoins de prise en charge varient selon les personnes." },
         "2": { "title": "Lutter contre la stigmatisation", "description": "Les idées reçues peuvent isoler les personnes et compliquer leur accès aux soins, à l’éducation ou à l’emploi." },
