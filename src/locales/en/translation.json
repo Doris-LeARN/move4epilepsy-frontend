@@ -1,0 +1,1120 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "active": "Active",
+    "secure": "Secure",
+    "worldwide": "Worldwide",
+    "patients": "Patients",
+    "countries": "Countries",
+    "satisfaction": "Satisfaction",
+    "allRightsReserved": "All rights reserved"
+  },
+  "header": {
+    "title": "Move4Epilepsy",
+    "subtitle": "Global Equitable Access to Medications",
+    "tagline": "Intelligent Platform • Data Science • Predictive AI",
+    "stats": {
+      "patientsWorld": "World Patients",
+      "countriesCovered": "Countries Covered",
+      "satisfaction": "Satisfaction",
+      "secure": "Secure"
+    },
+    "becomePartner": "Become a Partner",
+    "platformActive": "Platform Active",
+    "dataCollectionActive": "Data Collection Active",
+    "worldwideCoverage": "Worldwide Coverage",
+    "gdprCompliant": "Data protection",
+    "dataProtection": "Data protection",
+    "unGoal": "🎯 UN Goal 3.8: Universal Health Coverage"
+  },
+  "navigation": {
+    "home": "Home",
+    "search": "Search",
+    "searchServices": "Search for Services",
+    "medicationSearch": "Medication Search",
+    "searchMedication": "Search for Medication",
+    "patientSearch": "Patient Search",
+    "medication": "Medications",
+    "observatory": "Access Observatory",
+    "inequalityMap": "Access Inequality Map",
+    "myTreatment": "My Treatment",
+    "globalDashboard": "Global Dashboard",
+    "predictiveDashboard": "Predictive dashboard",
+    "networkAnalysis": "Network analysis",
+    "locationsMap": "Locations Map",
+    "trends": "Trends",
+    "reportMedicine": "Report Medicine",
+    "opinions": "Your Opinions",
+    "chat": "Chat",
+    "pharmacists": "Pharmacists",
+    "pharmacyDashboard": "Dashboard",
+    "stockManagement": "Stock Management",
+    "subscriptions": "Subscriptions",
+    "doctors": "Doctors",
+    "doctorDashboard": "Dashboard",
+    "awareness": "Awareness",
+    "perceptions": "Perceptions",
+    "truth": "The Truth",
+    "resources": "Resources",
+    "rights": "Rights",
+    "about": "About",
+    "team": "Our Team",
+    "becomePartner": "Become a Partner",
+    "dataProtection": "Understanding the GDPR",
+    "privacy": "Privacy",
+    "contact": "Contact",
+    "administration": "Administration"
+  },
+  "accessMap": {
+    "title": "Access Inequality Map",
+    "scenarioTab": "Distance scenario",
+    "apiTab": "Platform data",
+    "description": "Compare the distance between your city and the city where the medication is available.",
+    "apiDescription": "Locations of reported treatments and active pharmacies loaded from the API. Patient data is aggregated by city.",
+    "refresh": "Refresh data",
+    "treatmentsError": "Unable to load treatment locations:",
+    "pharmaciesError": "Unable to load pharmacies:",
+    "apiError": "Unable to load map data.",
+    "adminNotice": "The API currently restricts access to treatment records to administrators.",
+    "unmappedLocations": "{count} location(s) do not match a mapped city and are not shown.",
+    "patientLocations": "Reported treatments by city",
+    "pharmacies": "Active pharmacies",
+    "locationsShown": "{count} point(s) shown",
+    "noLocations": "No locations matching the mapped cities are available.",
+    "apiPrivacyNotice": "Treatments are aggregated by city. Pharmacy markers show city centers, not exact street addresses.",
+    "treatmentCount": "{count} reported treatment(s)",
+    "scenarioTitle": "Medication access scenario",
+    "patientCityLabel": "Where do you live? (patient's city)",
+    "pharmacyCityLabel": "Where is the medication available? (pharmacy city)",
+    "chooseCity": "Select a city",
+    "sameCity": "✓ Pharmacy in the same city — local access",
+    "intercity": "⚠ Travel between cities required",
+    "patientLocation": "Patient location",
+    "medicineLocation": "Medication location",
+    "cityCenter": "Reference point in the city center",
+    "mapHelp": "Select both cities to display the estimated route.",
+    "accessibleTitle": "Accessible",
+    "criticalTitle": "Warning — significant distance",
+    "localAccess": "The medication is available in your city. Local access.",
+    "criticalDistance": "Critical distance: a potential major barrier to accessing care.",
+    "longDistance": "Significant distance: may limit access to medication.",
+    "moderateDistance": "Moderate distance: travel is required.",
+    "reasonableDistance": "Travel is required, but the distance remains reasonable.",
+    "distance": "Estimated distance",
+    "travelType": "Travel type",
+    "withinCity": "Within the same city",
+    "betweenCities": "Between cities",
+    "impactTitle": "Potential impact",
+    "impactDescription": "A significant distance may increase transport costs and time, make access harder for people with reduced mobility, and contribute to treatment interruption.",
+    "recommendationsTitle": "Potential actions",
+    "recommendationsDescription": "Consider developing nearby pharmacies, delivery options, or backup stocks in underserved areas.",
+    "distanceDisclaimer": "Straight-line estimate between city centers, calculated from their coordinates. It is not a road route or the actual distance within a city."
+  },
+  "perceptions": {
+    "title": "Your views on epilepsy",
+    "intro": "Your opinion matters! Help us better understand public perceptions and knowledge about epilepsy.",
+    "impactTitle": "The impact of your participation",
+    "impactItems": {
+      "voice": { "title": "Make voices heard", "description": "Your answers help us better understand the experiences and needs of people affected." },
+      "myths": { "title": "Identify misconceptions", "description": "Understanding perceptions helps identify misinformation and topics that need clarification." },
+      "actions": { "title": "Improve awareness", "description": "Feedback can guide more relevant information and awareness activities." }
+    },
+    "formTitle": "Epilepsy perceptions questionnaire",
+    "anonymousNote": "This anonymous questionnaire helps us understand misconceptions and improve awareness.",
+    "generalInfo": "General information",
+    "ageLabel": "Age range *",
+    "selectAge": "Select your age range",
+    "ageRanges": {
+      "18-25": "18–25",
+      "26-35": "26–35",
+      "36-45": "36–45",
+      "46-55": "46–55",
+      "56-65": "56–65",
+      "over65": "Over 65"
+    },
+    "relationshipLabel": "Your relationship with epilepsy * (select all that apply)",
+    "relationships": {
+      "epileptic": "I have epilepsy",
+      "closePerson": "Someone close to me has epilepsy",
+      "healthProfessional": "I am a healthcare professional",
+      "noRelation": "I have no particular connection with epilepsy"
+    },
+    "opinionsTitle": "Your views on epilepsy",
+    "dangerQuestion": "In your opinion, is epilepsy dangerous? *",
+    "dangerOptions": {
+      "veryDangerous": "Very dangerous",
+      "moderatelyDangerous": "Moderately dangerous",
+      "slightlyDangerous": "Slightly dangerous",
+      "notDangerous": "Not dangerous"
+    },
+    "normalLifeQuestion": "Can a person with epilepsy lead a normal life? *",
+    "normalLifeOptions": {
+      "totally": "Yes, completely",
+      "withRestrictions": "Yes, with some restrictions",
+      "partially": "Partially",
+      "no": "No"
+    },
+    "contagiousQuestion": "Is epilepsy contagious? *",
+    "contagiousOptions": { "yes": "Yes", "no": "No", "dontKnow": "I don't know" },
+    "experienceTitle": "Your experience",
+    "experienceQuestion": "Have you ever witnessed an epileptic seizure? How did you respond?",
+    "experiencePlaceholder": "Describe your experience (optional)…",
+    "optionalNote": "Your answer is optional.",
+    "suggestionsTitle": "Suggestions to improve awareness",
+    "suggestionsQuestion": "How can the public be better informed about epilepsy?",
+    "suggestionsPlaceholder": "Your suggestions (optional)…",
+    "submit": "Submit my answers",
+    "submitting": "Submitting…",
+    "requiredHint": "Please answer the required questions (*) before submitting.",
+    "submitError": "There was an error submitting the questionnaire.",
+    "successTitle": "Thank you for participating!",
+    "successMessage": "Your answers will help improve epilepsy awareness.",
+    "researchTitle": "Why this research matters",
+    "recentFindingsTitle": "The challenges",
+    "recentFindings": {
+      "1": "Misconceptions can increase stigma and isolate people affected.",
+      "2": "Fear of seizures and misinformation can delay supportive first aid.",
+      "3": "Reliable knowledge helps promote inclusion in social and working life.",
+      "4": "Access to treatment and care remains unequal across settings."
+    },
+    "positiveChangeTitle": "What awareness can change",
+    "positiveChanges": {
+      "1": "Recognize epilepsy as a neurological condition.",
+      "2": "Know how to respond safely during a seizure.",
+      "3": "Promote inclusion and reduce discrimination.",
+      "4": "Guide people to trustworthy resources."
+    },
+    "whyTitle": "Why this questionnaire?",
+    "whyItems": {
+      "1": "Identify common misconceptions.",
+      "2": "Tailor awareness activities to public needs.",
+      "3": "Better understand how perceptions change over time.",
+      "4": "Support the inclusion of people living with epilepsy.",
+      "5": "Anonymous questionnaire: no personal contact details are requested.",
+      "6": "Your answers help guide information and awareness efforts."
+    }
+  },
+  "truthPage": {
+    "title": "The truth about epilepsy",
+    "intro": "Explore reliable information, challenge misconceptions, and learn seizure first aid.",
+    "mythsTitle": "Myths and facts",
+    "mythLabel": "MYTH",
+    "factLabel": "FACT",
+    "myths": {
+      "contagious": {
+        "myth": "Epilepsy is contagious.",
+        "truth": "Epilepsy is not contagious. It is a neurological condition and cannot be transmitted from one person to another.",
+        "category": "General"
+      },
+      "work": {
+        "myth": "People with epilepsy cannot work.",
+        "truth": "Many people living with epilepsy work and lead active lives. Needs vary from person to person and with their health.",
+        "category": "Employment"
+      },
+      "mouth": {
+        "myth": "You should put something in a person's mouth during a seizure.",
+        "truth": "Never put anything in the person's mouth; it could cause injury. Clear nearby hazards and protect their head.",
+        "category": "First aid"
+      },
+      "mental": {
+        "myth": "Epilepsy is a mental illness.",
+        "truth": "Epilepsy is a neurological condition related to brain activity; it is not, in itself, a mental illness.",
+        "category": "Medical"
+      }
+    },
+    "factsTitle": "Facts about epilepsy",
+    "facts": {
+      "prevalence": { "title": "Global prevalence", "description": "Around 50 million people worldwide live with epilepsy, according to WHO." },
+      "control": { "title": "Effective treatment", "description": "Up to 70% of people living with epilepsy could become seizure-free with appropriate diagnosis and treatment." },
+      "causes": { "title": "Many possible causes", "description": "Epilepsy can have different causes, including brain injury, infection, stroke, genetic factors, and others." },
+      "treatment": { "title": "Individualized care", "description": "Antiseizure medicines can control seizures for many people. Treatment should be managed with a healthcare professional." }
+    },
+    "firstAidTitle": "What to do during a seizure",
+    "firstAidIntro": "First aid guidance for a convulsive seizure.",
+    "stepsTitle": "Do",
+    "steps": {
+      "1": "Stay calm and time how long the seizure lasts.",
+      "2": "Move dangerous objects away and protect the person from injury.",
+      "3": "Place something soft and flat under their head.",
+      "4": "Loosen tight clothing around the neck and, if possible, gently turn the person onto their side when the jerking stops.",
+      "5": "Stay with the person and reassure them as they regain awareness.",
+      "6": "Call emergency services if the seizure lasts 5 minutes or longer, another seizure follows, the person is injured, or they do not regain awareness."
+    },
+    "doNotTitle": "Do not",
+    "doNotItems": {
+      "1": "Do not put anything in their mouth.",
+      "2": "Do not restrain their movements.",
+      "3": "Do not give water, food, or medicine until they are fully alert.",
+      "4": "Do not leave the person alone after the seizure."
+    },
+    "emergencyCallout": "Call local emergency services for a prolonged seizure, repeated seizures, or breathing difficulty.",
+    "firstAidNote": "This guidance does not replace first-aid training or advice from a healthcare professional.",
+    "resourcesTitle": "Learn more",
+    "resources": {
+      "research": { "title": "Medical information", "description": "Explore medical information and evidence-based resources." },
+      "testimonies": { "title": "Personal experiences", "description": "Listen to the experiences and needs of people affected." },
+      "training": { "title": "First-aid training", "description": "Learn safe first-aid steps for a seizure." }
+    },
+    "whoSource": "World Health Organization — Epilepsy",
+    "firstAidSource": "CDC — First aid for seizures"
+  },
+  "homepage": {
+    "hero": {
+      "title": "Equitable Access to",
+      "titleHighlight": "Antiepileptic Medications",
+      "description": "Move4Epilepsy revolutionizes global access to care through an intelligent platform for data collection, predictive analysis, and combating misinformation worldwide.",
+      "discover": "Discover the Platform",
+      "participate": "Participate in the Study",
+      "login": "Login / Sign Up"
+    },
+    "stats": {
+      "epilepticPeople": "Epileptic people worldwide",
+      "accessDifficulties": "Have access difficulties",
+      "facePrejudices": "Face prejudices",
+      "canControl": "Can control their seizures"
+    },
+    "problems": {
+      "title": "The Challenge We Address",
+      "description": "Epilepsy affects 50 million people worldwide, but equitable access to care remains a major challenge exacerbated by misinformation and lack of centralized data.",
+      "inequalities": {
+        "title": "Access Inequalities",
+        "description": "Significant disparities exist in access to antiepileptic medications depending on regions and socioeconomic situations.",
+        "stats": "30% of patients have access difficulties"
+      },
+      "misinformation": {
+        "title": "Misinformation",
+        "description": "Misconceptions and stigma around epilepsy create additional barriers to care.",
+        "stats": "85% of people have prejudices"
+      },
+      "lackOfData": {
+        "title": "Lack of Data",
+        "description": "The absence of centralized data prevents a global understanding of needs and obstacles.",
+        "stats": "Fragmented data"
+      }
+    },
+    "solutions": {
+      "title": "Our Innovative Solution",
+      "description": "An intelligent platform that combines data collection, predictive analysis, and artificial intelligence to revolutionize access to antiepileptic medications. It also strengthens human connection: community chat, awareness, trusted resources, and rights for people affected.",
+      "dataCollection": {
+        "title": "Data Collection",
+        "description": "Centralized platform to gather information on medication access and patient experiences."
+      },
+      "intelligentAnalysis": {
+        "title": "Intelligent Analysis",
+        "description": "Advanced data processing to identify patterns, trends, and areas for improvement."
+      },
+      "aiPredictions": {
+        "title": "AI Predictions",
+        "description": "Predictive models to anticipate stock shortages and optimize distribution."
+      },
+      "targetedActions": {
+        "title": "Targeted Actions",
+        "description": "Data-based recommendations to improve access and combat misinformation."
+      },
+      "communityChat": {
+        "title": "Community chat",
+        "description": "A space where patients, clinicians, loved ones, and citizens can connect to discuss and share experiences respectfully."
+      },
+      "awareness": {
+        "title": "Awareness",
+        "description": "Content to better understand epilepsy, reduce stigma, and share reliable information."
+      },
+      "resources": {
+        "title": "Available resources",
+        "description": "Guides and tools to find your way: validated information, treatments, and care pathways."
+      },
+      "rights": {
+        "title": "Rights of people with epilepsy",
+        "description": "Highlighting the right to health, non-discrimination, and clear information for people with epilepsy and their families."
+      }
+    },
+    "features": {
+      "title": "Advanced Features",
+      "description": "Powerful tools for a scientific approach to equal access to care.",
+      "dataSecurity": {
+        "title": "Data Security",
+        "description": "End-to-end encryption and GDPR compliance"
+      },
+      "realTimeAnalysis": {
+        "title": "Real-Time Analysis",
+        "description": "Instant insights on access trends"
+      },
+      "activeCommunity": {
+        "title": "Active Community",
+        "description": "Network of patients, doctors, and pharmacists"
+      },
+      "medicalValidation": {
+        "title": "Medical Validation",
+        "description": "Information verified by experts"
+      }
+    },
+    "sdgs": {
+      "kicker": "Our commitment to health",
+      "title": "The UN Sustainable Development Goals",
+      "description": "Move4Epilepsy contributes to UN SDG 3 by promoting more equitable access to care and epilepsy treatment.",
+      "goalTitle": "SDG 3 — Good Health and Well-Being",
+      "goalDescription": "Ensure healthy lives and promote well-being for all at all ages.",
+      "impacts": {
+        "riskZones": {
+          "title": "Identify high-need areas",
+          "description": "Identify areas where people with epilepsy have significant needs to better guide action."
+        },
+        "adaptedServices": {
+          "title": "Adapt health services",
+          "description": "Help pharmacists respond to local needs using geolocated data."
+        },
+        "costOptimization": {
+          "title": "Optimize resources",
+          "description": "Improve stock management to reduce medication surpluses and shortages."
+        }
+      },
+      "targetTitle": "Target 3.8 — Universal health coverage:",
+      "targetDescription": "promote access for all to essential health services and safe, effective, affordable medicines."
+    },
+    "partners": {
+      "kicker": "Collective impact",
+      "title": "Our partners",
+      "description": "We collaborate with organizations that help strengthen our impact.",
+      "sda": "A partnership focused on health data analysis and promoting diversity in data science across French-speaking Africa.",
+      "xponsor": "A platform for receiving sponsorship on a website or through a personalized link, including via Mobile Money.",
+      "mollet": "A financial management app for tracking expenses and income, including Mobile Money, even offline.",
+      "becomePartner": "Become a partner"
+    },
+    "cta": {
+      "title": "Join the Movement",
+      "description": "Your participation matters. Together, we can create equitable global access to antiepileptic medications and combat misinformation.",
+      "shareExperience": "Share my Experience",
+      "exploreData": "Explore Data",
+      "becomePartner": "Become a Partner"
+    }
+  },
+  "contentPages": {
+    "learnMore": "Learn more",
+    "about": {
+      "title": "About Move4Epilepsy",
+      "intro": "A project using data, awareness, and community engagement to improve access to epilepsy care.",
+      "missionTitle": "Our mission",
+      "mission": "Help people, healthcare professionals, and partners better understand barriers to treatment access and find reliable information.",
+      "objectivesTitle": "Our objectives",
+      "objectives": {
+        "1": "Better document barriers people face when accessing treatment.",
+        "2": "Share clear and reliable information about epilepsy.",
+        "3": "Encourage responses suited to local needs."
+      },
+      "valuesTitle": "Our values",
+      "values": {
+        "empathy": { "title": "Empathy", "description": "Listen to people and respect their experiences." },
+        "accuracy": { "title": "Accuracy", "description": "Present data and information carefully and transparently." },
+        "accessibility": { "title": "Accessibility", "description": "Make information understandable and useful to as many people as possible." },
+        "innovation": { "title": "Innovation", "description": "Use digital tools to support health equity." }
+      },
+      "journeyTitle": "Our journey",
+      "future": "Next",
+      "milestones": {
+        "2023": { "title": "Project launch", "description": "Defining the mission and the needs the portal aims to address." },
+        "2024": { "title": "Data and awareness", "description": "Developing initial resources and tools for sharing experiences." },
+        "2025": { "title": "Partnerships", "description": "Strengthening collaboration with health and data stakeholders." },
+        "future": { "title": "Ongoing development", "description": "Improving tools through feedback, validated data, and partnerships." }
+      }
+    },
+    "awareness": {
+      "title": "Epilepsy awareness",
+      "intro": "Understanding epilepsy and reducing stigma can help better support people affected by it.",
+      "cards": {
+        "1": { "title": "Understand epilepsy", "description": "Epilepsy is a neurological condition. Its symptoms and care needs vary from person to person." },
+        "2": { "title": "Challenge stigma", "description": "Misconceptions can isolate people and make access to care, education, or work more difficult." },
+        "3": { "title": "Support access to care", "description": "Reliable information and appropriate support contribute to a more inclusive care journey." }
+      },
+      "quickActionsTitle": "Take action and learn",
+      "quickActionsDescription": "Take the perceptions survey or explore facts and first-aid guidance.",
+      "resourcesTitle": "Educational resources",
+      "resources": {
+        "1": { "title": "First aid", "description": "Learn safe steps to take during a seizure." },
+        "2": { "title": "Myths and facts", "description": "Distinguish misconceptions from reliable health information." },
+        "3": { "title": "Living with epilepsy", "description": "Explore resources for people affected and their families." }
+      }
+    },
+    "resources": {
+      "title": "Reliable resources and information",
+      "intro": "Explore recognized external resources to learn more about epilepsy and first aid.",
+      "onlineTitle": "Online resources",
+      "openResource": "Open resource",
+      "downloadNotice": "The downloadable documents listed in the previous version are not available in this portal. No nonfunctional download buttons are shown.",
+      "cards": {
+        "1": { "title": "World Health Organization", "description": "Reference information about epilepsy, care, and public-health issues." },
+        "2": { "title": "First aid — CDC", "description": "Practical guidance on keeping someone safe during a convulsive seizure." },
+        "3": { "title": "Epilepsy Foundation", "description": "Information and support resources about epilepsy." },
+        "4": { "title": "Care journey", "description": "For advice suited to your circumstances, contact a healthcare professional or local association." }
+      }
+    },
+    "rights": {
+      "title": "Your rights and next steps",
+      "intro": "Rights, coverage, and procedures vary by country. Ask local health services and relevant organizations for guidance.",
+      "fundamentalTitle": "Key information",
+      "cards": {
+        "1": { "title": "Access to care", "description": "Everyone should be able to seek appropriate care from professionals and services in their country." },
+        "2": { "title": "Financial coverage", "description": "Available assistance and coverage depend on local insurance and health-system rules." },
+        "3": { "title": "Treatment information", "description": "Ask a healthcare professional about treatment options suited to your circumstances." },
+        "4": { "title": "Second opinion", "description": "You can discuss with your care team whether another medical opinion may be helpful." }
+      },
+      "stepsTitle": "Finding support",
+      "steps": {
+        "1": "Talk with a healthcare professional about your needs.",
+        "2": "Contact your country’s health or insurance organization for information.",
+        "3": "Keep relevant medical and administrative documents for your applications.",
+        "4": "Contact a local association to learn about available support."
+      },
+      "disclaimer": "This is general information, not legal advice. Always confirm the rights and procedures applicable in your country with the relevant organizations."
+    },
+    "medication": {
+      "title": "Antiseizure medicines",
+      "intro": "Antiseizure medicines are selected based on seizure type, health status, and each person’s needs.",
+      "categoriesTitle": "Some categories and examples",
+      "cards": {
+        "1": { "title": "Established treatments", "description": "Carbamazepine and valproate are examples of medicines used for some forms of epilepsy." },
+        "2": { "title": "More recent treatments", "description": "Levetiracetam and lamotrigine are among the options prescribed following clinical assessment." },
+        "3": { "title": "Specialist care", "description": "Treatment choices and complex cases require individualized follow-up by a healthcare professional." }
+      },
+      "warning": "Never start, change, or stop a treatment without consulting a healthcare professional. This page does not replace medical advice."
+    },
+    "team": {
+      "title": "Our team and expertise",
+      "intro": "Move4Epilepsy brings together complementary skills in health, data, technology, and user experience.",
+      "cards": {
+        "1": { "title": "Health and clinical expertise", "description": "Help share responsible information suited to health needs." },
+        "2": { "title": "Data and research", "description": "Structure and analyze data to better understand access barriers." },
+        "3": { "title": "Technology", "description": "Build useful, reliable, and accessible digital tools." },
+        "4": { "title": "Community and experience", "description": "Take the needs and feedback of affected people into account." }
+      },
+      "joinTitle": "Would you like to contribute?",
+      "joinDescription": "Contact the team to discuss collaboration or partnership.",
+      "contact": "Contact the team"
+    },
+    "contact": {
+      "title": "Contact Move4Epilepsy",
+      "intro": "Our team is available for questions about the portal, resources, or partnerships.",
+      "emailTitle": "Email",
+      "phoneTitle": "Phone",
+      "addressTitle": "Location",
+      "emergencyNote": "This portal is not an emergency service. In a medical emergency, contact your local emergency services."
+    }
+  },
+  "opinionsPage": {
+    "title": "Your opinion matters",
+    "intro": "Share your experience and read feedback from the community.",
+    "shareTitle": "Post a review",
+    "name": "Name or pseudonym",
+    "category": "Category",
+    "categoryAll": "Choose a category",
+    "categories": {
+      "patient": "Person with epilepsy",
+      "caregiver": "Family member or caregiver",
+      "professional": "Healthcare professional",
+      "general": "Other"
+    },
+    "message": "Your experience",
+    "rating": "Your rating",
+    "submit": "Post my review",
+    "sending": "Submitting…",
+    "submitSuccess": "Your review has been published.",
+    "submitError": "Unable to publish your review.",
+    "loadError": "Unable to load reviews.",
+    "listTitle": "Community reviews",
+    "average": "{count} reviews · average rating: {rating}/5",
+    "loading": "Loading reviews…",
+    "listError": "Reviews are unavailable.",
+    "retry": "Try again",
+    "empty": "No reviews yet. Be the first to share your experience.",
+    "ratingValue": "Rating: {rating} out of 5"
+  },
+  "patientSearch": {
+    "medication": "Medication",
+    "chooseMedication": "Choose a medication",
+    "city": "City",
+    "allCities": "All cities",
+    "loading": "Loading medications and pharmacies…",
+    "loadError": "Unable to load data.",
+    "retry": "Try again",
+    "chooseHint": "Choose a medication to view pharmacy stock declarations.",
+    "noResults": "No pharmacy has reported stock for this medication in this area.",
+    "available": "Available according to declared stock",
+    "unavailable": "Unavailable",
+    "quantity": "Declared quantity: {count}",
+    "noStockDeclaration": "No stock declaration for this medication",
+    "alertTitle": "Get an alert",
+    "alertDescription": "Request an alert about {medication}.",
+    "email": "Email address",
+    "phone": "Phone",
+    "alertSending": "Creating…",
+    "createAlert": "Create alert",
+    "alertSuccess": "Your alert request has been recorded.",
+    "alertError": "Unable to record the alert."
+  },
+  "protectedPages": {
+    "unavailableTitle": "Data unavailable",
+    "noFakeData": "No fabricated statistics are shown. Data will appear when the API permits access.",
+    "default": "The data on this page cannot be accessed without API authorization.",
+    "accessDashboard": "The access dashboard relies on protected treatment data.",
+    "trends": "Trends are calculated from protected treatment submissions.",
+    "pharmacyDashboard": "Pharmacy indicators require authorized pharmacy data.",
+    "pharmacyStock": "Viewing and changing stock is limited to authorized pharmacies.",
+    "doctorDashboard": "The medical dashboard requires authorized treatment data.",
+    "adminDashboard": "Administration tools require administrator authorization."
+  },
+  "networkAnalysis": {
+    "intro": "Understanding links between people, pharmacies, medicines, and places helps document unequal access and guide appropriate action.",
+    "problemKicker": "The problem is documented",
+    "problemTitle": "Unequal access to anti-seizure medicines exists.",
+    "problemDescription": "WHO estimates that around 50 million people worldwide live with epilepsy. In low-income countries, up to three in four people with epilepsy do not receive the treatment they need. The need to act is established; local data are needed to understand where and how access is failing.",
+    "globalStat": "Up to 3 in 4",
+    "globalStatLabel": "people with epilepsy in low-income countries may not receive the care they need, according to WHO.",
+    "whoSource": "Source: WHO epilepsy fact sheet",
+    "modelKicker": "Our approach",
+    "modelTitle": "Analyze relationships, not isolated numbers",
+    "modelDescription": "Network analysis represents actors and resources as nodes, and access links as relationships. It can help reveal gaps in care pathways and underserved areas.",
+    "conceptualLabel": "Conceptual diagram — not a visualization of real data",
+    "diagramAlt": "Conceptual diagram connecting people and reports to pharmacies and medicine stocks, alongside locations and barriers to access.",
+    "diagramCaption": "Relationships could be examined using voluntary reports, verified availability, and geographic distances. This diagram represents no individual and no calculated result.",
+    "nodes": {
+      "people": {
+        "title": "Reported experiences",
+        "description": "Voluntary reports about finding a medicine, cost, delays, or stockouts."
+      },
+      "pharmacies": {
+        "title": "Pharmacies",
+        "description": "Listed establishments and dated availability information."
+      },
+      "medicines": {
+        "title": "Medicines",
+        "description": "Treatments sought and products reported as available or missing."
+      },
+      "locations": {
+        "title": "Places",
+        "description": "Locations and distances needed to reach a resource."
+      },
+      "barriers": {
+        "title": "Access barriers",
+        "description": "Distance, unavailability, cost, and restocking delays."
+      }
+    },
+    "questionsKicker": "What analysis can help explain",
+    "questionsTitle": "Concrete questions for observing access",
+    "questions": {
+      "where": {
+        "title": "Where are needs not being met?",
+        "description": "Identify areas where people report difficulties and known pharmacies or stocks are scarce or far away."
+      },
+      "which": {
+        "title": "Which medicines are difficult to find?",
+        "description": "Compare reports of searches and stockouts by medicine, time period, and location."
+      },
+      "who": {
+        "title": "What connects people to resources?",
+        "description": "Understand links between pharmacies, catchment areas, and nearby options without exposing individual journeys."
+      },
+      "whatChanges": {
+        "title": "Are actions improving the situation?",
+        "description": "Track aggregated indicators over time and assess whether availability or proximity changes."
+      }
+    },
+    "collectionKicker": "Why collect data?",
+    "collectionTitle": "Turn a known problem into targeted action",
+    "collectionDescription": "Global estimates establish the scale of the challenge, but they cannot tell us which medicine is missing in a particular town or which barrier should be addressed first. Local, dated, cross-checked data help move from awareness to action.",
+    "reasons": {
+      "findGaps": {
+        "title": "Locate gaps",
+        "description": "Connect reports, medicines, and places to identify underserved areas or treatments."
+      },
+      "guideActions": {
+        "title": "Guide effort",
+        "description": "Help health stakeholders prioritize stock checks, information, and distribution improvements."
+      },
+      "measureChange": {
+        "title": "Measure change",
+        "description": "Compare aggregated indicators over time to assess whether actions help reduce barriers."
+      }
+    },
+    "privacyTitle": "Responsible data collection:",
+    "privacyDescription": "collect only what is necessary, explain its use, protect health information, aggregate results, and prevent identification. Local analyses will be published only when there is enough verified data and access is authorized.",
+    "evidenceTitle": "What is known — and what remains to be measured",
+    "evidenceDescription": "Global inequality in access is documented by WHO. This page does not claim to measure gaps by town or country: no local result is calculated here. Local analyses depend on reliable, representative, sufficiently numerous data that can be accessed with proper authorization."
+  },
+  "chatPage": {
+    "title": "Discussion",
+    "channels": "Discussion channels",
+    "loadingChannels": "Loading channels…",
+    "noChannels": "No public channels are available.",
+    "refresh": "Refresh",
+    "showRoles": "Show roles",
+    "loadingMessages": "Loading messages…",
+    "noMessages": "There are no messages in this channel.",
+    "anonymous": "Anonymous",
+    "loadError": "Unable to load discussions.",
+    "readOnlyNotice": "Messages can be viewed, but sending, editing, and reporting require permissions that are not enabled in this interface.",
+    "shareOpinion": "Share a review"
+  },
+  "footer": {
+    "description": "Revolutionizing global access to antiepileptic medications through data intelligence.",
+    "platform": "Platform",
+    "dataCollection": "Data Collection",
+    "predictiveAnalysis": "Predictive Analysis",
+    "research": "Research",
+    "community": "Community",
+    "resources": "Resources",
+    "documentation": "Documentation",
+    "api": "API",
+    "support": "Support",
+    "blog": "Blog",
+    "contact": "Contact",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use",
+    "gdpr": "GDPR",
+    "administration": "Administration"
+  },
+  "gdpr": {
+    "pageIntro": "Understand the GDPR, the data involved, and the rights people have on Move4Epilepsy.",
+    "eyebrow": "Personal and health data",
+    "introTitle": "Your data tells a personal story. Protecting it matters.",
+    "introText": "This page explains what the GDPR is, why it matters especially on a platform dealing with epilepsy and treatment, which data categories the API separate from the frontend provides for, and what rights you may exercise. It complements the privacy policy; it does not replace it.",
+    "whatTitle": "What is the GDPR?",
+    "whatText": "The General Data Protection Regulation (EU Regulation 2016/679) governs the use of information relating to an identifiable person. It has applied in the European Union since 25 May 2018 and may also apply to organizations outside the EU depending on their activities involving people in the EU. Applicable rules must be checked for each country and context.",
+    "scopeNote": "Data can still be personal even when a form is submitted without an account or under a pseudonym: a combination of age, location, treatment, and a personal account may sometimes identify someone. Health data receives enhanced protection.",
+    "whyTitle": "Why does this matter especially here?",
+    "whyText": "Information about epilepsy, medication, side effects, cost, or access can be highly private. Responsible collection helps people understand what they share, reduces exposure risks, and makes it possible to use aggregated data to study access inequalities without publishing individual stories.",
+    "principles": {
+      "lawfulnessTitle": "A clear legal basis",
+      "lawfulnessText": "Every use must have a documented legal basis. Health data also requires a specific condition, including under Article 9 of the GDPR; this cannot be inferred from the API code alone.",
+      "purposeTitle": "A specific purpose",
+      "purposeText": "Data should serve explained purposes, such as handling a request, responding to an alert, or studying access to treatment, and should not be reused incompatibly.",
+      "minimizationTitle": "Only what is needed",
+      "minimizationText": "Ask only for information needed for the stated service. Optional fields and free-text accounts need particular care because they may contain identifying details.",
+      "accuracyTitle": "Accurate information",
+      "accuracyText": "People should be able to correct inaccurate data, and conclusions should account for the limits and representativeness of submitted reports.",
+      "retentionTitle": "Limited retention",
+      "retentionText": "Set a justified retention period and explain what happens afterwards: deletion, anonymization, or permitted archiving.",
+      "securityTitle": "Appropriate security",
+      "securityText": "Restrict access, protect communications and systems, prevent disclosures, and plan how to respond to an incident."
+    },
+    "dataTitle": "What data does the API provide for?",
+    "dataIntro": "The categories below come from the API models and forms. The API is developed separately from the Vue frontend. They describe possible fields, not proof that every field is collected by this frontend or retained in production.",
+    "data": {
+      "healthTitle": "Treatment and health",
+      "healthText": "Age, sex, location, medication, dosage, frequency, treatment dates or duration, cost, effectiveness, side effects, difficulties, availability, alternatives, and comments. The treatment submission route can be used without an account; this data remains sensitive and is not necessarily anonymous.",
+      "locationTitle": "Location and searches",
+      "locationText": "Country or locality, medication searched for, and result information. The search model also provides fields for IP address and browser (user-agent); whether they are populated and how long they are retained must be verified.",
+      "contactTitle": "Contact details and requests",
+      "contactText": "A medicine availability alert may include an email address or phone number linked to a medicine and geographic area. Partnership applications may include a person's name, organization, contact details, and address.",
+      "contributionTitle": "Reviews and reports",
+      "contributionText": "Reviews, ratings, and free text; medicine and pharmacy reports, prices, availability, and possibly the reporter's name or phone number; and answers to questions about perceptions of epilepsy.",
+      "technicalTitle": "Accounts and technical logs",
+      "technicalText": "Account models provide for email, username, role, and profile. The server logs requests (method, path, and status); hosting configuration and actual logs must be checked before specifying which traces are retained."
+    },
+    "technicalCaveat": "The API sets a 30-day expiry for a search alert. An expiry or deactivation alone does not establish that data is actually deleted: purging, backups, and actual retention periods must be confirmed.",
+    "purposesTitle": "Why collect this data?",
+    "purposesText": "The visible features and API routes indicate possible purposes: recording treatment experiences, receiving reviews and reports, managing medicine availability alerts, handling partnership requests, operating professional accounts, and producing analyses of medicine access. The exact purpose, legal basis, and necessary data should be specified for each form before collection. Analyses should favor aggregated results and avoid publishing information that could identify someone.",
+    "rightsTitle": "What are your rights?",
+    "rightsIntro": "Where the GDPR applies, you may notably ask the data controller to:",
+    "rights": {
+      "access": "Access your data and receive information about how it is used.",
+      "rectification": "Have inaccurate or incomplete data corrected.",
+      "erasure": "Request erasure in situations provided for by law.",
+      "restriction": "Request restriction of certain processing.",
+      "objection": "Object to certain processing based on legitimate interests or a public task.",
+      "portability": "Receive certain data you provided, subject to the conditions for data portability.",
+      "withdrawal": "Withdraw consent where processing relies on it, without affecting earlier processing.",
+      "complaint": "Lodge a complaint with the competent supervisory authority."
+    },
+    "rightsLimit": "Not every right applies in every situation, and legal exceptions exist. Health data also requires a specific legal basis and processing condition. To exercise a right, contact the controller; its identity and official contact details should be clearly published.",
+    "knownTitle": "What we know — and what still needs clarification",
+    "knownText": "Reviewing the API code identifies fields, public forms, accounts, and access restricted to certain roles. This is not enough to demonstrate the compliance of the entire service or establish its hosting practices.",
+    "implementationTitle": "Current state of the Vue frontend",
+    "implementationIntro": "The information below describes forms in this Vue version. It should not be confused with capabilities planned for the separate API or requirements that still need implementation.",
+    "implementationCurrentTitle": "Treatment submission form",
+    "implementationCurrentText": "The Vue form collects, among other things, age, sex, location, treatment information, and access experience. The availability-alert option is optional. At present, this journey does not request an email address for the treatment submission, show an explicit consent checkbox, or verify an address. A review screen is present, but it displays only some answers before submission. The frontend does not yet offer self-service viewing, editing, or deletion of these submissions.",
+    "implementationPlannedTitle": "Documented requirements, integration pending",
+    "implementationPlannedText": "Verified email, a two-step consent flow with a versioned record, alerts, and later management of submissions are documented requirements, not features currently available in this form. The proposed journey and API contract must be validated by the backend team and data controller before integration and production use.",
+    "toConfirmTitle": "Information the controller must confirm",
+    "toConfirmText": "The controller's legal identity and address; purposes and legal bases, including the condition applicable to health data; recipients and processors; hosting locations and transfers outside the country; exact retention periods and backup purging; procedures for exercising rights; and the contact details of a data protection officer, if there is one.",
+    "disclaimer": "This page is an educational explanation based on the code reviewed, not legal advice or a compliance statement. It does not replace a complete privacy policy validated by the data controller and tailored to the countries where the service is offered.",
+    "contactTitle": "Questions or requests about your data?",
+    "contactText": "You can write to the contact address currently published on the portal. This is a general contact point; it does not by itself confirm the legal identity of the data controller.",
+    "sourceNote": "Technical material reviewed: API models and schemas for treatments, searches, alerts, accounts, reviews, partnerships, medicine reports, and perceptions. Legal reference:",
+    "officialText": "official GDPR text"
+  },
+  "predictiveDashboard": {
+    "title": "Predictive dashboard — antiepileptic demand",
+    "demoBanner": "Demo data (same structure as visualisations_demande.R). After ML deployment, charts will be fed by the pipeline (API or CSV exports).",
+    "downloadCsv": "Download table (CSV)",
+    "g1Title": "Monthly demand in tablets by city",
+    "g1Subtitle": "Stacked bars = predicted quantity per city (all medicines).",
+    "g2Title": "Total demand by country",
+    "g2Subtitle": "Macro view: tablets / month aggregated by country.",
+    "g3Title": "Patients without access to treatment",
+    "g3Subtitle": "By city and molecule — color = declared stockout risk.",
+    "g4Title": "Demand share by molecule",
+    "g4Subtitle": "Volumes in tablets / month and % of total.",
+    "g5Title": "Boxes to supply by city",
+    "g5Subtitle": "Using typical pack sizes (demo reference).",
+    "g6Title": "Heatmap of demand (city × country)",
+    "g6Subtitle": "Intensity = tablets / month. Red outline = critical stockout (score ≥ 4).",
+    "g7Title": "Demand vs accessibility",
+    "g7Subtitle": "Point size = uncovered patients. Shaded area = priority (high demand + difficult access).",
+    "g7Zone": "Red zone: high demand and low-to-medium access — prioritize supply.",
+    "g8Title": "Simulated monthly trend by country",
+    "g8Subtitle": "Illustrative 12-month projection (as in the R script) — replace with real series after deployment."
+  },
+  "subscriptions": {
+    "eyebrow": "Move4Epilepsy · Professional space",
+    "heroTitle": "Make your pharmacy more accessible. Better support for people affected by epilepsy.",
+    "heroDescription": "Join an international platform that helps people find pharmacies and useful resources. Choose an offer for your organization and build your professional presence.",
+    "discoverPlans": "Explore subscriptions",
+    "contactTeam": "Contact the team",
+    "trustInternational": "A platform with an international mission",
+    "trustMarket": "Offers adapted to the billing market",
+    "trustPatients": "Essential patient features remain free",
+    "offersKicker": "Our offers",
+    "offersTitle": "Choose the right offer for your pharmacy",
+    "offersDescription": "Prices, currencies, and billing periods appear only when configured for the selected market. Planned features remain subject to launch.",
+    "countryLabel": "Billing country",
+    "billingPeriod": "Billing period",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "noMarkets": "No pricing market is currently configured. No default price is displayed.",
+    "loading": "Loading configured offers…",
+    "loadError": "Configured prices are not available right now.",
+    "retry": "Try again",
+    "priceIntro": "Prices below come from the platform's active configuration. The final amount, applicable taxes, and terms must be confirmed before any subscription.",
+    "priceUnavailable": "Price coming soon",
+    "marketNotConfigured": "Not configured for this market",
+    "perMonth": "per month",
+    "perYear": "per year",
+    "popular": "Mid-tier offer",
+    "featuresSubjectToAvailability": "Planned features are available only after they have been developed, verified, and enabled.",
+    "selectionKicker": "Your selection",
+    "selectionTitle": "{plan} plan",
+    "selectionDetails": "{amount} · billed {period} · market: {country}",
+    "checkoutUnavailable": "Online subscriptions, professional account creation, and payments are not yet enabled. Contact the team for information; no subscription has been created.",
+    "dismiss": "Close",
+    "finalPriceNotice": "The final price, currency, taxes, renewal, and cancellation terms must be shown before payment is confirmed.",
+    "comparisonKicker": "Compare",
+    "comparisonTitle": "Features for your needs",
+    "comparisonDescription": "The offers below describe the planned scope. Only features actually deployed and enabled for your account will be available.",
+    "comparisonCaveat": "Features and access rights will be confirmed before each offer is launched.",
+    "comparison": {
+      "featureColumn": "Feature",
+      "features": {
+        "professionalProfile": "Professional profile",
+        "contactLocation": "Contact details and location",
+        "profileUpdates": "Profile updates",
+        "serviceInformation": "Information about services",
+        "visibilityStatistics": "Visibility statistics",
+        "multipleLocations": "Manage multiple locations",
+        "teamRoles": "Team member roles",
+        "consolidatedStatistics": "Consolidated view and statistics"
+      },
+      "values": {
+        "professionalProfile": { "essential": "Planned", "professional": "Planned", "network": "Planned" },
+        "contactLocation": { "essential": "Planned", "professional": "Planned", "network": "Planned" },
+        "profileUpdates": { "essential": "Planned", "professional": "Planned", "network": "Planned" },
+        "serviceInformation": { "essential": "—", "professional": "Planned", "network": "Planned" },
+        "visibilityStatistics": { "essential": "—", "professional": "Subject to availability", "network": "Subject to availability" },
+        "multipleLocations": { "essential": "—", "professional": "—", "network": "Planned" },
+        "teamRoles": { "essential": "—", "professional": "—", "network": "Planned" },
+        "consolidatedStatistics": { "essential": "—", "professional": "—", "network": "Subject to availability" }
+      }
+    },
+    "tiers": {
+      "essential": {
+        "name": "Essential",
+        "tagline": "Build your visibility",
+        "description": "For independent pharmacies seeking a professional presence on the platform.",
+        "cta": "Choose Essential",
+        "features": {
+          "professionalProfile": "Create a professional profile",
+          "contactLocation": "Display the pharmacy name, contact details, and submitted location",
+          "practicalInformation": "Practical information about the pharmacy",
+          "profileUpdates": "Update information according to account permissions"
+        }
+      },
+      "professional": {
+        "name": "Professional",
+        "tagline": "Enrich and manage your presence",
+        "description": "For pharmacies that need additional professional tools, subject to launch.",
+        "cta": "Choose Professional",
+        "features": {
+          "essentialIncluded": "Features planned for the Essential offer",
+          "enrichedProfile": "Enhanced profile management and pharmacy services",
+          "visibilityStatistics": "Visibility statistics, if data is available",
+          "serviceInformation": "Additional information about the pharmacy"
+        }
+      },
+      "network": {
+        "name": "Network",
+        "tagline": "For organizations with multiple locations",
+        "description": "An offer to be defined according to the number of locations, market, and organization needs.",
+        "cta": "Request a quote",
+        "features": {
+          "professionalIncluded": "Features planned for the previous offers",
+          "multipleLocations": "Centralized management of multiple pharmacies",
+          "centralManagement": "Profile and team-member role management",
+          "consolidatedView": "Overview and consolidated statistics, subject to availability"
+        }
+      }
+    },
+    "processKicker": "Professional journey",
+    "processTitle": "How does a subscription work?",
+    "processDescription": "The steps that will be offered once professional services are enabled.",
+    "process": {
+      "1": { "title": "Create a professional account", "description": "Provide the necessary information about your pharmacy or organization." },
+      "2": { "title": "Select your market", "description": "Confirm the billing country to view available prices and payment methods." },
+      "3": { "title": "Choose an offer", "description": "Compare available features and select the offer that fits your needs." },
+      "4": { "title": "Review and pay", "description": "Check the amount, currency, applicable taxes, and terms before confirming." },
+      "5": { "title": "Manage your presence", "description": "Access your professional space and manage the information allowed by your plan." }
+    },
+    "benefitsKicker": "Why join us?",
+    "benefitsTitle": "A useful presence, designed for pharmacies",
+    "benefits": {
+      "presence": { "title": "A professional presence", "description": "Help users discover your pharmacy information when they search for listed pharmacies." },
+      "access": { "title": "Improved accessibility", "description": "Help people affected by epilepsy find pharmacies with useful, up-to-date information." },
+      "management": { "title": "Management to suit your needs", "description": "Choose an offer based on the size of your organization and the features actually available." },
+      "international": { "title": "An international mission", "description": "The platform is designed to gradually support the languages, currencies, and payment methods of enabled markets." }
+    },
+    "faqKicker": "Need more information?",
+    "faqTitle": "Frequently asked questions",
+    "faq": {
+      "eligibility": { "question": "Who can subscribe?", "answer": "Independent pharmacies and organizations managing multiple locations can request an offer, subject to verification and availability in their country." },
+      "patientPrice": { "question": "Do patients have to pay to use Move4Epilepsy?", "answer": "No. Essential features for patients are intended to remain free. The subscriptions on this page are for pharmacies and pharmacy networks." },
+      "regionalPricing": { "question": "Are prices the same in every country?", "answer": "No. Prices are configured by market. No price is shown for a country until it has been configured." },
+      "currency": { "question": "Can I pay in my local currency?", "answer": "The currency depends on the billing market and available providers. The applicable currency must be shown before confirmation." },
+      "payment": { "question": "Which payment methods are accepted?", "answer": "Payment methods depend on the country and integrated providers. They will be listed only when available." },
+      "changePlan": { "question": "Can I change my plan?", "answer": "Changing plans from the professional space is planned but is not currently enabled." },
+      "cancel": { "question": "Can I cancel my subscription?", "answer": "Cancellation terms must be available before subscribing. Self-service cancellation is not currently enabled." },
+      "networkPlan": { "question": "How does the Network offer work?", "answer": "It is intended for organizations managing several pharmacies. Pricing and terms will depend on the number of sites, needs, and market." },
+      "privacy": { "question": "How is my information protected?", "answer": "Professional data must be handled under applicable privacy rules. Patient health information is not intended to be exposed to pharmacies." },
+      "unsupportedMarket": { "question": "What if my country is not listed?", "answer": "Contact the team with your country and needs. No listed price means no offer is currently configured for that market." }
+    },
+    "quoteKicker": "Network offer",
+    "quoteTitle": "A quote tailored to your organization",
+    "quoteDescription": "Tell us your billing country, the number of locations, and your professional needs. The team can respond based on available offers.",
+    "quotePrivacyNote": "Do not include any health information in this request.",
+    "quoteOrganization": "Organization name",
+    "quoteCountry": "Billing country",
+    "quoteLocations": "Approximate number of locations",
+    "quoteEmail": "Professional email address",
+    "quoteNeeds": "Specific needs (optional)",
+    "sendQuoteRequest": "Prepare my quote request",
+    "quoteMailNotice": "This request opens your email application and is not stored on the platform.",
+    "quoteEmailSubject": "Move4Epilepsy quote request",
+    "quoteFields": {
+      "organization": "Organization: {value}",
+      "country": "Billing country: {value}",
+      "locations": "Number of locations: {value}",
+      "email": "Email: {value}",
+      "needs": "Needs: {value}"
+    },
+    "notProvided": "Not provided",
+    "finalTitle": "Join the Move4Epilepsy network",
+    "finalDescription": "Build your pharmacy's presence on a platform designed to make useful information easier to find.",
+    "footerTitle": "Move4Epilepsy",
+    "footer": {
+      "about": "About",
+      "contact": "Contact",
+      "help": "Help center",
+      "terms": "Terms",
+      "privacy": "Privacy"
+    }
+  },
+  "servicesSearch": {
+    "title": "Find services",
+    "intro": "Browse pharmacies registered on the platform. Availability information should be confirmed directly with each pharmacy.",
+    "type": "Service type",
+    "pharmacies": "Pharmacies",
+    "hospitals": "Hospitals",
+    "searchLabel": "Search pharmacies",
+    "searchPlaceholder": "Name, address, or city",
+    "results": "Matching pharmacies",
+    "catalogueStock": "{count} catalogue stock item(s) currently available",
+    "loading": "Loading pharmacies…",
+    "loadError": "Unable to load pharmacies.",
+    "retry": "Try again",
+    "empty": "No pharmacies match this search.",
+    "hospitalsUnavailable": "There is no verified hospital directory connected to the platform yet. Check local resources or contact a healthcare professional.",
+    "resourcesLink": "View resources",
+    "disclaimer": "Pharmacy information may be out of date. Call ahead and confirm your medication is available before travelling."
+  },
+  "publicSubmission": {
+    "partner": {
+      "title": "Propose a partnership",
+      "description": "Tell us about your organization and the types of collaboration you would like to explore.",
+      "success": "Your partnership proposal has been sent to the platform.",
+      "submitError": "Your proposal could not be sent. Check your connection and try again."
+    },
+    "medicine-report": {
+      "title": "Report medication availability",
+      "description": "Report availability or pricing information observed at a pharmacy.",
+      "success": "Your report has been sent. It may be verified before publication.",
+      "submitError": "Your report could not be sent. Please try again."
+    },
+    "medication-registration": {
+      "title": "Share my treatment experience",
+      "description": "Answer this questionnaire about treatment access and experience. Nonessential fields are optional.",
+      "success": "Your experience has been sent. Thank you for helping us understand barriers to access.",
+      "submitError": "Your response could not be sent. Please try again."
+    },
+    "organizationType": "Organization type",
+    "organizationName": "Organization name",
+    "contactPerson": "Contact person",
+    "email": "Email address",
+    "phone": "Phone",
+    "website": "Website",
+    "address": "Address",
+    "city": "City",
+    "postalCode": "Postal code",
+    "partnershipTypes": "Partnership areas",
+    "partnershipKinds": {
+      "health": "Health",
+      "data": "Data and research",
+      "financial": "Funding",
+      "communication": "Communications",
+      "other": "Other"
+    },
+    "descriptionLabel": "Tell us about your organization",
+    "resourcesLabel": "Resources you could contribute",
+    "experience": "Relevant experience",
+    "motivation": "Why would you like to collaborate?",
+    "choose": "Select",
+    "medication": "Medication",
+    "pharmacyName": "Pharmacy name",
+    "price": "Observed price",
+    "quantityStatus": "Observed availability",
+    "status": {
+      "available": "Available",
+      "limited": "Limited stock",
+      "outOfStock": "Out of stock"
+    },
+    "reporterName": "Your name",
+    "reporterPhone": "Your phone number",
+    "reportNote": "A report does not guarantee current medication availability. Always confirm with the pharmacy.",
+    "nameOptional": "Name or pseudonym (optional)",
+    "age": "Age",
+    "sex": "Gender",
+    "sexOptions": {
+      "male": "Male",
+      "female": "Female",
+      "other": "Other",
+      "unspecified": "Prefer not to say"
+    },
+    "location": "City or place of residence",
+    "dosage": "Prescribed dosage",
+    "frequency": "How often do you take it?",
+    "duration": "Treatment duration (months)",
+    "startDate": "Start date",
+    "endDate": "End date",
+    "ongoing": "Treatment is ongoing",
+    "wantsAlert": "I would like to receive an availability alert",
+    "accessEase": "Ease of access to treatment",
+    "accessOptions": {
+      "easy": "Easy",
+      "difficult": "Difficult",
+      "veryDifficult": "Very difficult"
+    },
+    "monthlyCost": "Estimated monthly cost",
+    "unitPrice": "Price per unit",
+    "foundMedication": "Were you able to find the medication?",
+    "pharmaciesVisited": "Number of pharmacies visited",
+    "waitingTime": "Waiting time",
+    "stockoutFrequency": "Frequency of stockouts",
+    "educationLevel": "Education level (optional)",
+    "employmentStatus": "Employment status (optional)",
+    "minimumSalary": "Minimum monthly income (optional)",
+    "financialResources": "Are your financial resources sufficient?",
+    "yes": "Yes",
+    "no": "No",
+    "partially": "Partially",
+    "morningPills": "Morning doses",
+    "noonPills": "Midday doses",
+    "eveningPills": "Evening doses",
+    "hasAlternative": "I have an alternative medication",
+    "alternativeName": "Alternative medication name",
+    "knowsRestockDelay": "The pharmacy provided a restocking timeframe",
+    "preciseRestockDelay": "The timeframe is precise",
+    "restockDelay": "Timeframe provided",
+    "actionWhenDelayUnknown": "What do you do if the timeframe is unknown or unclear?",
+    "effectiveness": "Perceived effectiveness (1 to 10)",
+    "sideEffects": "Side effects",
+    "difficulties": "Difficulties encountered",
+    "additionalComments": "Additional comments",
+    "sections": {
+      "personal": "About you",
+      "treatment": "Treatment",
+      "access": "Access and cost",
+      "experience": "Your experience",
+      "dosage": "Daily doses",
+      "restock": "Restocking and alternatives"
+    },
+    "anonymousNote": "No account is required. Do not share information that could identify you if you wish to remain anonymous.",
+    "review": "Review my response",
+    "reviewTitle": "Review the main details",
+    "edit": "Edit",
+    "confirm": "Confirm submission",
+    "sending": "Sending…",
+    "submit": "Submit",
+    "sendAnother": "Send another response"
+  },
+  "admin": {
+    "dashboard": "Admin Dashboard",
+    "platformManagement": "Move4Epilepsy Platform Management",
+    "overview": "Overview",
+    "users": "Users",
+    "reportedMessages": "Reported Messages",
+    "pharmacies": "Pharmacies",
+    "partnerships": "Partnerships",
+    "settings": "Settings",
+    "logs": "Logs",
+    "accessDenied": "Access Denied",
+    "noAdminRights": "You do not have administrator rights",
+    "suspensionReason": "Suspension reason:",
+    "userSuspendedSuccess": "User suspended successfully",
+    "suspensionError": "Error suspending user",
+    "confirmDelete": "Confirm message deletion?",
+    "messageDeleted": "Message deleted",
+    "reportDismissed": "Report dismissed",
+    "pharmacyStatusUpdated": "Pharmacy status updated",
+    "performance": "Performance",
+    "performanceDescription": "Measurements from this browser session.",
+    "refreshMetrics": "Refresh",
+    "pageLoad": "Page load",
+    "domReady": "DOM ready",
+    "resources": "Resources",
+    "connection": "Connection",
+    "online": "Online",
+    "offline": "Offline",
+    "transferSize": "Transferred data",
+    "lastMeasured": "Last measured",
+    "trafficBackendNotice": "Global traffic, active visitors, and trends require server-side collection. These local measurements do not replace them."
+  },
+  "forms": {
+    "weak": "Weak",
+    "medium": "Medium",
+    "good": "Good",
+    "veryStrong": "Very strong",
+    "passwordStrength": "Password strength",
+    "doctor": "Doctor",
+    "pharmacist": "Pharmacist",
+    "admin": "Admin",
+    "available": "Available",
+    "limitedStock": "Limited stock",
+    "lastBox": "Last box",
+    "onOrder": "On order",
+    "iAmEpileptic": "I am epileptic",
+    "closeEpileptic": "I have a close person with epilepsy",
+    "healthProfessional": "I am a healthcare professional",
+    "noRelation": "No particular relation",
+    "hospital": "Hospital / Clinic",
+    "pharmacy": "Pharmacy / Pharmacy Network",
+    "association": "Patient Association",
+    "research": "Research Institute",
+    "tech": "Technology Company",
+    "other": "Other"
+  }
+}

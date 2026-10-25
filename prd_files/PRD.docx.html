@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>PRD Move4Epilepsy</title>
+  <style>
+    body {
+      font-family: Calibri, 'Segoe UI', Arial, sans-serif;
+      font-size: 11pt;
+      color: #333333;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+    .header-info {
+      border-bottom: 3px solid #BA55D3;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+    .header-info h1 {
+      color: #9932CC;
+      font-size: 26pt;
+      margin: 0 0 8px 0;
+    }
+    .header-info h2 {
+      color: #333333;
+      font-size: 14pt;
+      font-weight: normal;
+      margin: 0 0 16px 0;
+    }
+    .meta {
+      background: #E6E6FA;
+      padding: 12px 16px;
+      border-radius: 6px;
+      border-left: 4px solid #BA55D3;
+    }
+    .meta p { margin: 4px 0; }
+    .meta strong { color: #8B008B; }
+    .toc {
+      background: #E6E6FA;
+      padding: 20px 24px;
+      border-radius: 8px;
+      margin: 24px 0;
+    }
+    .toc h2 {
+      color: #8B008B;
+      font-size: 16pt;
+      margin-top: 0;
+    }
+    .toc ol, .toc ul { margin: 8px 0; }
+    .toc a { color: #9932CC; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    h1 { color: #9932CC; font-size: 22pt; margin-top: 32px; }
+    h2 { color: #8B008B; font-size: 16pt; margin-top: 28px; border-bottom: 2px solid #E6E6FA; padding-bottom: 6px; }
+    h3 { color: #BA55D3; font-size: 13pt; margin-top: 20px; }
+    h4 { color: #666666; font-size: 11pt; margin-top: 16px; }
+    h5, h6 { color: #888888; font-size: 10pt; }
+    p { text-align: justify; margin: 10px 0; }
+    ul, ol { margin: 10px 0 10px 20px; }
+    li { margin: 4px 0; }
+    strong { color: #8B008B; }
+    code {
+      font-family: 'Courier New', monospace;
+      background: #E6E6FA;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 9pt;
+      color: #8B008B;
+    }
+    .code-block {
+      background: #F8F8F8;
+      border-left: 4px solid #BA55D3;
+      padding: 12px 16px;
+      font-family: 'Courier New', monospace;
+      font-size: 9pt;
+      margin: 12px 0;
+      white-space: pre-wrap;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 16px 0;
+    }
+    th {
+      background: #9932CC;
+      color: #FFFFFF;
+      padding: 10px 12px;
+      text-align: left;
+      font-weight: bold;
+      border: 1px solid #8B008B;
+    }
+    td {
+      padding: 8px 12px;
+      border: 1px solid #E6E6FA;
+    }
+    tr:nth-child(even) td { background: #F5F0FA; }
+    hr.section-break {
+      border: none;
+      border-top: 1px solid #E6E6FA;
+      margin: 24px 0;
+    }
+    hr.page-break {
+      border: none;
+      page-break-before: always;
+      margin: 40px 0;
+    }
+    .content { margin-top: 20px; }
+  </style>
+</head>
+<body>
+<div class="content">
+<div class="header-info">
+<h1>Product Requirements Document (PRD)</h1>
+<h2>Move4Epilepsy - Plateforme Mondiale d'Accès aux Médicaments Antiépileptiques</h2>
+<div class="meta">
+<p><strong>Version:</strong> 1.7</p>
+<p><strong>Date:</strong> Octobre 2026</p>
+<p><strong>Statut:</strong> Référentiel produit du portail React historique et du frontend Vue ; les exigences et références de code ne sont pas toutes implémentées dans Vue.</p>
+<p><strong>Dernière mise à jour:</strong> Octobre 2026 — gestion des traitements par e-mail vérifié, enregistrement du consentement et retrait</p>
+</div>
+</div>
+<div class="toc">
+<h2>📋 Table des Matières</h2>
+<ol>
+  <li><a href="#vue-densemble">Vue d'Ensemble</a>
+  </li>
+  <li><a href="#vision-et-objectifs">Vision et Objectifs</a>
+    <ul>
+      <li>2.4 <a href="#24-technology-readiness-levels-trl">Technology Readiness Levels (TRL)</a></li>
+    </ul>
+  </li>
+  <li><a href="#personas-et-utilisateurs">Personas et Utilisateurs</a>
+  </li>
+  <li><a href="#fonctionnalités-détaillées">Fonctionnalités Détaillées</a>
+    <ul>
+      <li>4.13 <a href="#413-pages-légales-et-conformité-priorité-haute">Pages Légales et Conformité</a></li>
+    </ul>
+  </li>
+  <li><a href="#architecture-technique">Architecture Technique</a>
+  </li>
+  <li><a href="#expérience-utilisateur">Expérience Utilisateur</a>
+  </li>
+  <li><a href="#métriques-et-kpis">Métriques et KPIs</a>
+  </li>
+  <li><a href="#roadmap">Roadmap</a>
+  </li>
+  <li><a href="#contraintes-et-risques">Contraintes et Risques</a>
+  </li>
+  <li><a href="#appendices">Appendices</a>
+  </li>
+</ol>
+</div>
+
+<hr class="section-break">
+<hr class="page-break">
+<h2>1. Vue d'Ensemble</h2>
+<h3>1.1 Description du Produit</h3>
+<p>Move4Epilepsy est une plateforme web intelligente qui utilise l'intelligence artificielle et l'analyse de données pour améliorer l'accès équitable aux médicaments antiépileptiques dans le monde entier. La plateforme résout les problèmes d'asymétrie d'information et d'inadéquation entre l'offre et la demande de médicaments antiépileptiques.</p>
+<h3>1.2 Problème Résolu</h3>
+<p><strong>Problèmes identifiés :</strong></p>
+<ul>
+  <li><strong>Inégalités d'accès</strong> : 30% des patients épileptiques rencontrent des difficultés d'accès aux médicaments</li>
+  <li><strong>Asymétrie d'information</strong> : Les patients ne savent pas où trouver leurs médicaments, les pharmacies ne connaissent pas la demande locale</li>
+  <li><strong>Ruptures de stock</strong> : Manque de visibilité sur les stocks et les besoins</li>
+  <li><strong>Désinformation</strong> : 85% des personnes ont des préjugés sur l'épilepsie</li>
+  <li><strong>Manque de données centralisées</strong> : Données fragmentées empêchant une compréhension globale</li>
+</ul>
+
+<h3>1.3 Solution Proposée</h3>
+<p>Une plateforme unifiée qui :</p>
+<ul>
+  <li>Connecte intelligemment les patients aux pharmacies avec stocks disponibles</li>
+  <li>Prédit les ruptures de stock grâce à l'IA</li>
+  <li>Collecte des déclarations de santé et d'accès aux médicaments, avec accès restreint et analyses agrégées lorsque la ré-identification est empêchée</li>
+  <li>Éduque et sensibilise sur l'épilepsie</li>
+  <li>Fournit des analytics aux professionnels de santé</li>
+</ul>
+
+<h3>1.4 Alignement Stratégique</h3>
+<ul>
+  <li><strong>ODD 3.8 de l'ONU</strong> : Couverture Sanitaire Universelle</li>
+  <li><strong>Mission</strong> : Améliorer l'accès équitable aux soins pour tous</li>
+  <li><strong>Vision</strong> : Réduire les inégalités d'accès de 50% d'ici 2027</li>
+</ul>
+
+<hr class="section-break">
+<hr class="page-break">
+<h2>2. Vision et Objectifs</h2>
+<h3>2.1 Vision Produit</h3>
+<p>Créer la plateforme de référence mondiale pour l'accès aux médicaments antiépileptiques, en éliminant les barrières géographiques, économiques et informationnelles.</p>
+<h3>2.2 Objectifs Business</h3>
+<table>
+  <tr>
+    <th>Objectif</th>
+    <th>Métrique</th>
+    <th>Cible 2027</th>
+  </tr>
+  <tr>
+    <td>Réduction des inégalités d'accès</td>
+    <td>% de patients trouvant leurs médicaments</td>
+    <td>-50%</td>
+  </tr>
+  <tr>
+    <td>Base de données</td>
+    <td>Nombre de traitements enregistrés</td>
+    <td>100,000+</td>
+  </tr>
+  <tr>
+    <td>Précision prédictive</td>
+    <td>Précision des modèles IA</td>
+    <td>95%+</td>
+  </tr>
+  <tr>
+    <td>Couverture géographique</td>
+    <td>Pays actifs</td>
+    <td>20+ pays</td>
+  </tr>
+  <tr>
+    <td>Engagement pharmaciens</td>
+    <td>Taux d'adoption pharmacies</td>
+    <td>30%+</td>
+  </tr>
+</table>
+
+<h3>2.3 Objectifs Utilisateurs</h3>
+<p><strong>Pour les Patients :</strong></p>
+<ul>
+  <li>Trouver leurs médicaments en moins de 3 pharmacies visitées</li>
+  <li>Réduire le temps d'attente de 70%</li>
+  <li>Recevoir des alertes en temps réel de disponibilité</li>
+</ul>
+
+<p><strong>Pour les Pharmaciens :</strong></p>
+<ul>
+  <li>Optimiser la gestion des stocks</li>
+  <li>Anticiper la demande locale</li>
+  <li>Augmenter le chiffre d'affaires de 20%</li>
+</ul>
+
+<p><strong>Pour les Médecins :</strong></p>
+<ul>
+  <li>Accéder à des analytics sur l'efficacité des traitements</li>
+  <li>Identifier les zones à risque de rupture</li>
+  <li>Améliorer les prescriptions basées sur les données</li>
+</ul>
+
+<h3>2.4 Technology Readiness Levels (TRL)</h3>
+<p>Nous utilisons l'échelle TRL (Technology Readiness Level) pour évaluer le niveau de maturité de chaque fonctionnalité. Cette échelle de 1 à 9 permet une évaluation cohérente de la progression technologique.</p>
+<p><strong>Échelle TRL :</strong></p>
+<table>
+  <tr>
+    <th>TRL</th>
+    <th>Niveau</th>
+    <th>Description</th>
+    <th>Move4Epilepsy</th>
+  </tr>
+  <tr>
+    <td><strong>1</strong></td>
+    <td>Observation</td>
+    <td>Observation et rapports de principes scientifiques</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>2</strong></td>
+    <td>Concept</td>
+    <td>Concept et application technologique formalisés</td>
+    <td>—</td>
+  </tr>
+  <tr>
+    <td><strong>3</strong></td>
+    <td>Preuve Expérimentale</td>
+    <td>Preuve expérimentale du concept</td>
+    <td>—</td>
+  </tr>
+  <tr>
+    <td><strong>4</strong></td>
+    <td>Prototype Lab</td>
+    <td>Prototype technologique développé en lab</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><strong>5</strong></td>
+    <td>Prototype Validé</td>
+    <td>Prototype validé en environnement pertinent</td>
+    <td>Chat, Sensibilisation</td>
+  </tr>
+  <tr>
+    <td><strong>6</strong></td>
+    <td>Prototype Testé</td>
+    <td>Prototype testé en environnement opérationnel</td>
+    <td>Chat, Tendances</td>
+  </tr>
+  <tr>
+    <td><strong>7</strong></td>
+    <td>En Pré-Production</td>
+    <td>Démonstration complète en environnement opérationnel</td>
+    <td>Recherche, Matching, Stocks, Dashboard</td>
+  </tr>
+  <tr>
+    <td><strong>8</strong></td>
+    <td>Production</td>
+    <td>Système complet et qualifié en production</td>
+    <td>Recherche, Matching, Alertes, Stocks, Enregistrement</td>
+  </tr>
+  <tr>
+    <td><strong>9</strong></td>
+    <td>Production Éprouvée</td>
+    <td>Système éprouvé en exploitation opérationnelle</td>
+    <td>Recherche, Matching, Alertes, Abonnements</td>
+  </tr>
+</table>
+
+<p><strong>Fonctionnalités par TRL :</strong></p>
+<ul>
+  <li><strong>TRL 8-9 (Production Éprouvée)</strong> : Recherche de médicaments, Matching intelligent, Système d'alertes, Gestion des stocks, Enregistrement de traitements, Abonnements</li>
+  <li><strong>TRL 7 (En Pré-Production)</strong> : Dashboard global, Prédiction de ruptures (optimisation en cours)</li>
+  <li><strong>TRL 6-7 (Prototype Testé)</strong> : Chat communautaire, Système d'éducation, Questionnaires de perception</li>
+</ul>
+
+<hr class="section-break">
+<hr class="page-break">
+<h2>3. Personas et Utilisateurs</h2>
+<h3>3.1 Personas Principaux</h3>
+<h4>3.1.1 Patient Épileptique (Utilisateur Principal)</h4>
+<p><strong>Profil :</strong></p>
+<ul>
+  <li>Âge : 25-65 ans</li>
+  <li>Localisation : Principalement Bénin, expansion internationale</li>
+  <li>Besoins : Trouver rapidement ses médicaments, éviter les ruptures</li>
+  <li>Frustrations : Visiter plusieurs pharmacies, ruptures imprévisibles</li>
+  <li>Objectifs : Continuité du traitement, réduction de l'anxiété</li>
+</ul>
+
+<p><strong>Cas d'usage :</strong></p>
+<ul>
+  <li>Recherche de médicament en 3 étapes (médicament → zone → résultats)</li>
+  <li>Création d'alertes de disponibilité</li>
+  <li>Enregistrement de traitement avec données d'accès</li>
+  <li>Accès à l'éducation sur l'épilepsie</li>
+</ul>
+
+<h4>3.1.2 Pharmacien</h4>
+<p><strong>Profil :</strong></p>
+<ul>
+  <li>Gestionnaire de pharmacie</li>
+  <li>Besoins : Gérer les stocks, comprendre la demande, optimiser les commandes</li>
+  <li>Frustrations : Ruptures inattendues, manque de visibilité sur la demande</li>
+  <li>Objectifs : Réduire les ruptures, augmenter les ventes</li>
+</ul>
+
+<p><strong>Cas d'usage :</strong></p>
+<ul>
+  <li>Déclaration de stocks avec prix, délais, quantités</li>
+  <li>Consultation du dashboard avec analytics</li>
+  <li>Réception d'alertes de forte demande locale</li>
+  <li>Gestion des abonnements</li>
+</ul>
+
+<h4>3.1.3 Médecin/Neurologue</h4>
+<p><strong>Profil :</strong></p>
+<ul>
+  <li>Professionnel de santé spécialisé</li>
+  <li>Besoins : Analytics patients, identification des problèmes d'accès</li>
+  <li>Objectifs : Améliorer les prescriptions, suivre l'efficacité</li>
+</ul>
+
+<p><strong>Cas d'usage :</strong></p>
+<ul>
+  <li>Consultation du dashboard médecin</li>
+  <li>Analyse des traitements patients</li>
+  <li>Identification des zones à risque</li>
+  <li>Recommandations basées sur les données</li>
+</ul>
+
+<h4>3.1.4 Administrateur</h4>
+<p><strong>Profil :</strong></p>
+<ul>
+  <li>Gestionnaire de la plateforme</li>
+  <li>Besoins : Vue globale, gestion des utilisateurs, analytics</li>
+  <li>Objectifs : Optimiser la plateforme, assurer la qualité des données</li>
+</ul>
+
+<p><strong>Cas d'usage :</strong></p>
+<ul>
+  <li>Dashboard admin avec métriques globales</li>
+  <li>Gestion des utilisateurs et rôles</li>
+  <li>Modération du contenu</li>
+  <li>Analyse des tendances</li>
+</ul>
+
+<h3>3.2 Rôles et Permissions</h3>
+<table>
+  <tr>
+    <th>Rôle</th>
+    <th>Accès</th>
+    <th>Restrictions</th>
+  </tr>
+  <tr>
+    <td><strong>Anonyme</strong></td>
+    <td>Recherche médicaments, formulaires publics</td>
+    <td>Pas d'accès aux dashboards</td>
+  </tr>
+  <tr>
+    <td><strong>Patient</strong></td>
+    <td>Toutes les fonctionnalités publiques + alertes personnelles</td>
+    <td>Pas d'accès aux dashboards</td>
+  </tr>
+  <tr>
+    <td><strong>Pharmacien</strong></td>
+    <td>Dashboard pharmacie, gestion stocks, analytics zone</td>
+    <td>Accès limité à sa zone géographique</td>
+  </tr>
+  <tr>
+    <td><strong>Médecin</strong></td>
+    <td>Dashboard médecin, analytics patients</td>
+    <td>Accès aux données agrégées autorisées, sans coordonnées ni dossiers identifiants</td>
+  </tr>
+  <tr>
+    <td><strong>Admin</strong></td>
+    <td>Accès complet, gestion utilisateurs</td>
+    <td>Aucune restriction</td>
+  </tr>
+</table>
+
+<hr class="section-break">
+<hr class="page-break">
+<h2>4. Fonctionnalités Détaillées</h2>
+<h3>4.1 Recherche de Médicaments (Priorité: Haute) - TRL 8-9</h3>
+<p><strong>Description :</strong> Système de recherche en 3 étapes permettant aux patients de trouver leurs médicaments.</p>
+<p><strong>Flux utilisateur :</strong></p>
+<ol>
+  <li><strong>Étape 1</strong> : Sélection du médicament antiépileptique</li>
+  <li><strong>Étape 2</strong> : Sélection de la zone géographique (Département > Commune)</li>
+  <li><strong>Étape 3</strong> : Lancement de la recherche et affichage des résultats</li>
+</ol>
+
+<p><strong>Résultats de recherche :</strong></p>
+<ul>
+  <li>Liste des pharmacies avec disponibilité</li>
+  <li>Statut : Disponible / Indisponible / Non confirmé</li>
+  <li>Informations : Nom, adresse, téléphone, distance</li>
+  <li>Actions : Appeler, voir sur carte, réserver</li>
+</ul>
+
+<p><strong>Critères d'acceptation :</strong></p>
+<ul>
+  <li>✅ Recherche fonctionne sans authentification</li>
+  <li>✅ Résultats triés par distance et disponibilité</li>
+  <li>✅ Affichage du statut en temps réel</li>
+  <li>✅ Intégration avec système de matching intelligent</li>
+</ul>
+
+<p><strong>Fichiers associés :</strong></p>
+<ul>
+  <li><code>src/pages/PatientSearchPage.tsx</code></li>
+  <li><code>src/services/matchingService.ts</code></li>
+</ul>
+
+<hr class="section-break">
+<h3>4.2 Matching Intelligent (Priorité: Haute) - TRL 7-8</h3>
+<p><strong>Description :</strong> Algorithme de connexion automatique patients/pharmacies basé sur un score de pertinence.</p>
+<p><strong>Algorithme de scoring :</strong></p>
+<ul>
+  <li><strong>Disponibilité</strong> : 40% (médicament en stock)</li>
+  <li><strong>Distance</strong> : 40% (proximité géographique)</li>
+  <li><strong>Prix</strong> : 20% (prix compétitif)</li>
+</ul>
+
+<p><strong>Fonctionnalités :</strong></p>
+<ul>
+  <li>Filtrage automatique par distance maximale</li>
+  <li>Tri par score de pertinence décroissant</li>
+  <li>Calcul en temps réel</li>
+  <li>Cache pour performance</li>
+</ul>
+
+<p><strong>Critères d'acceptation :</strong></p>
+<ul>
+  <li>✅ Score calculé correctement selon la formule</li>
+  <li>✅ Résultats triés par pertinence</li>
+  <li>✅ Filtrage par distance fonctionnel</li>
+  <li>✅ Performance < 500ms pour 100 pharmacies</li>
+</ul>
+
+<p><strong>Fichiers associés :</strong></p>
+<ul>
+  <li><code>src/services/matchingService.ts</code></li>
+</ul>
+
+<hr class="section-break">
+<h3>4.3 Système d'Alertes Bidirectionnel (Priorité: Haute) - TRL 7-8</h3>
+<p><strong>Description :</strong> Système d'alertes permettant aux patients et pharmacies de communiquer.</p>
+<p><strong>Alertes Patients → Pharmacies :</strong></p>
+<ul>
+  <li>Patient crée une alerte pour un médicament dans une zone</li>
+  <li>Pharmacie reçoit notification de forte demande locale</li>
+  <li>Permet à la pharmacie d'anticiper les besoins</li>
+</ul>
+
+<p><strong>Alertes Pharmacies → Patients :</strong></p>
+<ul>
+  <li>Pharmacie déclare un stock disponible</li>
+  <li>Patients avec alertes actives dans la zone reçoivent notification</li>
+  <li>Notification par email et/ou SMS</li>
+</ul>
+
+<p><strong>Critères d'acceptation :</strong></p>
+<ul>
+  <li>✅ Création d'alerte patient fonctionnelle</li>
+  <li>✅ Notification automatique quand stock disponible</li>
+  <li>✅ Gestion des alertes (activer/désactiver/supprimer)</li>
+  <li>✅ Notifications en temps réel</li>
+</ul>
+
+<p><strong>Fichiers associés :</strong></p>
+<ul>
+  <li><code>src/services/alertService.ts</code></li>
+  <li><code>src/pages/PatientSearchPage.tsx</code></li>
+</ul>
+
+<hr class="section-break">
+<h3>4.4 Gestion des Stocks Pharmacies (Priorité: Haute) - TRL 7-8</h3>
+<p><strong>Description :</strong> Interface complète pour les pharmaciens pour déclarer et gérer leurs stocks.</p>
+<p><strong>Données collectées :</strong></p>
+<ul>
+  <li><strong>Quantité en stock</strong> : Nombre d'unités disponibles</li>
+  <li><strong>Prix unitaire</strong> : Prix en monnaie locale</li>
+  <li><strong>Délai de réapprovisionnement</strong> : Jours avant réappro</li>
+  <li><strong>Quantité minimale de commande</strong> : Seuil de commande</li>
+  <li><strong>Historique des ruptures</strong> : Suivi des ruptures passées</li>
+</ul>
+
+<p><strong>Fonctionnalités :</strong></p>
+<ul>
+  <li>Déclaration de stock par médicament</li>
+  <li>Mise à jour en temps réel</li>
+  <li>Visualisation de l'historique</li>
+  <li>Prédictions de rupture (jours avant rupture)</li>
+</ul>
+
+<p><strong>Critères d'acceptation :</strong></p>
+<ul>
+  <li>✅ Déclaration de stock complète</li>
+  <li>✅ Mise à jour en temps réel</li>
+  <li>✅ Calcul automatique des jours avant rupture</li>
+  <li>✅ Historique accessible</li>
+</ul>
+
+<p><strong>Fichiers associés :</strong></p>
+<ul>
+  <li><code>src/pages/PharmacyStockPage.tsx</code></li>
+  <li><code>src/services/pharmacyService.ts</code></li>
+</ul>
+
+<hr class="section-break">
+<h3>4.5 Enregistrement de Traitements Patients (Priorité: Moyenne) - TRL 8</h3>
+<p><strong>Description :</strong> Formulaire enrichi pour collecter les données d'accès aux médicaments.</p>
+<p><strong>Données collectées :</strong></p>
+<ul>
+  <li>Informations de traitement (médicament, dosage, fréquence)</li>
+  <li><strong>Période de traitement</strong> (pour les analyses temporelles) :</li>
+  <li><code>treatment_start_date</code> : Date de début du traitement</li>
+  <li><code>treatment_end_date</code> : Date de fin du traitement (optionnel)</li>
+  <li><code>treatment_is_ongoing</code> : Statut « traitement en cours » (booléen)</li>
+  <li><strong>Données d'accès enrichies</strong> :</li>
+  <li><code>found_medication</code> : Facilité à trouver (facile/difficile/impossible)</li>
+  <li><code>pharmacies_visited</code> : Nombre de pharmacies visitées <strong>avant de trouver le médicament</strong> (parcours patient)</li>
+  <li><code>waiting_time</code> : Délai d'obtention (immédiat, jours, semaines)</li>
+  <li><code>stockout_frequency</code> : Fréquence des ruptures (jamais/rarement/souvent)</li>
+  <li>Alertes de disponibilité : l'envoi par e-mail est requis dans le parcours retenu ; l'adresse doit être vérifiée et rattachée aux déclarations concernées. Le booléen historique <code>wants_alert</code> ne constitue ni la preuve de vérification, ni celle du consentement.</li>
+  <li><strong>Données socio-économiques et cliniques</strong> (optionnelles) : niveau d'études, revenus, statut d'emploi, effets secondaires, difficultés, commentaires libres, nombre de comprimés (matin/midi/soir), médicament sans alternative, etc.</li>
+  <li><strong>Adresse e-mail</strong> : requise et vérifiée pour l'envoi des alertes de disponibilité et pour permettre au déclarant de retrouver et gérer ses traitements. Aucun nom ni compte patient n'est requis. L'e-mail est une donnée personnelle et son association à un traitement révèle potentiellement une information de santé ; il ne doit pas être exposé dans les dashboards, exports analytiques ou courriels au-delà du nécessaire.</li>
+</ul>
+
+<p><strong>Consentement et confirmation :</strong></p>
+<ul>
+  <li>Conserver le double contrôle du parcours React : case de consentement explicite, non précochée, dans le formulaire ; puis récapitulatif complet et confirmation finale avant écriture définitive.</li>
+  <li>La confirmation finale est la seule étape qui crée le traitement. L'adresse e-mail doit être vérifiée avant cette confirmation ; aucun traitement définitif ne doit être créé au stade du formulaire ou de la demande de code. Les codes et états de vérification sont temporaires.</li>
+  <li>L'API doit enregistrer une preuve minimale et vérifiable : finalité(s), version du texte présenté, horodatage du consentement, horodatage de la confirmation finale, vérification de l'e-mail et, le cas échéant, horodatage du retrait. Les décisions relatives aux usages analytiques et aux alertes doivent être identifiables séparément, même si les alertes sont requises par le parcours produit.</li>
+  <li>Les traitements et coordonnées ne sont pas réputés anonymes du seul fait qu'aucun nom ou compte n'est demandé. Les champs de santé, la localisation et l'e-mail peuvent permettre une identification directe ou indirecte ; limiter les accès et agréger les statistiques avant publication.</li>
+  <li>Le formulaire explique que l'envoi des alertes par e-mail est requis, les événements qui déclenchent un message et l'usage de l'adresse. La base légale et la condition applicable aux données de santé, ainsi que le caractère requis de l'e-mail et des alertes, doivent être validés par le responsable du traitement avant mise en production. La case de consentement et la confirmation de formulaire ne remplacent pas cette validation.</li>
+</ul>
+
+<p><strong>Gestion ultérieure :</strong></p>
+<ul>
+  <li>La personne saisit son adresse puis la vérifie à nouveau par un code à usage unique avant de consulter ses traitements associés, les modifier ou les supprimer. Les réponses de l'API ne révèlent pas si une adresse ou une déclaration existe.</li>
+  <li>Autoriser la modification individuelle des traitements et la sélection d'un ou plusieurs traitements pour suppression.</li>
+  <li>Toute suppression doit être confirmée explicitement et exécutée côté API ; une suppression groupée est atomique.</li>
+  <li>Le retrait du consentement doit arrêter les alertes concernées et lancer la suppression du ou des traitements visés selon la règle produit, sous réserve des obligations légales applicables. Retirer aussi les enregistrements supprimés des vues analytiques et recalculer les indicateurs concernés.</li>
+  <li>Définir et expliquer le délai de purge des sauvegardes. Ne conserver que des résultats agrégés rendus irréversiblement anonymes ; définir séparément la durée de conservation de la preuve de consentement.</li>
+</ul>
+
+<p><strong>Critères d'acceptation :</strong></p>
+<ul>
+  <li>✅ Formulaire accessible sans authentification</li>
+  <li>✅ Toutes les données d'accès collectées</li>
+  <li>✅ E-mail vérifié pour les alertes et la gestion du traitement</li>
+  <li>✅ Consentement et confirmation finale conservés avec version et horodatage</li>
+  <li>✅ Gestion autorisée uniquement après vérification de l'e-mail</li>
+  <li>✅ Validation des données</li>
+</ul>
+
+<p><strong>Fichiers associés :</strong></p>
+<ul>
+  <li><code>src/pages/MedicationRegistrationPage.tsx</code></li>
+  <li><code>src/services/patientService.ts</code></li>
+  <li><code>src/utils/dataAnonymization.ts</code></li>
+</ul>
+
+<hr class="section-break">
+<h3>4.6 Dashboards Analytics</h3>
+<h4>4.6.1 Dashboard Global d'Accès (Priorité: Moyenne) - TRL 7</h4>
+<p><strong>Description :</strong> Dashboard global de l'accès aux médicaments — toutes les analyses sont calculées à partir des données réelles de l'API (GET <code>/patients/treatments</code>, base move4epilepsy-api). Aucune donnée improvisée ; les indicateurs utilisent les dates de début, de fin et le statut « en cours » des traitements.</p>
+<p><strong>Actions utilisateur :</strong></p>
+<ul>
+  <li><strong>Actualiser le dashboard</strong> : rechargement des données et des analyses</li>
+  <li><strong>Enregistrer un traitement</strong> : lien vers le formulaire d'enregistrement</li>
+</ul>
+
+<p><strong>Sections du dashboard (avec loaders par section pendant le chargement) :</strong></p>
+<ol>
+  <li><strong>Géolocalisation de la demande</strong></li>
+</ol>
+
+<p>Carte Leaflet (fond OpenStreetMap). Les adresses issues de la base sont géocodées via l’API Nominatim (OpenStreetMap) ; marqueurs par localisation avec popup (effectifs, efficacité moyenne, comprimés/jour, coût, ruptures, charge en comprimés, médicaments sans alternative).</p>
+<ol>
+  <li><strong>Indicateurs globaux</strong></li>
+</ol>
+
+<p>Traitements analysés, taux d'accès moyen, barrière financière (%), comprimés/jour moyenne.</p>
+<ol>
+  <li><strong>Analyse de l'accès aux traitements</strong></li>
+</ol>
+
+<p>Répartition des modes d'accès déclarés, nombre moyen de pharmacies visitées avant d'obtenir le médicament, délai d'obtention le plus fréquent.</p>
+<ol>
+  <li><strong>Analyse démographique</strong></li>
+</ol>
+
+<p>Répartition par tranches d'âge et par sexe (graphiques âge/sexe).</p>
+<ol>
+  <li><strong>Évolution temporelle de l'accès et des ruptures</strong></li>
+</ol>
+
+<p>Par période (mois) : nombre de traitements actifs, taux d'accès, taux de rupture ; <strong>médicaments (effectifs) par période</strong> dans le tableau et dans le tooltip du graphique. Périodes calculées à partir des dates de début, de fin et du statut « en cours ».</p>
+<ol>
+  <li><strong>Répartition des traitements par médicament</strong></li>
+</ol>
+
+<p>Top des médicaments les plus enregistrés (graphique en camembert).</p>
+<ol>
+  <li><strong>Charge en comprimés et importance des médicaments</strong></li>
+</ol>
+
+<p>Par médicament : charge moyenne en comprimés/jour, part sans alternative en cas de rupture ; mise en avant de l’importance clinique des médicaments sans alternative.</p>
+<ol>
+  <li><strong>Situations où l'accès est le plus fragile</strong></li>
+</ol>
+
+<p>Croisement charge en comprimés, ruptures, absence d’alternative ; score de fragilité et tableau des médicaments les plus sensibles.</p>
+<ol>
+  <li><strong>Ruptures de stock : importance et conséquences</strong></li>
+</ol>
+
+<p>Effectifs avec/sans rupture, efficacité perçue, parcours patient (pharmacies visitées), conclusions sous forme de cartes (Alerte, Point clé, Observation).</p>
+<ol>
+  <li><strong>Analyse socio-économique de l'accès</strong></li>
+</ol>
+
+<p>Impact du niveau d'études, des revenus et du statut d'emploi sur les difficultés d'accès ; barres de progression et graphiques par statut d'emploi et par tranche de revenu ; mise en avant des profils vulnérables (ex. chômeur, sans salaire déclaré).</p>
+<ol>
+  <li><strong>Effets secondaires les plus fréquents</strong></li>
+</ol>
+
+<p>Graphique et conclusions à partir des champs libres déclarés.</p>
+<ol>
+  <li><strong>Difficultés d'accès les plus fréquentes</strong></li>
+</ol>
+
+<p>Graphique et conclusions sur les obstacles mentionnés.</p>
+<ol>
+  <li><strong>Commentaires additionnels des patients</strong></li>
+</ol>
+
+<p>Thèmes les plus cités dans les commentaires libres, avec conclusions.</p>
+<p><strong>Données et technique :</strong></p>
+<ul>
+  <li>Source : API move4epilepsy-api, endpoint GET <code>/patients/treatments</code> (limite adaptée pour l’analytics).</li>
+  <li>Périodes temporelles : basées uniquement sur <code>treatment_start_date</code>, <code>treatment_end_date</code>, <code>treatment_is_ongoing</code> (pas sur <code>created_at</code>).</li>
+  <li>Loaders : chaque section affiche un état de chargement dédié (spinner + message), comme pour la géolocalisation.</li>
+</ul>
+
+<p><strong>Fichiers associés :</strong></p>
+<ul>
+  <li><code>src/pages/AccessDashboard.tsx</code></li>
+  <li><code>src/services/patientService.api.ts</code> (méthode <code>getTemporalAccessAnalysis</code>, géocodage Nominatim côté front)</li>
+</ul>
+
+<h4>4.6.2 Dashboard Pharmacien (Priorité: Haute) - TRL 7-8</h4>
+<p><strong>Description :</strong> Analytics pour les pharmaciens sur leur zone.</p>
+<p><strong>Métriques affichées :</strong></p>
+<ul>
+  <li>Stocks actuels et prédictions</li>
+  <li>Demandes locales</li>
+  <li>Alertes de forte demande</li>
+  <li>Performance de la pharmacie</li>
+</ul>
+
+<p><strong>Fichiers associés :</strong></p>
+<ul>
+  <li><code>src/pages/PharmacyDashboard.tsx</code></li>
+</ul>
+
+<h4>4.6.3 Dashboard Médecin (Priorité: Moyenne) - TRL 7</h4>
+<p><strong>Description :</strong> Analytics sur les traitements patients.</p>
+<p><strong>Métriques affichées :</strong></p>
+<ul>
+  <li>Efficacité des traitements</li>
+  <li>Zones à risque de rupture</li>
+  <li>Recommandations basées sur les données</li>
+  <li>Statistiques patients agrégées, sans coordonnées ni dossiers identifiants</li>
+</ul>
+
+<p><strong>Fichiers associés :</strong></p>
+<ul>
+  <li><code>src/pages/DoctorDashboard.tsx</code></li>
+</ul>
+
+<h4>4.6.4 Dashboard Admin (Priorité: Haute) - TRL 7-8</h4>
+<p><strong>Description :</strong> Vue complète pour la gestion de la plateforme.</p>
+<p><strong>Métriques affichées :</strong></p>
+<ul>
+  <li>Utilisateurs actifs</li>
+  <li>Statistiques globales</li>
+  <li>Gestion des utilisateurs</li>
+  <li>Modération du contenu</li>
+</ul>
+
+<p><strong>Fichiers associés :</strong></p>
+<ul>
+  <li><code>src/pages/AdminDashboard.tsx</code></li>
+</ul>
+
+<hr class="section-break">
+<h3>4.7 Système d'Abonnements (Priorité: Moyenne) - TRL 7-8</h3>
+<p><strong>Description :</strong> Plans d'abonnement adaptés par pays avec tarification locale.</p>
+<p><strong>Plans disponibles :</strong></p>
+<ul>
+  <li><strong>Basic</strong> : Fonctionnalités essentielles</li>
+  <li><strong>Professional</strong> : Analytics avancés</li>
+  <li><strong>Premium</strong> : Toutes les fonctionnalités + support prioritaire</li>
+</ul>
+
+<p><strong>Tarification :</strong></p>
+<ul>
+  <li>Adaptée au pouvoir d'achat local</li>
+  <li>Paiements en monnaie locale</li>
+  <li>Essai gratuit 30 jours</li>
+</ul>
+
+<p><strong>Critères d'acceptation :</strong></p>
+<ul>
+  <li>✅ Plans configurables par pays</li>
+  <li>✅ Tarification adaptée</li>
+  <li>✅ Gestion des paiements</li>
+  <li>✅ Essai gratuit fonctionnel</li>
+</ul>
+
+<p><strong>Fichiers associés :</strong></p>
+<ul>
+  <li><code>src/pages/SubscriptionPage.tsx</code></li>
+  <li><code>src/services/subscriptionService.ts</code></li>
+</ul>
+
+<hr class="section-break">
+<h3>4.8 Chat Communautaire (Priorité: Basse) - TRL 6-7</h3>
+<p><strong>Description :</strong> Espace de discussion <strong>simple</strong> (sans bot, sans analyse automatique) où la communauté peut échanger librement sur l'épilepsie <strong>sans tabou</strong> — partager vécu, questions, soutien et informations dans un cadre bienveillant.</p>
+<p><strong>Fonctionnalités :</strong></p>
+<ul>
+  <li><strong>Salon public</strong> : canaux thématiques (ex. Général, Support, Médicaments) ouverts à tous</li>
+  <li><strong>Messagerie privée (inbox)</strong> : possibilité d'écrire en <strong>tête-à-tête</strong> à une personne de son choix</li>
+  <li><strong>Pseudonymes</strong> : protection de la vie privée tout en favorisant l'expression libre</li>
+  <li><strong>Modération humaine</strong> : signalement d'abus et modération manuelle</li>
+  <li><strong>Liberté de parole</strong> : espace dédié à briser les tabous autour de l'épilepsie</li>
+</ul>
+
+<p><strong>Critères d'acceptation :</strong></p>
+<ul>
+  <li>✅ Canaux publics fonctionnels</li>
+  <li>✅ Messagerie privée (inbox) entre utilisateurs</li>
+  <li>✅ Pseudonymes uniques</li>
+  <li>✅ Signalement et modération humaine opérationnels</li>
+</ul>
+
+<p><strong>Fichiers associés :</strong></p>
+<ul>
+  <li><code>src/pages/ChatPage.tsx</code></li>
+  <li><code>src/services/chatService.ts</code></li>
+</ul>
+
+<hr class="section-break">
+<h3>4.9 Éducation et Sensibilisation (Priorité: Moyenne) - TRL 6-7</h3>
+<p><strong>Pages éducatives :</strong></p>
+<ul>
+  <li><strong>Awareness</strong> : Sensibilisation sur l'épilepsie</li>
+  <li><strong>Truth</strong> : Combattre les idées reçues</li>
+  <li><strong>Resources</strong> : Ressources éducatives</li>
+  <li><strong>Rights</strong> : Droits des patients</li>
+</ul>
+
+<p><strong>Fichiers associés :</strong></p>
+<ul>
+  <li><code>src/pages/AwarenessPage.tsx</code></li>
+  <li><code>src/pages/TruthPage.tsx</code></li>
+  <li><code>src/pages/ResourcesPage.tsx</code></li>
+  <li><code>src/pages/RightsPage.tsx</code></li>
+</ul>
+
+<hr class="section-break">
+<h3>4.10 Autres Fonctionnalités - TRL 6-7</h3>
+<ul>
+  <li><strong>Questionnaires de Perception</strong> : <code>EpilepsyPerceptionsPage.tsx</code></li>
+  <li><strong>Signalement de Médicaments</strong> : <code>MedicineReportPage.tsx</code></li>
+  <li><strong>Partenariats</strong> : <code>PartnerPage.tsx</code></li>
+  <li><strong>Carte des Localisations</strong> : <code>LocationsMapPage.tsx</code></li>
+  <li><strong>Tendances</strong> : <code>TrendsPage.tsx</code></li>
+</ul>
+
+<hr class="section-break">
+<h3>4.13 Pages Légales et Conformité (Priorité: Haute)</h3>
+<h4>4.13.1 Information sur la protection des données (RGPD)</h4>
+<p><strong>Description :</strong> Informer clairement sur les données et les usages avant la collecte, les droits des personnes et les moyens de les exercer. La page pédagogique complète la politique de confidentialité, mais ne constitue ni un avis juridique ni une preuve de conformité.</p>
+<p><strong>Route :</strong></p>
+<ul>
+  <li>Route principale : <code>#protection-des-donnees</code> (explicite et claire)</li>
+  <li>Routes de compatibilité : <code>#privacy</code>, <code>#rgpd</code> (redirigent vers la route principale)</li>
+</ul>
+
+<p><strong>Sections principales :</strong></p>
+<ol>
+  <li><strong>Principes de protection</strong></li>
+</ol>
+
+<ul>
+  <li>Ne pas qualifier d'anonymes des données liées à un e-mail vérifié, ni des données de santé ou de localisation potentiellement ré-identifiantes.</li>
+  <li>Expliquer les finalités, la base légale à valider, les destinataires, la durée de conservation, les droits et les contacts du responsable.</li>
+  <li>Collecter seulement les informations nécessaires, protéger l'accès et publier des statistiques agrégées uniquement lorsque la ré-identification est raisonnablement empêchée.</li>
+</ul>
+
+<ol>
+  <li><strong>Mesures de sécurité</strong></li>
+</ol>
+
+<ul>
+  <li>Décrire uniquement les mesures effectivement mises en place et vérifiées.</li>
+  <li>Les codes de vérification doivent être temporaires, protégés contre les tentatives répétées, non inclus dans les URL ou journaux et ne donner accès qu'aux traitements de l'adresse vérifiée.</li>
+</ul>
+
+<ol>
+  <li><strong>Données et finalités</strong></li>
+</ol>
+
+<ul>
+  <li>Décrire les données de traitement et d'accès, coordonnées de contact/alerte, preuve de consentement et données techniques réellement utilisées.</li>
+  <li>Distinguer les données nécessaires à l'alerte des données exploitées à des fins d'analyse.</li>
+</ul>
+
+<ol>
+  <li><strong>Droits et gestion des traitements</strong></li>
+</ol>
+
+<ul>
+  <li>Permettre à la personne qui vérifie son e-mail de consulter, rectifier et supprimer un ou plusieurs de ses traitements.</li>
+  <li>Le retrait du consentement met fin aux alertes concernées et entraîne la suppression des traitements associés conformément à la règle produit et aux obligations applicables.</li>
+</ul>
+
+<ol>
+  <li><strong>Droits des personnes selon le RGPD</strong></li>
+</ol>
+
+<ul>
+  <li>Droit d'information (Art. 13-14 RGPD)</li>
+  <li>Droit d'accès (Art. 15 RGPD)</li>
+  <li>Droit de rectification (Art. 16 RGPD)</li>
+  <li>Droit à l'effacement (Art. 17 RGPD)</li>
+  <li>Droit à la portabilité (Art. 20 RGPD)</li>
+  <li>Droit d'opposition (Art. 21 RGPD)</li>
+  <li>Droit à la limitation (Art. 18 RGPD)</li>
+  <li>Droit de retrait du consentement (Art. 7.3 RGPD)</li>
+</ul>
+
+<ol>
+  <li><strong>Cadre légal et responsabilités</strong></li>
+</ol>
+
+<ul>
+  <li>Identifier le responsable du traitement, ses coordonnées, les bases légales et conditions applicables aux données de santé, les sous-traitants/destinataires, l'hébergement et les transferts, ainsi que les durées de conservation.</li>
+  <li>Les législations nationales et certifications ne sont mentionnées comme applicables ou obtenues qu'après vérification et validation documentées.</li>
+</ul>
+
+<ol>
+  <li><strong>Consentement</strong></li>
+</ol>
+
+<ul>
+  <li>Présenter le choix dans le formulaire puis un récapitulatif complet avant enregistrement définitif.</li>
+  <li>Conserver les versions et horodatages de ces étapes ; fournir une action compréhensible pour retirer le consentement.</li>
+  <li>Ne pas inventer d'identité de responsable, d'adresse DPO, de certification ou de délai juridique non confirmé.</li>
+</ul>
+
+<p><strong>Critères d'acceptation :</strong></p>
+<ul>
+  <li>Page accessible depuis les liens légaux et distincte des conditions d'utilisation.</li>
+  <li>Informations exactes, compréhensibles et cohérentes avec les pratiques réellement en place.</li>
+  <li>Coordonnées et informations légales requises validées avant publication ; aucun engagement de conformité ou certification non vérifié.</li>
+</ul>
+
+<p><strong>Fichiers associés :</strong></p>
+<ul>
+  <li><code>src/pages/PrivacyPage.tsx</code></li>
+  <li><code>src/App.tsx</code> (routage)</li>
+</ul>
+
+<hr class="section-break">
+<h4>4.13.2 Page de Conditions d'Utilisation</h4>
+<p><strong>Description :</strong> Page complète dédiée aux conditions d'utilisation de la plateforme Move4Epilepsy.</p>
+<p><strong>Route :</strong></p>
+<ul>
+  <li>Route principale : <code>#conditions-utilisation</code> (explicite et claire)</li>
+  <li>Route de compatibilité : <code>#terms</code> (redirige vers la route principale)</li>
+</ul>
+
+<p><strong>Sections principales :</strong></p>
+<ol>
+  <li><strong>Acceptation des Conditions</strong></li>
+</ol>
+
+<ul>
+  <li>Acceptation pleine et entière</li>
+  <li>Modifications des conditions</li>
+  <li>Acceptation continue</li>
+</ul>
+
+<ol>
+  <li><strong>Utilisation de la Plateforme</strong></li>
+</ol>
+
+<ul>
+  <li>Usage légitime et conforme</li>
+  <li>Informations exactes et à jour</li>
+  <li>Interdiction d'usage frauduleux</li>
+  <li>Responsabilité du compte</li>
+</ul>
+
+<ol>
+  <li><strong>Propriété Intellectuelle</strong></li>
+</ol>
+
+<ul>
+  <li>Protection des contenus</li>
+  <li>Droits d'auteur</li>
+  <li>Propriété intellectuelle des contenus ; traitement des données personnelles régi par les informations de confidentialité et le cadre légal applicable</li>
+  <li>Droits des utilisateurs</li>
+</ul>
+
+<ol>
+  <li><strong>Utilisations Interdites</strong></li>
+</ol>
+
+<ul>
+  <li>Accès non autorisé</li>
+  <li>Transmission de virus</li>
+  <li>Usurpation d'identité</li>
+  <li>Collecte automatisée</li>
+  <li>Informations médicales erronées</li>
+  <li>Violation des lois</li>
+</ul>
+
+<ol>
+  <li><strong>Comptes Utilisateurs</strong></li>
+</ol>
+
+<ul>
+  <li>Âge minimum (18 ans)</li>
+  <li>Un compte par personne</li>
+  <li>Responsabilité des activités</li>
+  <li>Suspension/suppression en cas de violation</li>
+</ul>
+
+<ol>
+  <li><strong>Responsabilités et Limitations</strong></li>
+</ol>
+
+<ul>
+  <li>Plateforme fournie "en l'état"</li>
+  <li>Pas de garantie d'exactitude</li>
+  <li>Limitation de responsabilité</li>
+  <li>Ne remplace pas les conseils médicaux</li>
+  <li>Interruption/modification possible</li>
+</ul>
+
+<ol>
+  <li><strong>Modifications et Disponibilité</strong></li>
+</ol>
+
+<ul>
+  <li>Modifications possibles à tout moment</li>
+  <li>Disponibilité 24/7 non garantie</li>
+  <li>Communication des modifications importantes</li>
+  <li>Interruptions techniques</li>
+</ul>
+
+<ol>
+  <li><strong>Droit Applicable et Juridiction</strong></li>
+</ol>
+
+<ul>
+  <li>Droit applicable selon juridiction</li>
+  <li>Compétence des tribunaux</li>
+  <li>Version française faisant foi</li>
+  <li>Invalidité partielle</li>
+</ul>
+
+<ol>
+  <li><strong>Droits des Utilisateurs</strong></li>
+</ol>
+
+<ul>
+  <li>Droit d'accès</li>
+  <li>Droit de rectification</li>
+  <li>Droit de résiliation</li>
+  <li>Droit de portabilité</li>
+</ul>
+
+<ol>
+  <li><strong>Contact et Support</strong></li>
+</ol>
+
+<ul>
+  <li>Formulaire de contact</li>
+  <li>Email : contact@move4epilepsy.fr</li>
+  <li>Délai de réponse : 48 heures</li>
+</ul>
+
+<ol>
+  <li><strong>Mentions Légales</strong></li>
+</ol>
+
+<ul>
+  <li>Éditeur de la plateforme</li>
+  <li>Hébergement (Supabase)</li>
+  <li>Dernière mise à jour</li>
+  <li>Liens utiles</li>
+</ul>
+
+<p><strong>Critères d'acceptation :</strong></p>
+<ul>
+  <li>✅ Page accessible via route explicite <code>#conditions-utilisation</code></li>
+  <li>✅ Compatibilité avec route <code>#terms</code></li>
+  <li>✅ Toutes les sections documentées</li>
+  <li>✅ Liens vers page de protection des données</li>
+  <li>✅ Design cohérent avec le reste de la plateforme</li>
+  <li>✅ Accessible depuis le footer</li>
+</ul>
+
+<p><strong>Fichiers associés :</strong></p>
+<ul>
+  <li><code>src/pages/TermsOfUsePage.tsx</code></li>
+  <li><code>src/App.tsx</code> (routage)</li>
+</ul>
+
+<p><strong>Intégration :</strong></p>
+<ul>
+  <li>Lien dans le footer : "Conditions d'utilisation" → <code>#conditions-utilisation</code></li>
+  <li>Lien dans la page de protection des données (référence croisée)</li>
+</ul>
+
+<hr class="section-break">
+<hr class="page-break">
+<h2>5. Architecture Technique</h2>
+<h3>5.1 Stack Technologique</h3>
+<p><strong>Frontend :</strong></p>
+<ul>
+  <li><strong>React 18.3.1</strong> : Framework UI</li>
+  <li><strong>TypeScript 5.5.3</strong> : Typage statique</li>
+  <li><strong>Tailwind CSS 3.4.1</strong> : Framework CSS</li>
+  <li><strong>Vite 7.1.4</strong> : Build tool</li>
+  <li><strong>React Router</strong> : Navigation (via hash routing)</li>
+  <li><strong>i18next</strong> : Internationalisation (FR, EN, IT)</li>
+  <li><strong>Lucide React</strong> : Icônes</li>
+  <li><strong>Recharts</strong> : Graphiques</li>
+  <li><strong>Leaflet</strong> : Cartes interactives</li>
+</ul>
+
+<p><strong>Backend :</strong></p>
+<ul>
+  <li><strong>API move4epilepsy-api</strong> (FastAPI) : Endpoints pour les traitements patients (GET/POST <code>/patients/treatments</code>), médicaments, pharmacies, etc. Données stockées en base (PostgreSQL ou équivalent). Le dashboard global d’accès consomme exclusivement cette API pour ses analyses.</li>
+  <li><strong>Supabase</strong> (selon déploiement) : Backend-as-a-Service optionnel</li>
+  <li>PostgreSQL : Base de données</li>
+  <li>Row Level Security (RLS) : Sécurité granulaire</li>
+  <li>Real-time : Notifications instantanées</li>
+  <li>Authentication : Gestion des utilisateurs</li>
+  <li>Storage : Stockage de fichiers</li>
+</ul>
+
+<p><strong>Outils de Développement :</strong></p>
+<ul>
+  <li><strong>Vitest</strong> : Tests unitaires</li>
+  <li><strong>ESLint</strong> : Linting</li>
+  <li><strong>PostCSS</strong> : Traitement CSS</li>
+  <li><strong>TypeScript Strict Mode</strong> : Sécurité de type</li>
+</ul>
+
+<h3>5.2 Architecture Base de Données</h3>
+<p><strong>Tables Principales :</strong></p>
+<h4>Gestion des Utilisateurs</h4>
+<ul>
+  <li><code>user_profiles</code> : Profils utilisateurs avec pseudonymes</li>
+  <li><code>user_roles</code> : Rôles (admin, pharmacien, medecin, patient)</li>
+</ul>
+
+<h4>Médicaments et Stocks</h4>
+<ul>
+  <li><code>medications</code> : Catalogue des médicaments antiépileptiques</li>
+  <li><code>pharmacies</code> : Réseau de pharmacies avec géolocalisation</li>
+  <li><code>pharmacy_stocks</code> : Stocks détaillés (quantité, prix, délais, historique)</li>
+</ul>
+
+<h4>Recherche et Alertes</h4>
+<ul>
+  <li><code>patient_searches</code> : Analytics de recherche</li>
+  <li><code>search_alerts</code> : Alertes patients</li>
+  <li><code>alerts</code> : Système d'alertes bidirectionnel</li>
+  <li><code>stockout_alerts</code> : Suivi des ruptures de stock</li>
+</ul>
+
+<h4>Données Cliniques</h4>
+<ul>
+  <li><code>patient_treatments</code> : Déclarations de traitements et données d'accès/santé, potentiellement ré-identifiantes. Champs principaux : <code>medication_name</code>, <code>treatment_start_date</code>, <code>treatment_end_date</code>, <code>treatment_is_ongoing</code>, <code>found_medication</code>, <code>pharmacies_visited</code> (nombre de pharmacies visitées avant de trouver le médicament), <code>waiting_time</code>, <code>stockout_frequency</code>, <code>effectiveness</code>, <code>education_level</code>, <code>minimum_salary</code>, <code>employment_status</code>, <code>has_alternative_medication</code>, <code>morning_pills</code> / <code>noon_pills</code> / <code>evening_pills</code>, <code>side_effects</code>, <code>difficulties</code>, <code>additional_comments</code>, etc. Évolutions requises : e-mail d'alerte vérifié lié aux déclarations, consentement versionné et horodaté, et mécanisme temporaire de vérification pour la gestion par la personne.</li>
+  <li>Une preuve de consentement distincte des données cliniques doit conserver les finalités, les versions de texte, les horodatages des deux confirmations et le retrait éventuel, selon une durée documentée. Les codes OTP et sessions de gestion sont temporaires et ne sont pas stockés en clair.</li>
+</ul>
+
+<h4>Communauté</h4>
+<ul>
+  <li><code>chat_channels</code> : Canaux de discussion publics</li>
+  <li><code>chat_messages</code> : Messages des salons publics</li>
+  <li><code>direct_messages</code> : Messagerie privée (inbox) entre utilisateurs</li>
+  <li><code>message_reports</code> : Signalements (modération humaine)</li>
+</ul>
+
+<h4>Abonnements</h4>
+<ul>
+  <li><code>subscription_plans</code> : Plans d'abonnement</li>
+  <li><code>country_pricing</code> : Tarification par pays</li>
+  <li><code>pharmacy_subscriptions</code> : Abonnements actifs</li>
+  <li><code>subscription_payments</code> : Historique paiements</li>
+</ul>
+
+<h4>Analytics</h4>
+<ul>
+  <li><code>demand_analytics</code> : Analyses de demande</li>
+  <li><code>stockout_predictions</code> : Prédictions IA</li>
+</ul>
+
+<h3>5.3 Sécurité et protection des données</h3>
+<ul>
+  <li>Les traitements et coordonnées associés sont des données personnelles/sensibles à protéger, même lorsque le formulaire ne demande ni nom ni compte.</li>
+  <li>Les lectures et modifications globales restent réservées aux rôles autorisés. La gestion par e-mail vérifié doit être strictement limitée aux traitements associés à cette adresse et ne doit pas exposer de données à des tiers.</li>
+  <li>Les codes de vérification et jetons de gestion sont temporaires, à usage contrôlé, limités en tentatives et exclus des URL/journaux. Les réponses ne doivent pas permettre l'énumération d'adresses ou de traitements.</li>
+  <li>Les suppressions doivent être appliquées en base et propagées aux vues, caches et agrégats concernés ; documenter les exceptions et délais de purge des sauvegardes.</li>
+  <li>Les mesures techniques, certifications, politiques RLS, durées de conservation et affirmations de conformité doivent être documentées uniquement après vérification du déploiement réel.</li>
+</ul>
+
+<h3>5.4 Performance</h3>
+<p><strong>Optimisations :</strong></p>
+<ul>
+  <li>Index sur colonnes fréquemment requêtées</li>
+  <li>Cache pour résultats de matching</li>
+  <li>Lazy loading des composants</li>
+  <li>Code splitting par route</li>
+</ul>
+
+<p><strong>Métriques cibles :</strong></p>
+<ul>
+  <li>Temps de chargement initial : < 2s</li>
+  <li>Temps de réponse API : < 500ms</li>
+  <li>Matching intelligent : < 500ms pour 100 pharmacies</li>
+</ul>
+
+<hr class="section-break">
+<hr class="page-break">
+<h2>6. Expérience Utilisateur</h2>
+<h3>6.1 Design System</h3>
+<p><strong>Palette de Couleurs :</strong></p>
+<ul>
+  <li><strong>Lavender</strong> : Couleur principale (#BA55D3, #E6E6FA)</li>
+  <li><strong>Purple</strong> : Couleur secondaire (#9932CC, #8B008B)</li>
+  <li><strong>Semantic Colors</strong> : Vert (succès), Rouge (erreur), Bleu (info)</li>
+</ul>
+
+<p><strong>Composants UI :</strong></p>
+<ul>
+  <li>Cards avec ombres et hover effects</li>
+  <li>Boutons avec transitions fluides</li>
+  <li>Formulaires avec validation</li>
+  <li>Modals responsives</li>
+</ul>
+
+<h3>6.2 Responsive Design</h3>
+<ul>
+  <li><strong>Mobile First</strong> : Optimisé pour mobile</li>
+  <li><strong>Breakpoints</strong> : sm, md, lg, xl</li>
+  <li><strong>Touch Friendly</strong> : Boutons et interactions adaptés</li>
+</ul>
+
+<h3>6.3 Internationalisation</h3>
+<p><strong>Langues supportées :</strong></p>
+<ul>
+  <li>Français (FR) - Par défaut</li>
+  <li>Anglais (EN)</li>
+  <li>Italien (IT)</li>
+</ul>
+
+<p><strong>Fichiers de traduction :</strong></p>
+<ul>
+  <li><code>src/locales/fr/translation.json</code></li>
+  <li><code>src/locales/en/translation.json</code></li>
+  <li><code>src/locales/it/translation.json</code></li>
+</ul>
+
+<h3>6.4 Accessibilité</h3>
+<ul>
+  <li>Navigation au clavier</li>
+  <li>Contraste de couleurs WCAG AA</li>
+  <li>Labels ARIA</li>
+  <li>Structure sémantique HTML</li>
+</ul>
+
+<hr class="section-break">
+<hr class="page-break">
+<h2>7. Métriques et KPIs</h2>
+<h3>7.1 Métriques Utilisateurs</h3>
+<table>
+  <tr>
+    <th>Métrique</th>
+    <th>Description</th>
+    <th>Cible</th>
+  </tr>
+  <tr>
+    <td><strong>Utilisateurs actifs mensuels (MAU)</strong></td>
+    <td>Nombre d'utilisateurs uniques par mois</td>
+    <td>10,000+</td>
+  </tr>
+  <tr>
+    <td><strong>Taux d'adoption pharmacies</strong></td>
+    <td>% de pharmacies utilisant la plateforme</td>
+    <td>30%+</td>
+  </tr>
+  <tr>
+    <td><strong>Recherches réussies</strong></td>
+    <td>% de recherches trouvant un médicament</td>
+    <td>80%+</td>
+  </tr>
+  <tr>
+    <td><strong>Taux de création d'alertes</strong></td>
+    <td>% d'utilisateurs créant des alertes</td>
+    <td>40%+</td>
+  </tr>
+</table>
+
+<h3>7.2 Métriques Produit</h3>
+<table>
+  <tr>
+    <th>Métrique</th>
+    <th>Description</th>
+    <th>Cible</th>
+  </tr>
+  <tr>
+    <td><strong>Temps moyen de recherche</strong></td>
+    <td>Temps pour trouver un médicament</td>
+    <td>< 2 min</td>
+  </tr>
+  <tr>
+    <td><strong>Nombre de pharmacies visitées</strong></td>
+    <td>Moyenne avant de trouver</td>
+    <td>< 2</td>
+  </tr>
+  <tr>
+    <td><strong>Précision matching</strong></td>
+    <td>% de matches pertinents</td>
+    <td>90%+</td>
+  </tr>
+  <tr>
+    <td><strong>Taux de notification</strong></td>
+    <td>% d'alertes déclenchées</td>
+    <td>70%+</td>
+  </tr>
+</table>
+
+<h3>7.3 Métriques Business</h3>
+<table>
+  <tr>
+    <th>Métrique</th>
+    <th>Description</th>
+    <th>Cible</th>
+  </tr>
+  <tr>
+    <td><strong>Taux d'abonnement pharmacies</strong></td>
+    <td>% de pharmacies abonnées</td>
+    <td>20%+</td>
+  </tr>
+  <tr>
+    <td><strong>Rétention utilisateurs</strong></td>
+    <td>% d'utilisateurs actifs après 30 jours</td>
+    <td>60%+</td>
+  </tr>
+  <tr>
+    <td><strong>Taux de conversion</strong></td>
+    <td>% de recherches → réservations</td>
+    <td>30%+</td>
+  </tr>
+</table>
+
+<h3>7.4 Métriques Techniques</h3>
+<table>
+  <tr>
+    <th>Métrique</th>
+    <th>Description</th>
+    <th>Cible</th>
+  </tr>
+  <tr>
+    <td><strong>Temps de chargement</strong></td>
+    <td>Temps de chargement initial</td>
+    <td>< 2s</td>
+  </tr>
+  <tr>
+    <td><strong>Temps de réponse API</strong></td>
+    <td>Latence moyenne API</td>
+    <td>< 500ms</td>
+  </tr>
+  <tr>
+    <td><strong>Uptime</strong></td>
+    <td>Disponibilité de la plateforme</td>
+    <td>99.5%+</td>
+  </tr>
+  <tr>
+    <td><strong>Taux d'erreur</strong></td>
+    <td>% de requêtes en erreur</td>
+    <td>< 0.1%</td>
+  </tr>
+</table>
+
+<hr class="section-break">
+<hr class="page-break">
+<h2>8. Roadmap</h2>
+<h3>8.1 Phase 1 : MVP (Terminé ✅)</h3>
+<p><strong>Période :</strong> 2024-2025</p>
+<p><strong>Statut :</strong> ✅ Complètement déployé en production</p>
+<p><strong>Fonctionnalités livrées :</strong></p>
+<ul>
+  <li>✅ Recherche de médicaments en 3 étapes (TRL 8-9)</li>
+  <li>✅ Système d'authentification (admin, pharmacien, médecin) (TRL 8)</li>
+  <li>✅ Gestion des stocks pharmacies (TRL 7-8)</li>
+  <li>✅ Dashboards de base (TRL 7-8)</li>
+  <li>✅ Système d'alertes bidirectionnel (TRL 7-8)</li>
+  <li>✅ Enregistrement de traitements patients (TRL 8)</li>
+  <li>✅ Matching intelligent (TRL 7-8)</li>
+  <li>✅ Système d'abonnements (TRL 7-8)</li>
+  <li>✅ Chat communautaire — salons publics + inbox privée (TRL 6-7)</li>
+  <li>✅ Pages d'éducation et sensibilisation (TRL 6-7)</li>
+</ul>
+
+<h3>8.2 Phase 2 : Amélioration et Expansion (En cours 🚧)</h3>
+<p><strong>Période :</strong> Q2 2025 - Q3 2026</p>
+<p><strong>Statut :</strong> 🚧 Actuellement en développement</p>
+<p><strong>Fonctionnalités livrées récemment :</strong></p>
+<ul>
+  <li>✅ Dashboard global d'accès enrichi (toutes les sections décrites en 4.6.1) - TRL 7</li>
+  <li>✅ Géolocalisation de la demande (carte Leaflet, géocodage OpenStreetMap/Nominatim)</li>
+  <li>✅ Évolution temporelle avec médicaments par période (dates début/fin, statut « en cours »)</li>
+  <li>✅ Loaders par section du dashboard</li>
+  <li>✅ Analyse socio-économique, effets secondaires, difficultés, commentaires</li>
+  <li>✅ Interface multilingue (FR, EN, IT)</li>
+  <li>✅ Système de paiement USD pour abonnements</li>
+</ul>
+
+<p><strong>Fonctionnalités en développement :</strong></p>
+<ul>
+  <li>🚧 Optimisation du matching intelligent (TRL 7 → 8)</li>
+  <li>🚧 Amélioration des prédictions IA</li>
+  <li>🚧 Expansion géographique (pays supplémentaires)</li>
+  <li>🚧 Amélioration des analytics et dashboards</li>
+  <li>🚧 Refinement de l'expérience utilisateur</li>
+</ul>
+
+<p><strong>Timeline :</strong> Objectif fin Q3 2026</p>
+<h3>8.3 Phase 3 : Intelligence Avancée (Planifié 📅)</h3>
+<p><strong>Période :</strong> Q4 2026 - Q1 2027</p>
+<p><strong>Statut:</strong> 📅 En planification R&D</p>
+<p><strong>Fonctionnalités prévues :</strong></p>
+<ul>
+  <li>📅 Modèles de prédiction de demande avancés</li>
+  <li>📅 Détection automatique de ruptures (amélioration)</li>
+  <li>📅 Recommandations personnalisées intelligentes</li>
+  <li>📅 Analyse prédictive des tendances améliorée</li>
+</ul>
+
+<p><strong>Ressources :</strong> 2 Data Scientists FTE</p>
+<p><strong>Budget estimé :</strong> ~3000-5000 USD/mois (infrastructure ML)</p>
+<p><strong>Timeline :</strong> 12-18 mois de R&D et déploiement progressif</p>
+<h3>8.4 Phase 4 : Mobile et Expansion (Futur 🔮)</h3>
+<p><strong>Période :</strong> 2027+</p>
+<p><strong>Statut :</strong> 🔮 Planification à long terme</p>
+<p><strong>Fonctionnalités futures :</strong></p>
+<ul>
+  <li>🔮 Application mobile native (iOS/Android)</li>
+  <li>🔮 Notifications push géolocalisées</li>
+  <li>🔮 Géolocalisation en temps réel (parcours patient)</li>
+  <li>🔮 Intégration avec systèmes de santé nationaux</li>
+  <li>🔮 API publique pour partenaires tiers</li>
+  <li>🔮 Expansion à d'autres pathologies</li>
+</ul>
+
+<p><strong>Timeline :</strong> À partir de 2027</p>
+<hr class="section-break">
+<hr class="page-break">
+<h2>9. Contraintes et Risques</h2>
+<h3>9.1 Contraintes Techniques</h3>
+<p><strong>Contraintes identifiées :</strong></p>
+<ul>
+  <li>Dépendance à Supabase (vendor lock-in potentiel)</li>
+  <li>Performance limitée par la base de données</li>
+  <li>Scalabilité dépendante de l'infrastructure Supabase</li>
+  <li>Limitations de l'API Supabase (rate limiting)</li>
+</ul>
+
+<p><strong>Mitigation :</strong></p>
+<ul>
+  <li>Monitoring de la performance</li>
+  <li>Optimisation des requêtes</li>
+  <li>Cache stratégique</li>
+  <li>Plan de migration si nécessaire</li>
+</ul>
+
+<h3>9.2 Contraintes Business</h3>
+<p><strong>Contraintes identifiées :</strong></p>
+<ul>
+  <li>Adoption des pharmaciens (nécessite changement de comportement)</li>
+  <li>Conformité réglementaire par pays</li>
+  <li>Gestion des paiements multi-devises</li>
+  <li>Support multilingue</li>
+</ul>
+
+<p><strong>Mitigation :</strong></p>
+<ul>
+  <li>Programme d'onboarding pharmaciens</li>
+  <li>Consultation légale par pays</li>
+  <li>Intégration de processeurs de paiement locaux</li>
+  <li>Expansion progressive des langues</li>
+</ul>
+
+<h3>9.3 Risques</h3>
+<table>
+  <tr>
+    <th>Risque</th>
+    <th>Impact</th>
+    <th>Probabilité</th>
+    <th>Mitigation</th>
+  </tr>
+  <tr>
+    <td><strong>Faible adoption pharmaciens</strong></td>
+    <td>Élevé</td>
+    <td>Moyen</td>
+    <td>Programme d'incitation, démonstration de valeur</td>
+  </tr>
+  <tr>
+    <td><strong>Problèmes de performance</strong></td>
+    <td>Moyen</td>
+    <td>Faible</td>
+    <td>Monitoring, optimisation continue</td>
+  </tr>
+  <tr>
+    <td><strong>Conformité réglementaire</strong></td>
+    <td>Élevé</td>
+    <td>Faible</td>
+    <td>Consultation légale préalable</td>
+  </tr>
+  <tr>
+    <td><strong>Qualité des données</strong></td>
+    <td>Moyen</td>
+    <td>Moyen</td>
+    <td>Validation, modération</td>
+  </tr>
+  <tr>
+    <td><strong>Sécurité des données</strong></td>
+    <td>Élevé</td>
+    <td>Faible</td>
+    <td>Audit sécurité, conformité RGPD</td>
+  </tr>
+</table>
+
+<hr class="section-break">
+<h3>4.13 Droits RGPD et gestion des traitements (Priorité : Haute)</h3>
+<p><strong>Objectif :</strong> permettre à une personne sans compte patient ni nom déclaré de contrôler les traitements associés à son adresse e-mail vérifiée, et aux utilisateurs authentifiés de gérer leurs autres données.</p>
+<p><strong>Fonctionnalités :</strong></p>
+<ul>
+  <li>Pour un traitement, recueillir le consentement au formulaire puis exiger la confirmation d'un récapitulatif complet avant l'enregistrement définitif.</li>
+  <li>Exiger une adresse e-mail vérifiée dans le parcours traitement afin d'envoyer les alertes de disponibilité et de permettre la récupération/gestion des déclarations.</li>
+  <li>Après vérification de l'adresse par code temporaire, permettre de consulter et modifier les traitements associés, puis de sélectionner une ou plusieurs déclarations à supprimer.</li>
+  <li>Afficher une confirmation explicite avant chaque suppression et identifier clairement son caractère définitif.</li>
+  <li>Permettre le retrait du consentement ; arrêter les alertes associées et supprimer les traitements concernés selon la règle produit validée.</li>
+  <li>Permettre à l'auteur d'une opinion de demander sa suppression.</li>
+  <li>Permettre une demande de suppression complète du compte et des données personnelles associées.</li>
+  <li>Déconnecter l'utilisateur après la suppression complète et invalider sa session.</li>
+</ul>
+
+<p><strong>Règles de conservation :</strong></p>
+<ul>
+  <li>L'e-mail nécessaire à la gestion et aux alertes est lié à des données de santé et doit être protégé comme donnée personnelle, jamais présenté comme anonyme.</li>
+  <li>Après suppression valide, retirer le contenu clinique et l'adresse liée des systèmes actifs, des vues analytiques, caches et tâches d'alertes concernés ; définir le délai de purge des sauvegardes.</li>
+  <li>Des statistiques ne peuvent être conservées que si elles sont agrégées et irréversiblement anonymisées.</li>
+  <li>La preuve minimale du consentement et de son retrait suit une durée de conservation distincte, déterminée et justifiée par le responsable du traitement ; ne pas conserver le contenu médical dans les journaux d'audit.</li>
+  <li>Une exception légale à l'effacement doit être validée, limitée, documentée et expliquée à la personne.</li>
+</ul>
+
+<p><strong>Critères d'acceptation :</strong></p>
+<ul>
+  <li>L'API conserve la preuve versionnée et horodatée du consentement au formulaire et de la confirmation finale.</li>
+  <li>Aucune consultation, modification ou suppression self-service n'est autorisée sans vérification récente de l'e-mail associé.</li>
+  <li>Aucune déclaration d'une autre adresse n'est retournée ou modifiée ; les réponses d'erreur ne permettent pas d'énumérer les traitements.</li>
+  <li>La suppression groupée est atomique et les traitements supprimés cessent d'alimenter les analyses et alertes.</li>
+  <li>Aucun traitement ou avis n'est supprimé avant confirmation explicite.</li>
+  <li>La suppression de compte explique ce qui est supprimé et ce qui peut rester sous forme anonymisée.</li>
+  <li>Les endpoints backend appliquent l'autorisation au propriétaire de la donnée ou à l'administrateur habilité.</li>
+  <li>Les opérations sont journalisées avec un minimum de métadonnées, sans conserver le contenu médical supprimé ni les codes OTP.</li>
+</ul>
+
+<p><strong>Contrats API attendus :</strong></p>
+<ul>
+  <li>Routes à définir pour l'envoi et la vérification des codes e-mail, la création du traitement après confirmation, la liste des traitements associés, leur modification, la suppression individuelle/groupée et le retrait du consentement.</li>
+  <li><code>DELETE /api/v1/patients/treatments/{treatment_id}</code></li>
+  <li><code>DELETE /api/v1/opinions/{opinion_id}</code></li>
+  <li><code>DELETE /api/v1/auth/me</code></li>
+</ul>
+
+<hr class="section-break">
+<hr class="page-break">
+<h2>10. Appendices</h2>
+<h3>10.1 Glossaire</h3>
+<ul>
+  <li><strong>RLS</strong> : Row Level Security - Sécurité au niveau des lignes</li>
+  <li><strong>Matching Intelligent</strong> : Algorithme de connexion patients/pharmacies</li>
+  <li><strong>ODD</strong> : Objectif de Développement Durable (ONU)</li>
+  <li><strong>IA</strong> : Intelligence Artificielle</li>
+  <li><strong>MVP</strong> : Minimum Viable Product</li>
+</ul>
+
+<h3>10.2 Références</h3>
+<ul>
+  <li><strong>Documentation Supabase</strong> : https://supabase.com/docs</li>
+  <li><strong>ODD 3.8 ONU</strong> : Couverture Sanitaire Universelle</li>
+  <li><strong>RGPD</strong> : Règlement Général sur la Protection des Données</li>
+</ul>
+
+<h3>10.3 Contacts</h3>
+<ul>
+  <li><strong>Équipe Produit</strong> : À définir</li>
+  <li><strong>Support Technique</strong> : support@move4epilepsy.fr</li>
+  <li><strong>Contact Général</strong> : contact@move4epilepsy.fr</li>
+</ul>
+
+<h3>10.4 Historique des Versions</h3>
+<table>
+  <tr>
+    <th>Version</th>
+    <th>Date</th>
+    <th>Auteur</th>
+    <th>Changements</th>
+  </tr>
+  <tr>
+    <td>1.0</td>
+    <td>Janvier 2025</td>
+    <td>Équipe Move4Epilepsy</td>
+    <td>Version initiale du PRD</td>
+  </tr>
+  <tr>
+    <td>1.1</td>
+    <td>Février 2025</td>
+    <td>Équipe Move4Epilepsy</td>
+    <td>Dashboard global d'accès : description complète des 13 sections, géolocalisation Leaflet/Nominatim, évolution temporelle avec médicaments par période, loaders par section, analyse socio-économique. Enregistrement des traitements : précision sur période (dates début/fin, en cours) et sur pharmacies_visited (avant de trouver le médicament). Base de données : détail des champs patient_treatments et référence à l'API move4epilepsy-api. Roadmap : géolocalisation et dashboard enrichi marqués livrés en Phase 2.</td>
+  </tr>
+  <tr>
+    <td>1.5</td>
+    <td>Juin 2026</td>
+    <td>Équipe Move4Epilepsy</td>
+    <td>Clarification Chat communautaire (4.8) : chat simple, salons publics + messagerie privée (inbox), modération humaine, espace sans tabou.</td>
+  </tr>
+  <tr>
+    <td>1.6</td>
+    <td>Juin 2026</td>
+    <td>Équipe Move4Epilepsy</td>
+    <td>Suppression complète de la section 4.12 (analyse automatique des opinions) et de toutes les références associées dans le TRL, la roadmap et le chat.</td>
+  </tr>
+  <tr>
+    <td>1.7</td>
+    <td>Octobre 2026</td>
+    <td>Équipe Move4Epilepsy</td>
+    <td>Parcours traitements : e-mail vérifié requis pour alertes et gestion, double confirmation et preuve de consentement, modification/suppression self-service, retrait et purge analytique ; correction des affirmations non vérifiées d'anonymisation totale/conformité.</td>
+  </tr>
+</table>
+
+<hr class="section-break">
+<h2>📝 Notes de Mise à Jour</h2>
+<p>Ce document est un document vivant et sera mis à jour au fur et à mesure de l'évolution du produit. Les mises à jour importantes seront documentées dans la section "Historique des Versions".</p>
+<p><strong>Prochaines révisions prévues :</strong></p>
+<ul>
+  <li>Après chaque release majeure</li>
+  <li>Lors de changements significatifs de fonctionnalités</li>
+  <li>À la demande de l'équipe produit</li>
+</ul>
+
+<hr class="section-break">
+<p><strong>Document créé le :</strong> Janvier 2025</p>
+<p><strong>Dernière mise à jour :</strong> Février 2025</p>
+<p><strong>Statut :</strong> ✅ Approuvé pour développement</p>
+</div>
+</body>
+</html>

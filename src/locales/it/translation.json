@@ -1,0 +1,1118 @@
+{
+  "common": {
+    "loading": "Caricamento in corso...",
+    "active": "Attivo",
+    "secure": "Sicuro",
+    "worldwide": "Mondiale",
+    "patients": "Pazienti",
+    "countries": "Paesi",
+    "satisfaction": "Soddisfazione",
+    "allRightsReserved": "Tutti i diritti riservati"
+  },
+  "header": {
+    "title": "Move4Epilepsy",
+    "subtitle": "Accesso Equo Globale ai Medicinali",
+    "tagline": "Piattaforma Intelligente • Data Science • IA Predittiva",
+    "stats": {
+      "patientsWorld": "Pazienti nel Mondo",
+      "countriesCovered": "Paesi Coperti",
+      "satisfaction": "Soddisfazione",
+      "secure": "Sicuro"
+    },
+    "becomePartner": "Diventa Partner",
+    "platformActive": "Piattaforma Attiva",
+    "dataCollectionActive": "Raccolta Dati Attiva",
+    "worldwideCoverage": "Copertura Mondiale",
+    "gdprCompliant": "Protezione dei dati",
+    "dataProtection": "Protezione dei dati",
+    "unGoal": "🎯 Obiettivo ONU 3.8: Copertura Sanitaria Universale"
+  },
+  "navigation": {
+    "home": "Home",
+    "search": "Cerca",
+    "searchServices": "Cerca Servizi",
+    "medicationSearch": "Ricerca Medicinale",
+    "searchMedication": "Cerca un Medicinale",
+    "patientSearch": "Ricerca Paziente",
+    "medication": "Medicinali",
+    "observatory": "Osservatorio sull'accesso",
+    "inequalityMap": "Mappa delle disuguaglianze di accesso",
+    "myTreatment": "Il Mio Trattamento",
+    "globalDashboard": "Dashboard Globale",
+    "predictiveDashboard": "Dashboard predittivo",
+    "networkAnalysis": "Analisi delle reti",
+    "locationsMap": "Mappa delle Località",
+    "trends": "Tendenze",
+    "reportMedicine": "Segnala un Medicinale",
+    "opinions": "Le Tue Opinioni",
+    "chat": "Chat",
+    "pharmacists": "Farmacisti",
+    "pharmacyDashboard": "Dashboard",
+    "stockManagement": "Gestione Magazzino",
+    "subscriptions": "Abbonamenti",
+    "doctors": "Medici",
+    "doctorDashboard": "Dashboard",
+    "awareness": "Sensibilizzazione",
+    "perceptions": "Percezioni",
+    "truth": "La Verità",
+    "resources": "Risorse",
+    "rights": "Diritti",
+    "about": "Chi Siamo",
+    "team": "Il Nostro Team",
+    "becomePartner": "Diventa Partner",
+    "dataProtection": "Capire il GDPR",
+    "privacy": "Privacy",
+    "contact": "Contatto",
+    "administration": "Amministrazione"
+  },
+  "accessMap": {
+    "title": "Mappa delle disuguaglianze di accesso",
+    "scenarioTab": "Simula una distanza",
+    "apiTab": "Dati della piattaforma",
+    "description": "Confronta la distanza tra la tua città e quella in cui è disponibile il medicinale.",
+    "apiDescription": "Località dei trattamenti segnalati e farmacie attive caricate dall’API. I dati dei pazienti sono aggregati per città.",
+    "refresh": "Aggiorna i dati",
+    "treatmentsError": "Impossibile caricare le località dei trattamenti:",
+    "pharmaciesError": "Impossibile caricare le farmacie:",
+    "apiError": "Impossibile caricare i dati della mappa.",
+    "adminNotice": "Attualmente l’API riserva l’accesso ai trattamenti agli amministratori.",
+    "unmappedLocations": "{count} località non corrispondono alle città mappate e non sono visualizzate.",
+    "patientLocations": "Trattamenti segnalati per città",
+    "pharmacies": "Farmacie attive",
+    "locationsShown": "{count} punti visualizzati",
+    "noLocations": "Non sono disponibili località corrispondenti alle città mappate.",
+    "apiPrivacyNotice": "I trattamenti sono aggregati per città. I marcatori delle farmacie indicano il centro della città, non l’indirizzo esatto.",
+    "treatmentCount": "{count} trattamento/i segnalato/i",
+    "scenarioTitle": "Scenario di accesso ai medicinali",
+    "patientCityLabel": "Dove abiti? (città del paziente)",
+    "pharmacyCityLabel": "Dove si trova il medicinale? (città della farmacia)",
+    "chooseCity": "Seleziona una città",
+    "sameCity": "✓ Farmacia nella stessa città — accesso locale",
+    "intercity": "⚠ È necessario spostarsi tra città",
+    "patientLocation": "Posizione del paziente",
+    "medicineLocation": "Posizione del medicinale",
+    "cityCenter": "Punto di riferimento nel centro città",
+    "mapHelp": "Seleziona entrambe le città per visualizzare il percorso stimato.",
+    "accessibleTitle": "Accessibile",
+    "criticalTitle": "Attenzione — distanza significativa",
+    "localAccess": "Il medicinale è disponibile nella tua città. Accesso locale.",
+    "criticalDistance": "Distanza critica: possibile ostacolo importante all’accesso alle cure.",
+    "longDistance": "Distanza significativa: può limitare l’accesso ai medicinali.",
+    "moderateDistance": "Distanza moderata: è necessario spostarsi.",
+    "reasonableDistance": "È necessario spostarsi, ma la distanza resta ragionevole.",
+    "distance": "Distanza stimata",
+    "travelType": "Tipo di spostamento",
+    "withinCity": "Nella stessa città",
+    "betweenCities": "Tra città",
+    "impactTitle": "Impatto potenziale",
+    "impactDescription": "Una distanza significativa può aumentare costi e tempi di trasporto, rendere più difficile l’accesso per le persone con mobilità ridotta e contribuire all’interruzione del trattamento.",
+    "recommendationsTitle": "Possibili azioni",
+    "recommendationsDescription": "Valutare farmacie di prossimità, consegne o scorte di riserva nelle aree meno servite.",
+    "distanceDisclaimer": "Stima in linea d’aria tra i centri delle città, calcolata dalle loro coordinate. Non rappresenta un percorso stradale né la distanza effettiva all’interno di una città."
+  },
+  "perceptions": {
+    "title": "Cosa pensi dell’epilessia",
+    "intro": "La tua opinione conta! Aiutaci a comprendere meglio le percezioni e le conoscenze del pubblico sull’epilessia.",
+    "impactTitle": "L’impatto della tua partecipazione",
+    "impactItems": {
+      "voice": { "title": "Dare voce alle persone", "description": "Le tue risposte ci aiutano a comprendere meglio le esperienze e le esigenze delle persone interessate." },
+      "myths": { "title": "Individuare i pregiudizi", "description": "Comprendere le percezioni aiuta a individuare le informazioni errate e i temi da chiarire." },
+      "actions": { "title": "Migliorare la sensibilizzazione", "description": "I commenti raccolti possono orientare attività informative più efficaci." }
+    },
+    "formTitle": "Questionario sulle percezioni dell’epilessia",
+    "anonymousNote": "Questo questionario anonimo ci aiuta a comprendere i pregiudizi e a migliorare la sensibilizzazione.",
+    "generalInfo": "Informazioni generali",
+    "ageLabel": "Fascia d’età *",
+    "selectAge": "Seleziona la fascia d’età",
+    "ageRanges": {
+      "18-25": "18-25 anni",
+      "26-35": "26-35 anni",
+      "36-45": "36-45 anni",
+      "46-55": "46-55 anni",
+      "56-65": "56-65 anni",
+      "over65": "Oltre 65 anni"
+    },
+    "relationshipLabel": "Il tuo rapporto con l’epilessia * (puoi selezionare più risposte)",
+    "relationships": {
+      "epileptic": "Ho l’epilessia",
+      "closePerson": "Una persona a me vicina ha l’epilessia",
+      "healthProfessional": "Sono un professionista sanitario",
+      "noRelation": "Non ho un rapporto particolare con l’epilessia"
+    },
+    "opinionsTitle": "Le tue opinioni sull’epilessia",
+    "dangerQuestion": "Secondo te, l’epilessia è pericolosa? *",
+    "dangerOptions": {
+      "veryDangerous": "Molto pericolosa",
+      "moderatelyDangerous": "Moderatamente pericolosa",
+      "slightlyDangerous": "Poco pericolosa",
+      "notDangerous": "Non pericolosa"
+    },
+    "normalLifeQuestion": "Una persona con epilessia può condurre una vita normale? *",
+    "normalLifeOptions": {
+      "totally": "Sì, completamente",
+      "withRestrictions": "Sì, con alcune limitazioni",
+      "partially": "Parzialmente",
+      "no": "No"
+    },
+    "contagiousQuestion": "L’epilessia è contagiosa? *",
+    "contagiousOptions": { "yes": "Sì", "no": "No", "dontKnow": "Non so" },
+    "experienceTitle": "La tua esperienza",
+    "experienceQuestion": "Hai mai assistito a una crisi epilettica? Come hai reagito?",
+    "experiencePlaceholder": "Descrivi la tua esperienza (facoltativo)…",
+    "optionalNote": "La risposta è facoltativa.",
+    "suggestionsTitle": "Suggerimenti per migliorare la sensibilizzazione",
+    "suggestionsQuestion": "Come informare meglio il pubblico sull’epilessia?",
+    "suggestionsPlaceholder": "I tuoi suggerimenti (facoltativo)…",
+    "submit": "Invia le mie risposte",
+    "submitting": "Invio…",
+    "requiredHint": "Rispondi alle domande obbligatorie (*) prima di inviare.",
+    "submitError": "Si è verificato un errore durante l’invio del questionario.",
+    "successTitle": "Grazie per la partecipazione!",
+    "successMessage": "Le tue risposte contribuiranno a migliorare la sensibilizzazione sull’epilessia.",
+    "researchTitle": "Perché questa ricerca è importante",
+    "recentFindingsTitle": "Le sfide",
+    "recentFindings": {
+      "1": "I pregiudizi possono rafforzare lo stigma e isolare le persone interessate.",
+      "2": "La paura delle crisi e le informazioni errate possono ritardare il primo soccorso.",
+      "3": "Conoscenze affidabili favoriscono l’inclusione sociale e professionale.",
+      "4": "L’accesso ai trattamenti e alle cure resta diseguale."
+    },
+    "positiveChangeTitle": "Cosa può cambiare con l’informazione",
+    "positiveChanges": {
+      "1": "Riconoscere meglio l’epilessia come condizione neurologica.",
+      "2": "Sapere come intervenire in sicurezza durante una crisi.",
+      "3": "Promuovere l’inclusione e ridurre la discriminazione.",
+      "4": "Indirizzare le persone verso risorse affidabili."
+    },
+    "whyTitle": "Perché questo questionario?",
+    "whyItems": {
+      "1": "Individuare i pregiudizi più diffusi.",
+      "2": "Adattare le attività di sensibilizzazione alle esigenze del pubblico.",
+      "3": "Comprendere meglio l’evoluzione delle percezioni.",
+      "4": "Sostenere l’inclusione delle persone che vivono con l’epilessia.",
+      "5": "Questionario anonimo: non vengono richiesti dati personali di contatto.",
+      "6": "Le risposte aiutano a orientare l’informazione e la sensibilizzazione."
+    }
+  },
+  "truthPage": {
+    "title": "La verità sull’epilessia",
+    "intro": "Scopri informazioni affidabili, sfata i pregiudizi e impara il primo soccorso in caso di crisi.",
+    "mythsTitle": "Pregiudizi e realtà",
+    "mythLabel": "PREGIUDIZIO",
+    "factLabel": "REALTÀ",
+    "myths": {
+      "contagious": {
+        "myth": "L’epilessia è contagiosa.",
+        "truth": "L’epilessia non è contagiosa. È una condizione neurologica che non si trasmette da una persona all’altra.",
+        "category": "Generale"
+      },
+      "work": {
+        "myth": "Le persone con epilessia non possono lavorare.",
+        "truth": "Molte persone con epilessia lavorano e conducono una vita attiva. Le esigenze variano da persona a persona e in base alla salute.",
+        "category": "Lavoro"
+      },
+      "mouth": {
+        "myth": "Durante una crisi bisogna mettere qualcosa in bocca.",
+        "truth": "Non mettere mai nulla in bocca: potrebbe causare lesioni. Allontana gli oggetti pericolosi e proteggi la testa.",
+        "category": "Primo soccorso"
+      },
+      "mental": {
+        "myth": "L’epilessia è una malattia mentale.",
+        "truth": "L’epilessia è una condizione neurologica legata all’attività cerebrale; di per sé non è una malattia mentale.",
+        "category": "Medicina"
+      }
+    },
+    "factsTitle": "Informazioni sull’epilessia",
+    "facts": {
+      "prevalence": { "title": "Diffusione globale", "description": "Secondo l’OMS, circa 50 milioni di persone nel mondo vivono con l’epilessia." },
+      "control": { "title": "Trattamenti efficaci", "description": "Fino al 70% delle persone con epilessia potrebbe non avere più crisi con diagnosi e trattamento adeguati." },
+      "causes": { "title": "Cause diverse", "description": "L’epilessia può avere diverse cause, tra cui lesioni cerebrali, infezioni, ictus e fattori genetici." },
+      "treatment": { "title": "Cure personalizzate", "description": "I farmaci antiepilettici possono controllare le crisi per molte persone. Il trattamento va seguito con un professionista sanitario." }
+    },
+    "firstAidTitle": "Cosa fare in caso di crisi",
+    "firstAidIntro": "Indicazioni di primo soccorso per una crisi convulsiva.",
+    "stepsTitle": "Cosa fare",
+    "steps": {
+      "1": "Mantieni la calma e misura la durata della crisi.",
+      "2": "Allontana gli oggetti pericolosi e proteggi la persona da lesioni.",
+      "3": "Metti un oggetto morbido e piatto sotto la testa.",
+      "4": "Allenta gli indumenti stretti intorno al collo e, se possibile, gira delicatamente la persona su un fianco quando le convulsioni terminano.",
+      "5": "Resta con la persona e rassicurala mentre riprende conoscenza.",
+      "6": "Chiama i soccorsi se la crisi dura almeno 5 minuti, se ne segue un’altra, se la persona è ferita o non riprende conoscenza."
+    },
+    "doNotTitle": "Cosa non fare",
+    "doNotItems": {
+      "1": "Non mettere nulla in bocca.",
+      "2": "Non bloccare i movimenti.",
+      "3": "Non dare acqua, cibo o farmaci finché la persona non è pienamente cosciente.",
+      "4": "Non lasciare sola la persona dopo la crisi."
+    },
+    "emergencyCallout": "Chiama i servizi di emergenza locali in caso di crisi prolungata, crisi ripetute o difficoltà respiratorie.",
+    "firstAidNote": "Queste indicazioni non sostituiscono una formazione di primo soccorso né il parere di un professionista sanitario.",
+    "resourcesTitle": "Per saperne di più",
+    "resources": {
+      "research": { "title": "Informazioni mediche", "description": "Consulta informazioni mediche e risorse basate su prove scientifiche." },
+      "testimonies": { "title": "Esperienze personali", "description": "Ascolta le esperienze e le esigenze delle persone interessate." },
+      "training": { "title": "Formazione di primo soccorso", "description": "Impara le misure di primo soccorso sicure in caso di crisi." }
+    },
+    "whoSource": "Organizzazione Mondiale della Sanità — Epilessia",
+    "firstAidSource": "CDC — Primo soccorso in caso di crisi"
+  },
+  "homepage": {
+    "hero": {
+      "title": "Accesso Equo ai",
+      "titleHighlight": "Medicinali Antiepilettici",
+      "description": "Move4Epilepsy rivoluziona l'accesso globale alle cure attraverso una piattaforma intelligente per la raccolta di dati, l'analisi predittiva e la lotta alla disinformazione in tutto il mondo.",
+      "discover": "Scopri la Piattaforma",
+      "participate": "Partecipa allo Studio",
+      "login": "Accedi / Registrati"
+    },
+    "stats": {
+      "epilepticPeople": "Persone epilettiche nel mondo",
+      "accessDifficulties": "Hanno difficoltà di accesso",
+      "facePrejudices": "Affrontano pregiudizi",
+      "canControl": "Possono controllare le loro crisi"
+    },
+    "problems": {
+      "title": "La Sfida che Affrontiamo",
+      "description": "L'epilessia colpisce 50 milioni di persone nel mondo, ma l'accesso equo alle cure rimane una sfida importante aggravata dalla disinformazione e dalla mancanza di dati centralizzati.",
+      "inequalities": {
+        "title": "Disuguaglianze di Accesso",
+        "description": "Esistono disparità significative nell'accesso ai medicinali antiepilettici a seconda delle regioni e delle situazioni socioeconomiche.",
+        "stats": "Il 30% dei pazienti ha difficoltà di accesso"
+      },
+      "misinformation": {
+        "title": "Disinformazione",
+        "description": "I pregiudizi e lo stigma intorno all'epilessia creano barriere aggiuntive alle cure.",
+        "stats": "L'85% delle persone ha pregiudizi"
+      },
+      "lackOfData": {
+        "title": "Mancanza di Dati",
+        "description": "L'assenza di dati centralizzati impedisce una comprensione globale dei bisogni e degli ostacoli.",
+        "stats": "Dati frammentati"
+      }
+    },
+    "solutions": {
+      "title": "La Nostra Soluzione Innovativa",
+      "description": "Una piattaforma intelligente che combina raccolta di dati, analisi predittiva e intelligenza artificiale per rivoluzionare l'accesso ai medicinali antiepilettici. Mette anche al centro il legame tra le persone: chat di comunità, sensibilizzazione, risorse e diritti.",
+      "dataCollection": {
+        "title": "Raccolta di Dati",
+        "description": "Piattaforma centralizzata per raccogliere informazioni sull'accesso ai medicinali e le esperienze dei pazienti."
+      },
+      "intelligentAnalysis": {
+        "title": "Analisi Intelligente",
+        "description": "Elaborazione avanzata dei dati per identificare modelli, tendenze e aree di miglioramento."
+      },
+      "aiPredictions": {
+        "title": "Previsioni IA",
+        "description": "Modelli predittivi per anticipare le carenze di stock e ottimizzare la distribuzione."
+      },
+      "targetedActions": {
+        "title": "Azioni Mirate",
+        "description": "Raccomandazioni basate sui dati per migliorare l'accesso e combattere la disinformazione."
+      },
+      "communityChat": {
+        "title": "Chat e comunità",
+        "description": "Uno spazio dove pazienti, medici, familiari e cittadini possono connettersi per confrontarsi e condividere esperienze nel rispetto reciproco."
+      },
+      "awareness": {
+        "title": "Sensibilizzazione",
+        "description": "Contenuti per capire meglio l'epilessia, ridurre lo stigma e diffondere informazioni affidabili."
+      },
+      "resources": {
+        "title": "Risorse disponibili",
+        "description": "Guide e strumenti per orientarsi: informazioni validate, terapie e percorsi di cura."
+      },
+      "rights": {
+        "title": "Diritti delle persone interessate",
+        "description": "Valore al diritto alla salute, alla non discriminazione e all'informazione per le persone con epilessia e i loro cari."
+      }
+    },
+    "features": {
+      "title": "Funzionalità Avanzate",
+      "description": "Strumenti potenti per un approccio scientifico all'uguaglianza di accesso alle cure.",
+      "dataSecurity": {
+        "title": "Sicurezza dei Dati",
+        "description": "Crittografia end-to-end e conformità GDPR"
+      },
+      "realTimeAnalysis": {
+        "title": "Analisi in Tempo Reale",
+        "description": "Insight istantanei sulle tendenze di accesso"
+      },
+      "activeCommunity": {
+        "title": "Comunità Attiva",
+        "description": "Rete di pazienti, medici e farmacisti"
+      },
+      "medicalValidation": {
+        "title": "Validazione Medica",
+        "description": "Informazioni verificate da esperti"
+      }
+    },
+    "sdgs": {
+      "kicker": "Il nostro impegno per la salute",
+      "title": "Obiettivi di Sviluppo Sostenibile delle Nazioni Unite",
+      "description": "Move4Epilepsy contribuisce all’OSS 3 dell’ONU promuovendo un accesso più equo alle cure e ai trattamenti per l’epilessia.",
+      "goalTitle": "OSS 3 — Salute e benessere",
+      "goalDescription": "Garantire una vita sana e promuovere il benessere per tutti a tutte le età.",
+      "impacts": {
+        "riskZones": {
+          "title": "Individuare le aree a rischio",
+          "description": "Individuare le aree in cui le persone con epilessia hanno maggiori bisogni per orientare meglio gli interventi."
+        },
+        "adaptedServices": {
+          "title": "Adattare i servizi sanitari",
+          "description": "Aiutare i farmacisti a rispondere meglio alle esigenze locali grazie ai dati geolocalizzati."
+        },
+        "costOptimization": {
+          "title": "Ottimizzare le risorse",
+          "description": "Migliorare la gestione delle scorte per ridurre eccedenze e carenze di medicinali."
+        }
+      },
+      "targetTitle": "Traguardo 3.8 — Copertura sanitaria universale:",
+      "targetDescription": "promuovere per tutti l’accesso ai servizi sanitari essenziali e a medicinali sicuri, efficaci e accessibili."
+    },
+    "partners": {
+      "kicker": "Impatto collettivo",
+      "title": "I nostri partner",
+      "description": "Collaboriamo con organizzazioni che contribuiscono a rafforzare il nostro impatto.",
+      "sda": "Partnership per l’analisi dei dati sanitari e la promozione della diversità nella data science nell’Africa francofona.",
+      "xponsor": "Una piattaforma per ricevere sponsorizzazioni su un sito web o tramite un link personalizzato, anche con Mobile Money.",
+      "mollet": "Un’app per gestire le finanze e monitorare spese ed entrate, anche Mobile Money, senza connessione.",
+      "becomePartner": "Diventa partner"
+    },
+    "cta": {
+      "title": "Unisciti al Movimento",
+      "description": "La tua partecipazione conta. Insieme, possiamo creare un accesso equo globale ai medicinali antiepilettici e combattere la disinformazione.",
+      "shareExperience": "Condividi la Mia Esperienza",
+      "exploreData": "Esplora i Dati",
+      "becomePartner": "Diventa Partner"
+    }
+  },
+  "contentPages": {
+    "learnMore": "Scopri di più",
+    "about": {
+      "title": "Informazioni su Move4Epilepsy",
+      "intro": "Un progetto che utilizza dati, sensibilizzazione e comunità per migliorare l’accesso alle cure per l’epilessia.",
+      "missionTitle": "La nostra missione",
+      "mission": "Aiutare le persone interessate, i professionisti sanitari e i partner a comprendere meglio gli ostacoli all’accesso alle terapie e a trovare informazioni affidabili.",
+      "objectivesTitle": "I nostri obiettivi",
+      "objectives": {
+        "1": "Documentare meglio le difficoltà nell’accesso ai trattamenti.",
+        "2": "Diffondere informazioni chiare e affidabili sull’epilessia.",
+        "3": "Promuovere risposte adeguate alle esigenze locali."
+      },
+      "valuesTitle": "I nostri valori",
+      "values": {
+        "empathy": { "title": "Empatia", "description": "Ascoltare le persone e rispettare la loro esperienza." },
+        "accuracy": { "title": "Precisione", "description": "Presentare dati e informazioni con prudenza e trasparenza." },
+        "accessibility": { "title": "Accessibilità", "description": "Rendere i contenuti comprensibili e utili al maggior numero di persone." },
+        "innovation": { "title": "Innovazione", "description": "Mettere gli strumenti digitali al servizio dell’equità sanitaria." }
+      },
+      "journeyTitle": "Il nostro percorso",
+      "future": "Prossimamente",
+      "milestones": {
+        "2023": { "title": "Avvio del progetto", "description": "Definizione della missione e dei bisogni a cui il portale intende rispondere." },
+        "2024": { "title": "Dati e sensibilizzazione", "description": "Sviluppo delle prime risorse e degli strumenti per condividere esperienze." },
+        "2025": { "title": "Partnership", "description": "Rafforzamento della collaborazione con gli attori della salute e dei dati." },
+        "future": { "title": "Sviluppo continuo", "description": "Miglioramento degli strumenti sulla base di feedback, dati convalidati e partnership." }
+      }
+    },
+    "awareness": {
+      "title": "Sensibilizzazione sull’epilessia",
+      "intro": "Comprendere l’epilessia e ridurre lo stigma aiuta a sostenere meglio le persone interessate.",
+      "cards": {
+        "1": { "title": "Comprendere l’epilessia", "description": "L’epilessia è una condizione neurologica. I sintomi e le esigenze di cura variano da persona a persona." },
+        "2": { "title": "Contrastare lo stigma", "description": "Le idee errate possono isolare le persone e rendere più difficile l’accesso alle cure, all’istruzione o al lavoro." },
+        "3": { "title": "Favorire l’accesso alle cure", "description": "Informazioni affidabili e un sostegno adeguato contribuiscono a un percorso di cura più inclusivo." }
+      },
+      "quickActionsTitle": "Agire e informarsi",
+      "quickActionsDescription": "Partecipa al questionario sulle percezioni o consulta informazioni e indicazioni di primo soccorso.",
+      "resourcesTitle": "Risorse educative",
+      "resources": {
+        "1": { "title": "Primo soccorso", "description": "Scopri come intervenire in sicurezza durante una crisi." },
+        "2": { "title": "Miti e realtà", "description": "Distingui le idee errate dalle informazioni sanitarie affidabili." },
+        "3": { "title": "Vivere con l’epilessia", "description": "Esplora le risorse per le persone interessate e le loro famiglie." }
+      }
+    },
+    "resources": {
+      "title": "Risorse e informazioni affidabili",
+      "intro": "Consulta risorse esterne riconosciute per approfondire l’epilessia e il primo soccorso.",
+      "onlineTitle": "Risorse online",
+      "openResource": "Apri la risorsa",
+      "downloadNotice": "I documenti scaricabili elencati nella versione precedente non sono disponibili nel portale. Non mostriamo pulsanti di download non funzionanti.",
+      "cards": {
+        "1": { "title": "Organizzazione Mondiale della Sanità", "description": "Informazioni di riferimento sull’epilessia, le cure e la salute pubblica." },
+        "2": { "title": "Primo soccorso — CDC", "description": "Indicazioni pratiche per proteggere una persona durante una crisi convulsiva." },
+        "3": { "title": "Epilepsy Foundation", "description": "Informazioni e risorse di supporto sull’epilessia." },
+        "4": { "title": "Percorso di cura", "description": "Per un consiglio adatto alla tua situazione, contatta un professionista sanitario o un’associazione locale." }
+      }
+    },
+    "rights": {
+      "title": "I tuoi diritti e le procedure",
+      "intro": "Diritti, copertura e procedure variano da paese a paese. Rivolgiti ai servizi sanitari locali e agli enti competenti.",
+      "fundamentalTitle": "Informazioni essenziali",
+      "cards": {
+        "1": { "title": "Accesso alle cure", "description": "Tutti dovrebbero poter cercare cure adeguate presso i professionisti e i servizi del proprio paese." },
+        "2": { "title": "Copertura finanziaria", "description": "Gli aiuti e la copertura dipendono dalle regole locali di assicurazione e del sistema sanitario." },
+        "3": { "title": "Informazioni sui trattamenti", "description": "Chiedi a un professionista sanitario quali opzioni terapeutiche sono adatte alla tua situazione." },
+        "4": { "title": "Secondo parere", "description": "Puoi discutere con il tuo team di cura se sia utile richiedere un altro parere medico." }
+      },
+      "stepsTitle": "Come orientarsi",
+      "steps": {
+        "1": "Parla con un professionista sanitario delle tue esigenze.",
+        "2": "Chiedi informazioni all’ente sanitario o assicurativo del tuo paese.",
+        "3": "Conserva i documenti medici e amministrativi utili.",
+        "4": "Contatta un’associazione locale per conoscere i sostegni disponibili."
+      },
+      "disclaimer": "Queste sono informazioni generali, non consulenza legale. Verifica sempre diritti e procedure applicabili nel tuo paese con gli enti competenti."
+    },
+    "medication": {
+      "title": "Medicinali antiepilettici",
+      "intro": "I medicinali antiepilettici vengono scelti in base al tipo di crisi, allo stato di salute e alle esigenze individuali.",
+      "categoriesTitle": "Alcune categorie ed esempi",
+      "cards": {
+        "1": { "title": "Trattamenti consolidati", "description": "Carbamazepina e valproato sono esempi di medicinali utilizzati in alcune forme di epilessia." },
+        "2": { "title": "Trattamenti più recenti", "description": "Levetiracetam e lamotrigina sono tra le opzioni prescritte dopo una valutazione clinica." },
+        "3": { "title": "Assistenza specialistica", "description": "Le scelte terapeutiche e le situazioni complesse richiedono un monitoraggio individuale da parte di un professionista sanitario." }
+      },
+      "warning": "Non iniziare, modificare o interrompere un trattamento senza consultare un professionista sanitario. Questa pagina non sostituisce il parere medico."
+    },
+    "team": {
+      "title": "Il nostro team e le nostre competenze",
+      "intro": "Move4Epilepsy riunisce competenze complementari in ambito sanitario, dati, tecnologia ed esperienza utente.",
+      "cards": {
+        "1": { "title": "Salute e competenze cliniche", "description": "Contribuire a condividere informazioni responsabili e adatte alle esigenze sanitarie." },
+        "2": { "title": "Dati e ricerca", "description": "Strutturare e analizzare dati per comprendere meglio gli ostacoli all’accesso." },
+        "3": { "title": "Tecnologia", "description": "Progettare strumenti digitali utili, affidabili e accessibili." },
+        "4": { "title": "Comunità ed esperienza", "description": "Considerare i bisogni e i feedback delle persone interessate." }
+      },
+      "joinTitle": "Vuoi contribuire?",
+      "joinDescription": "Contatta il team per discutere una collaborazione o una partnership.",
+      "contact": "Contatta il team"
+    },
+    "contact": {
+      "title": "Contatta Move4Epilepsy",
+      "intro": "Il nostro team è a disposizione per domande sul portale, sulle risorse o sulle partnership.",
+      "emailTitle": "E-mail",
+      "phoneTitle": "Telefono",
+      "addressTitle": "Sede",
+      "emergencyNote": "Questo portale non è un servizio di emergenza. In caso di emergenza medica, contatta i servizi di emergenza locali."
+    }
+  },
+  "opinionsPage": {
+    "title": "La tua opinione conta",
+    "intro": "Condividi la tua esperienza e leggi i commenti della comunità.",
+    "shareTitle": "Pubblica una recensione",
+    "name": "Nome o pseudonimo",
+    "category": "Categoria",
+    "categoryAll": "Scegli una categoria",
+    "categories": {
+      "patient": "Persona con epilessia",
+      "caregiver": "Familiare o assistente",
+      "professional": "Professionista sanitario",
+      "general": "Altro"
+    },
+    "message": "La tua esperienza",
+    "rating": "La tua valutazione",
+    "submit": "Pubblica la recensione",
+    "sending": "Invio…",
+    "submitSuccess": "La tua recensione è stata pubblicata.",
+    "submitError": "Impossibile pubblicare la recensione.",
+    "loadError": "Impossibile caricare le recensioni.",
+    "listTitle": "Recensioni della comunità",
+    "average": "{count} recensioni · valutazione media: {rating}/5",
+    "loading": "Caricamento delle recensioni…",
+    "listError": "Le recensioni non sono disponibili.",
+    "retry": "Riprova",
+    "empty": "Ancora nessuna recensione. Condividi per primo la tua esperienza.",
+    "ratingValue": "Valutazione: {rating} su 5"
+  },
+  "patientSearch": {
+    "medication": "Medicinale",
+    "chooseMedication": "Scegli un medicinale",
+    "city": "Città",
+    "allCities": "Tutte le città",
+    "loading": "Caricamento di medicinali e farmacie…",
+    "loadError": "Impossibile caricare i dati.",
+    "retry": "Riprova",
+    "chooseHint": "Scegli un medicinale per consultare le disponibilità dichiarate dalle farmacie.",
+    "noResults": "Nessuna farmacia ha dichiarato scorte per questo medicinale nella zona.",
+    "available": "Disponibile secondo le scorte dichiarate",
+    "unavailable": "Non disponibile",
+    "quantity": "Quantità dichiarata: {count}",
+    "noStockDeclaration": "Nessuna disponibilità dichiarata per questo medicinale",
+    "alertTitle": "Ricevi un avviso",
+    "alertDescription": "Richiedi un avviso su {medication}.",
+    "email": "Indirizzo e-mail",
+    "phone": "Telefono",
+    "alertSending": "Creazione…",
+    "createAlert": "Crea avviso",
+    "alertSuccess": "La richiesta di avviso è stata registrata.",
+    "alertError": "Impossibile registrare l’avviso."
+  },
+  "protectedPages": {
+    "unavailableTitle": "Dati non disponibili",
+    "noFakeData": "Non vengono mostrate statistiche fittizie. I dati saranno visibili quando l’API ne consentirà la consultazione.",
+    "default": "I dati di questa pagina non sono accessibili senza autorizzazione dell’API.",
+    "accessDashboard": "Il dashboard di accesso utilizza dati di trattamento protetti.",
+    "trends": "Le tendenze sono calcolate a partire dalle dichiarazioni di trattamento protette.",
+    "pharmacyDashboard": "Gli indicatori della farmacia richiedono dati autorizzati.",
+    "pharmacyStock": "La consultazione e la modifica delle scorte sono riservate alle farmacie autorizzate.",
+    "doctorDashboard": "Il dashboard medico richiede dati di trattamento autorizzati.",
+    "adminDashboard": "Gli strumenti di amministrazione richiedono l’autorizzazione di amministratore."
+  },
+  "networkAnalysis": {
+    "intro": "Comprendere i legami tra persone, farmacie, medicinali e territori aiuta a documentare le disuguaglianze di accesso e a orientare interventi adeguati.",
+    "problemKicker": "Il problema è documentato",
+    "problemTitle": "La disuguaglianza di accesso ai medicinali antiepilettici esiste.",
+    "problemDescription": "L’OMS stima che circa 50 milioni di persone nel mondo vivano con l’epilessia. Nei paesi a basso reddito, fino a tre persone su quattro non ricevono il trattamento di cui hanno bisogno. La necessità di agire è dimostrata; servono dati locali per capire dove e come l’accesso viene meno.",
+    "globalStat": "Fino a 3 su 4",
+    "globalStatLabel": "persone con epilessia nei paesi a basso reddito potrebbero non ricevere le cure necessarie, secondo l’OMS.",
+    "whoSource": "Fonte: scheda informativa OMS sull’epilessia",
+    "modelKicker": "Il nostro approccio",
+    "modelTitle": "Analizzare le relazioni, non numeri isolati",
+    "modelDescription": "L’analisi delle reti rappresenta attori e risorse come nodi e i legami di accesso come relazioni. Può aiutare a individuare interruzioni nei percorsi di cura e territori poco serviti.",
+    "conceptualLabel": "Schema concettuale — non rappresenta dati reali",
+    "diagramAlt": "Schema concettuale che collega persone e segnalazioni a farmacie e scorte di medicinali, insieme ai territori e agli ostacoli di accesso.",
+    "diagramCaption": "Le relazioni potrebbero essere studiate usando segnalazioni volontarie, disponibilità verificate e distanze geografiche. Lo schema non rappresenta persone né risultati calcolati.",
+    "nodes": {
+      "people": {
+        "title": "Esperienze segnalate",
+        "description": "Segnalazioni volontarie su reperibilità, costi, tempi o indisponibilità."
+      },
+      "pharmacies": {
+        "title": "Farmacie",
+        "description": "Strutture registrate e informazioni datate sulla disponibilità."
+      },
+      "medicines": {
+        "title": "Medicinali",
+        "description": "Terapie cercate e prodotti segnalati come disponibili o mancanti."
+      },
+      "locations": {
+        "title": "Territori",
+        "description": "Luoghi e distanze necessarie per raggiungere una risorsa."
+      },
+      "barriers": {
+        "title": "Ostacoli di accesso",
+        "description": "Distanza, indisponibilità, costo e tempi di riassortimento."
+      }
+    },
+    "questionsKicker": "Cosa può chiarire l’analisi",
+    "questionsTitle": "Domande concrete per osservare l’accesso",
+    "questions": {
+      "where": {
+        "title": "Dove i bisogni non sono soddisfatti?",
+        "description": "Individuare i territori in cui si segnalano difficoltà e le farmacie o scorte note sono poche o lontane."
+      },
+      "which": {
+        "title": "Quali medicinali sono difficili da trovare?",
+        "description": "Confrontare le segnalazioni di ricerca e indisponibilità per medicinale, periodo e territorio."
+      },
+      "who": {
+        "title": "Cosa collega le persone alle risorse?",
+        "description": "Comprendere i legami tra farmacie, territori serviti e alternative vicine senza esporre i percorsi individuali."
+      },
+      "whatChanges": {
+        "title": "Gli interventi migliorano la situazione?",
+        "description": "Monitorare indicatori aggregati nel tempo e verificare se disponibilità o vicinanza cambiano."
+      }
+    },
+    "collectionKicker": "Perché raccogliere dati?",
+    "collectionTitle": "Trasformare un problema noto in risposte mirate",
+    "collectionDescription": "Le stime globali mostrano la dimensione della sfida, ma non indicano quale medicinale manchi in una determinata città o quale ostacolo abbia priorità. Dati locali, datati e verificati aiutano a passare dalla constatazione all’azione.",
+    "reasons": {
+      "findGaps": {
+        "title": "Individuare le lacune",
+        "description": "Collegare segnalazioni, medicinali e luoghi per individuare territori o terapie poco serviti."
+      },
+      "guideActions": {
+        "title": "Orientare gli interventi",
+        "description": "Aiutare gli attori sanitari a dare priorità alla verifica delle scorte, all’informazione e alla distribuzione."
+      },
+      "measureChange": {
+        "title": "Misurare i cambiamenti",
+        "description": "Confrontare indicatori aggregati nel tempo per valutare se gli interventi riducono gli ostacoli."
+      }
+    },
+    "privacyTitle": "Raccolta responsabile:",
+    "privacyDescription": "raccogliere solo le informazioni necessarie, spiegarne l’uso, proteggere i dati sanitari, aggregare i risultati ed evitare l’identificazione. Le analisi locali saranno pubblicate solo con dati sufficienti, verificati e accessibili con le dovute autorizzazioni.",
+    "evidenceTitle": "Cosa sappiamo — e cosa resta da misurare",
+    "evidenceDescription": "La disuguaglianza globale di accesso è documentata dall’OMS. Questa pagina non pretende di misurare le differenze tra città o paesi: qui non viene calcolato alcun risultato locale. Le analisi territoriali dipenderanno da dati affidabili, rappresentativi, sufficienti e accessibili con le dovute autorizzazioni."
+  },
+  "chatPage": {
+    "title": "Discussione",
+    "channels": "Canali di discussione",
+    "loadingChannels": "Caricamento dei canali…",
+    "noChannels": "Non ci sono canali pubblici disponibili.",
+    "refresh": "Aggiorna",
+    "showRoles": "Mostra i ruoli",
+    "loadingMessages": "Caricamento dei messaggi…",
+    "noMessages": "Non ci sono messaggi in questo canale.",
+    "anonymous": "Anonimo",
+    "loadError": "Impossibile caricare le discussioni.",
+    "readOnlyNotice": "I messaggi possono essere letti, ma l’invio, la modifica e la segnalazione richiedono autorizzazioni non attive in questa interfaccia.",
+    "shareOpinion": "Condividi una recensione"
+  },
+  "footer": {
+    "description": "Rivoluzionare l'accesso globale ai medicinali antiepilettici attraverso l'intelligenza dei dati.",
+    "platform": "Piattaforma",
+    "dataCollection": "Raccolta di Dati",
+    "predictiveAnalysis": "Analisi Predittiva",
+    "research": "Ricerca",
+    "community": "Comunità",
+    "resources": "Risorse",
+    "documentation": "Documentazione",
+    "api": "API",
+    "support": "Supporto",
+    "blog": "Blog",
+    "contact": "Contatto",
+    "privacyPolicy": "Politica sulla Privacy",
+    "termsOfUse": "Termini di Utilizzo",
+    "gdpr": "GDPR",
+    "administration": "Amministrazione"
+  },
+  "gdpr": {
+    "pageIntro": "Scopri il GDPR, i dati interessati e i diritti delle persone su Move4Epilepsy.",
+    "eyebrow": "Dati personali e sanitari",
+    "introTitle": "I tuoi dati raccontano una storia personale. Proteggerli è importante.",
+    "introText": "Questa pagina spiega in modo semplice cos’è il GDPR, perché è particolarmente importante per una piattaforma che tratta epilessia e terapie, quali categorie di dati sono previste dall’API separata dal frontend e quali diritti puoi esercitare. Completa l’informativa sulla privacy, ma non la sostituisce.",
+    "whatTitle": "Che cos’è il GDPR?",
+    "whatText": "Il Regolamento generale sulla protezione dei dati (Regolamento UE 2016/679) disciplina l’uso delle informazioni relative a una persona identificabile. Si applica nell’Unione europea dal 25 maggio 2018 e può riguardare anche organizzazioni fuori dall’UE in base alle loro attività rivolte a persone nell’UE. Le norme applicabili devono essere verificate in base al paese e al contesto.",
+    "scopeNote": "Un dato può essere personale anche se un modulo viene inviato senza account o con uno pseudonimo: la combinazione di età, luogo, terapia e racconto può talvolta identificare una persona. I dati sanitari godono di una protezione rafforzata.",
+    "whyTitle": "Perché è particolarmente importante qui?",
+    "whyText": "Le informazioni su epilessia, medicinali, effetti indesiderati, costi o accesso possono essere molto personali. Una raccolta responsabile aiuta le persone a capire cosa condividono, riduce il rischio di esposizione e consente di usare dati aggregati per studiare le disuguaglianze di accesso senza pubblicare storie individuali.",
+    "principles": {
+      "lawfulnessTitle": "Una base giuridica chiara",
+      "lawfulnessText": "Ogni uso deve basarsi su una base giuridica documentata. Per i dati sanitari è necessaria anche una condizione specifica, inclusa quella prevista dall’articolo 9 del GDPR, che non può essere dedotta dal solo codice dell’API.",
+      "purposeTitle": "Una finalità specifica",
+      "purposeText": "I dati devono servire a finalità spiegate, come gestire una richiesta, rispondere a un avviso o studiare l’accesso alle terapie, senza riutilizzi incompatibili.",
+      "minimizationTitle": "Solo i dati necessari",
+      "minimizationText": "Richiedere solo le informazioni necessarie per il servizio indicato. I campi facoltativi e i testi liberi richiedono particolare attenzione perché possono contenere dettagli identificativi.",
+      "accuracyTitle": "Informazioni accurate",
+      "accuracyText": "Le persone devono poter correggere dati inesatti e le conclusioni devono considerare i limiti e la rappresentatività delle segnalazioni.",
+      "retentionTitle": "Conservazione limitata",
+      "retentionText": "Definire un periodo di conservazione giustificato e spiegare cosa succede dopo: cancellazione, anonimizzazione o archiviazione consentita.",
+      "securityTitle": "Sicurezza adeguata",
+      "securityText": "Limitare gli accessi, proteggere comunicazioni e sistemi, prevenire divulgazioni e pianificare la risposta agli incidenti."
+    },
+    "dataTitle": "Quali dati prevede l’API?",
+    "dataIntro": "Le categorie seguenti provengono dai modelli e dai moduli dell’API, sviluppata separatamente dal frontend Vue. Descrivono i campi possibili, ma non dimostrano che ogni campo venga raccolto da questo frontend o conservato in produzione.",
+    "data": {
+      "healthTitle": "Terapie e salute",
+      "healthText": "Età, sesso, luogo, medicinale, dose, frequenza, date o durata della terapia, costo, efficacia, effetti indesiderati, difficoltà, disponibilità, alternative e commenti. La rotta di invio può essere usata senza account; questi dati restano sensibili e non sono necessariamente anonimi.",
+      "locationTitle": "Luogo e ricerche",
+      "locationText": "Paese o località, medicinale cercato e informazioni sui risultati. Il modello di ricerca prevede anche campi per indirizzo IP e browser (user-agent); occorre verificare se vengono compilati e per quanto tempo sono conservati.",
+      "contactTitle": "Contatti e richieste",
+      "contactText": "Un avviso di disponibilità può includere e-mail o numero di telefono collegati a un medicinale e a un’area geografica. Le richieste di partnership possono includere nome, organizzazione, contatti e indirizzo.",
+      "contributionTitle": "Opinioni e segnalazioni",
+      "contributionText": "Opinioni, valutazioni e testi liberi; segnalazioni di medicinali e farmacie, prezzi, disponibilità ed eventualmente nome o telefono del segnalante; risposte a domande sulle percezioni dell’epilessia.",
+      "technicalTitle": "Account e registri tecnici",
+      "technicalText": "I modelli degli account prevedono e-mail, nome utente, ruolo e profilo. Il server registra le richieste (metodo, percorso e stato); la configurazione dell’hosting e i registri effettivi devono essere verificati prima di specificare quali tracce vengono conservate."
+    },
+    "technicalCaveat": "L’API imposta una scadenza di 30 giorni per un avviso di ricerca. Una scadenza o disattivazione non dimostra da sola che i dati vengano effettivamente cancellati: eliminazione, backup e periodi reali di conservazione devono essere confermati.",
+    "purposesTitle": "Perché raccogliere questi dati?",
+    "purposesText": "Le funzionalità visibili e le rotte API indicano possibili finalità: registrare esperienze di trattamento, ricevere opinioni e segnalazioni, gestire avvisi sulla disponibilità dei medicinali, trattare richieste di partnership, gestire account professionali e produrre analisi sull’accesso ai medicinali. Prima della raccolta, per ogni modulo vanno precisati la finalità esatta, la base giuridica e i dati necessari. Le analisi dovrebbero privilegiare risultati aggregati ed evitare la pubblicazione di dati che consentano di identificare una persona.",
+    "rightsTitle": "Quali sono i tuoi diritti?",
+    "rightsIntro": "Quando si applica il GDPR, puoi chiedere in particolare al titolare del trattamento di:",
+    "rights": {
+      "access": "Accedere ai tuoi dati e ricevere informazioni sul loro utilizzo.",
+      "rectification": "Far correggere i dati inesatti o incompleti.",
+      "erasure": "Chiedere la cancellazione nei casi previsti dalla legge.",
+      "restriction": "Chiedere la limitazione di determinati trattamenti.",
+      "objection": "Opporti a determinati trattamenti basati sul legittimo interesse o su un compito di interesse pubblico.",
+      "portability": "Ricevere alcuni dati forniti, alle condizioni previste dal diritto alla portabilità.",
+      "withdrawal": "Revocare il consenso quando il trattamento si basa su di esso, senza pregiudicare i trattamenti precedenti.",
+      "complaint": "Presentare un reclamo all’autorità di controllo competente."
+    },
+    "rightsLimit": "Non tutti i diritti si applicano in ogni situazione e possono esserci eccezioni legali. Per i dati sanitari è necessaria anche una base giuridica e una condizione specifica. Per esercitare un diritto, contatta il titolare del trattamento; la sua identità e i contatti ufficiali dovrebbero essere pubblicati chiaramente.",
+    "knownTitle": "Cosa sappiamo — e cosa resta da chiarire",
+    "knownText": "L’esame del codice API consente di individuare campi, moduli pubblici, account e accessi limitati a determinati ruoli. Ciò non basta a dimostrare la conformità dell’intero servizio né a stabilire le sue pratiche di hosting.",
+    "implementationTitle": "Stato attuale del frontend Vue",
+    "implementationIntro": "Le informazioni seguenti descrivono i moduli presenti in questa versione Vue. Non vanno confuse con le funzionalità previste per l’API separata o con requisiti ancora da implementare.",
+    "implementationCurrentTitle": "Modulo di invio di una terapia",
+    "implementationCurrentText": "Il modulo Vue raccoglie, tra le altre cose, età, sesso, località, informazioni sulla terapia e sull’esperienza di accesso. L’opzione per ricevere avvisi di disponibilità è facoltativa. Al momento, questo percorso non richiede un indirizzo e-mail per la dichiarazione, non mostra una casella di consenso esplicito e non verifica l’indirizzo. È presente una schermata di riepilogo, ma prima dell’invio mostra solo alcune risposte. Il frontend non offre ancora la consultazione, la modifica o la cancellazione self-service di queste dichiarazioni.",
+    "implementationPlannedTitle": "Requisiti documentati, integrazione in attesa",
+    "implementationPlannedText": "E-mail verificata, doppio controllo del consenso con prova versionata, avvisi e gestione successiva delle dichiarazioni sono requisiti documentati, non funzionalità già disponibili in questo modulo. Il percorso proposto e il contratto API devono essere convalidati dal team backend e dal titolare del trattamento prima dell’integrazione e della messa in produzione.",
+    "toConfirmTitle": "Informazioni che il titolare deve confermare",
+    "toConfirmText": "Identità giuridica e indirizzo del titolare; finalità e basi giuridiche, inclusa la condizione applicabile ai dati sanitari; destinatari e responsabili esterni; luoghi di hosting e trasferimenti fuori dal paese; periodi precisi di conservazione ed eliminazione dei backup; procedure per esercitare i diritti; e contatti del responsabile della protezione dei dati, se nominato.",
+    "disclaimer": "Questa pagina è una spiegazione divulgativa basata sul codice esaminato, non un parere legale né una dichiarazione di conformità. Non sostituisce un’informativa completa, convalidata dal titolare del trattamento e adattata ai paesi in cui il servizio è offerto.",
+    "contactTitle": "Domande o richieste sui tuoi dati?",
+    "contactText": "Puoi scrivere all’indirizzo di contatto attualmente pubblicato sul portale. È un contatto generale e non conferma da solo l’identità giuridica del titolare del trattamento.",
+    "sourceNote": "Materiale tecnico consultato: modelli e schemi API relativi a terapie, ricerche, avvisi, account, opinioni, partnership, segnalazioni di medicinali e percezioni. Riferimento giuridico:",
+    "officialText": "testo ufficiale del GDPR"
+  },
+  "predictiveDashboard": {
+    "title": "Dashboard predittivo — domanda di farmaci antiepilettici",
+    "demoBanner": "Dati dimostrativi (come visualisations_demande.R). Dopo il deploy del modello ML, i grafici saranno alimentati dalla pipeline (API o CSV).",
+    "downloadCsv": "Scarica tabella (CSV)",
+    "g1Title": "Domanda mensile in compresse per città",
+    "g1Subtitle": "Barre impilate = quantità prevista per città (tutti i farmaci).",
+    "g2Title": "Domanda totale per paese",
+    "g2Subtitle": "Vista macro: compresse / mese aggregate per paese.",
+    "g3Title": "Pazienti senza accesso alla terapia",
+    "g3Subtitle": "Per città e molecola — colore = rischio di rottura dichiarato.",
+    "g4Title": "Riparto della domanda per molecola",
+    "g4Subtitle": "Volumi in compresse / mese e quota sul totale.",
+    "g5Title": "Scatole da rifornire per città",
+    "g5Subtitle": "In base a confezioni tipo (riferimento demo).",
+    "g6Title": "Mappa di calore domanda (città × paese)",
+    "g6Subtitle": "Intensità = compresse / mese. Bordo rosso = rottura critica (punteggio ≥ 4).",
+    "g7Title": "Domanda vs accessibilità",
+    "g7Subtitle": "Dimensione punti = pazienti non coperti. Area ombreggiata = priorità.",
+    "g7Zone": "Zona rossa: forte domanda e accesso difficile — prioritizzare l’approvvigionamento.",
+    "g8Title": "Andamento mensile simulato per paese",
+    "g8Subtitle": "Proiezione illustrativa su 12 mesi — da sostituire con serie reali dopo il deploy."  },
+  "subscriptions": {
+    "eyebrow": "Move4Epilepsy · Area professionale",
+    "heroTitle": "Una farmacia più accessibile. Un sostegno migliore per le persone interessate dall’epilessia.",
+    "heroDescription": "Unisciti a una piattaforma internazionale che facilita l’orientamento verso farmacie e risorse utili. Scegli l’offerta adatta alla tua struttura e sviluppa la tua presenza professionale.",
+    "discoverPlans": "Scopri gli abbonamenti",
+    "contactTeam": "Contatta il team",
+    "trustInternational": "Una piattaforma con una vocazione internazionale",
+    "trustMarket": "Offerte adattate al mercato di fatturazione",
+    "trustPatients": "Le funzioni essenziali per i pazienti restano gratuite",
+    "offersKicker": "Le nostre offerte",
+    "offersTitle": "Scegli l’offerta adatta alla tua farmacia",
+    "offersDescription": "Prezzi, valute e periodicità sono mostrati solo se configurati per il mercato selezionato. Le funzioni previste dipendono dalla loro attivazione.",
+    "countryLabel": "Paese di fatturazione",
+    "billingPeriod": "Periodicità",
+    "monthly": "Mensile",
+    "annual": "Annuale",
+    "noMarkets": "Al momento non è configurato alcun mercato tariffario. Non viene mostrato un prezzo predefinito.",
+    "loading": "Caricamento delle offerte configurate…",
+    "loadError": "I prezzi configurati non sono disponibili al momento.",
+    "retry": "Riprova",
+    "priceIntro": "I prezzi provengono dalla configurazione attiva della piattaforma. Importo finale, eventuali imposte e condizioni devono essere confermati prima dell’abbonamento.",
+    "priceUnavailable": "Prezzo in arrivo",
+    "marketNotConfigured": "Non configurato per questo mercato",
+    "perMonth": "al mese",
+    "perYear": "all’anno",
+    "popular": "Offerta intermedia",
+    "featuresSubjectToAvailability": "Le funzioni previste saranno disponibili solo dopo sviluppo, verifica e attivazione.",
+    "selectionKicker": "La tua selezione",
+    "selectionTitle": "Piano {plan}",
+    "selectionDetails": "{amount} · fatturazione {period} · mercato: {country}",
+    "checkoutUnavailable": "Gli abbonamenti online, la creazione di account professionali e i pagamenti non sono ancora attivi. Contatta il team per informazioni; non è stato creato alcun abbonamento.",
+    "dismiss": "Chiudi",
+    "finalPriceNotice": "Prezzo finale, valuta, imposte, rinnovo e condizioni di cancellazione devono essere mostrati prima della conferma del pagamento.",
+    "comparisonKicker": "Confronta",
+    "comparisonTitle": "Funzioni secondo le tue esigenze",
+    "comparisonDescription": "Le offerte descrivono le funzioni previste. Saranno disponibili solo quelle effettivamente sviluppate e abilitate per il tuo account.",
+    "comparisonCaveat": "Funzioni e autorizzazioni saranno confermate prima dell’attivazione di ogni offerta.",
+    "comparison": {
+      "featureColumn": "Funzione",
+      "features": {
+        "professionalProfile": "Scheda professionale",
+        "contactLocation": "Contatti e posizione",
+        "profileUpdates": "Aggiornamento della scheda",
+        "serviceInformation": "Informazioni sui servizi",
+        "visibilityStatistics": "Statistiche di visibilità",
+        "multipleLocations": "Gestione di più sedi",
+        "teamRoles": "Ruoli per i collaboratori",
+        "consolidatedStatistics": "Vista e statistiche consolidate"
+      },
+      "values": {
+        "professionalProfile": { "essential": "Previsto", "professional": "Previsto", "network": "Previsto" },
+        "contactLocation": { "essential": "Previsto", "professional": "Previsto", "network": "Previsto" },
+        "profileUpdates": { "essential": "Previsto", "professional": "Previsto", "network": "Previsto" },
+        "serviceInformation": { "essential": "—", "professional": "Previsto", "network": "Previsto" },
+        "visibilityStatistics": { "essential": "—", "professional": "Secondo disponibilità", "network": "Secondo disponibilità" },
+        "multipleLocations": { "essential": "—", "professional": "—", "network": "Previsto" },
+        "teamRoles": { "essential": "—", "professional": "—", "network": "Previsto" },
+        "consolidatedStatistics": { "essential": "—", "professional": "—", "network": "Secondo disponibilità" }
+      }
+    },
+    "tiers": {
+      "essential": {
+        "name": "Essenziale",
+        "tagline": "Aumenta la tua visibilità",
+        "description": "Per le farmacie indipendenti che desiderano una presenza professionale sulla piattaforma.",
+        "cta": "Scegli Essenziale",
+        "features": {
+          "professionalProfile": "Creazione di una scheda professionale",
+          "contactLocation": "Visualizzazione di nome, contatti e posizione indicata",
+          "practicalInformation": "Informazioni pratiche sulla struttura",
+          "profileUpdates": "Aggiornamento delle informazioni secondo i permessi dell’account"
+        }
+      },
+      "professional": {
+        "name": "Professionale",
+        "tagline": "Arricchisci e gestisci la tua presenza",
+        "description": "Per le farmacie che necessitano di strumenti professionali aggiuntivi, subordinati all’attivazione.",
+        "cta": "Scegli Professionale",
+        "features": {
+          "essentialIncluded": "Funzioni previste nell’offerta Essenziale",
+          "enrichedProfile": "Gestione avanzata della scheda e dei servizi offerti",
+          "visibilityStatistics": "Statistiche di visibilità, se i dati sono disponibili",
+          "serviceInformation": "Informazioni aggiuntive sulla farmacia"
+        }
+      },
+      "network": {
+        "name": "Rete",
+        "tagline": "Per organizzazioni con più sedi",
+        "description": "Un’offerta da definire secondo il numero di sedi, il mercato e le esigenze dell’organizzazione.",
+        "cta": "Richiedi un preventivo",
+        "features": {
+          "professionalIncluded": "Funzioni previste nelle offerte precedenti",
+          "multipleLocations": "Gestione centralizzata di più farmacie",
+          "centralManagement": "Gestione delle schede e dei ruoli dei collaboratori",
+          "consolidatedView": "Panoramica e statistiche consolidate, secondo disponibilità"
+        }
+      }
+    },
+    "processKicker": "Percorso professionale",
+    "processTitle": "Come funziona l’abbonamento?",
+    "processDescription": "I passaggi previsti quando i servizi professionali saranno attivati.",
+    "process": {
+      "1": { "title": "Crea un account professionale", "description": "Inserisci le informazioni necessarie sulla farmacia o sull’organizzazione." },
+      "2": { "title": "Seleziona il mercato", "description": "Conferma il paese di fatturazione per visualizzare prezzi e metodi di pagamento disponibili." },
+      "3": { "title": "Scegli un’offerta", "description": "Confronta le funzioni disponibili e seleziona l’offerta adatta alle tue esigenze." },
+      "4": { "title": "Controlla il riepilogo e paga", "description": "Verifica importo, valuta, eventuali imposte e condizioni prima della conferma." },
+      "5": { "title": "Gestisci la tua presenza", "description": "Accedi all’area professionale e gestisci le informazioni consentite dal piano." }
+    },
+    "benefitsKicker": "Perché unirsi a noi?",
+    "benefitsTitle": "Una presenza utile, pensata per le farmacie",
+    "benefits": {
+      "presence": { "title": "Una presenza professionale", "description": "Aiuta gli utenti a scoprire le informazioni della tua farmacia durante la ricerca." },
+      "access": { "title": "Migliore accessibilità", "description": "Contribuisci a orientare le persone interessate verso farmacie con informazioni utili e aggiornate." },
+      "management": { "title": "Gestione su misura", "description": "Scegli un’offerta in base alle dimensioni della struttura e alle funzioni effettivamente disponibili." },
+      "international": { "title": "Una vocazione internazionale", "description": "La piattaforma è progettata per adattarsi progressivamente a lingue, valute e pagamenti dei mercati attivi." }
+    },
+    "faqKicker": "Hai bisogno di chiarimenti?",
+    "faqTitle": "Domande frequenti",
+    "faq": {
+      "eligibility": { "question": "Chi può abbonarsi?", "answer": "Le farmacie indipendenti e le organizzazioni con più sedi possono richiedere un’offerta, previa verifica e in base alla disponibilità nel paese." },
+      "patientPrice": { "question": "I pazienti devono pagare per usare Move4Epilepsy?", "answer": "No. Le funzioni essenziali destinate ai pazienti sono previste gratuite. Gli abbonamenti in questa pagina sono per farmacie e reti." },
+      "regionalPricing": { "question": "I prezzi sono uguali in tutti i paesi?", "answer": "No. I prezzi sono configurati per mercato. Non viene mostrato alcun prezzo finché il paese non è stato configurato." },
+      "currency": { "question": "Posso pagare nella valuta locale?", "answer": "La valuta dipende dal mercato di fatturazione e dai fornitori disponibili. Deve essere indicata prima della conferma." },
+      "payment": { "question": "Quali metodi di pagamento sono accettati?", "answer": "I metodi dipendono dal paese e dai fornitori integrati. Saranno indicati solo quando disponibili." },
+      "changePlan": { "question": "Posso cambiare piano?", "answer": "La modifica del piano dall’area professionale è prevista, ma non è ancora attiva." },
+      "cancel": { "question": "Posso annullare l’abbonamento?", "answer": "Le condizioni di cancellazione devono essere consultabili prima dell’abbonamento. La cancellazione autonoma non è ancora attiva." },
+      "networkPlan": { "question": "Come funziona l’offerta Rete?", "answer": "È destinata alle organizzazioni con più farmacie. Prezzo e condizioni dipenderanno dal numero di sedi, dalle esigenze e dal mercato." },
+      "privacy": { "question": "Come vengono protette le mie informazioni?", "answer": "I dati professionali devono essere trattati secondo le norme applicabili. Le informazioni sanitarie dei pazienti non sono destinate alle farmacie." },
+      "unsupportedMarket": { "question": "Cosa fare se il mio paese non è indicato?", "answer": "Contatta il team indicando paese ed esigenze. L’assenza di un prezzo significa che non è configurata un’offerta per quel mercato." }
+    },
+    "quoteKicker": "Offerta Rete",
+    "quoteTitle": "Un preventivo per la tua organizzazione",
+    "quoteDescription": "Indica il paese di fatturazione, il numero di sedi e le esigenze professionali. Il team potrà rispondere in base alle offerte disponibili.",
+    "quotePrivacyNote": "Non inserire informazioni sanitarie in questa richiesta.",
+    "quoteOrganization": "Nome dell’organizzazione",
+    "quoteCountry": "Paese di fatturazione",
+    "quoteLocations": "Numero approssimativo di sedi",
+    "quoteEmail": "Indirizzo e-mail professionale",
+    "quoteNeeds": "Esigenze specifiche (facoltativo)",
+    "sendQuoteRequest": "Prepara la richiesta di preventivo",
+    "quoteMailNotice": "La richiesta apre il programma di posta elettronica e non viene salvata sulla piattaforma.",
+    "quoteEmailSubject": "Richiesta di preventivo — Move4Epilepsy",
+    "quoteFields": {
+      "organization": "Organizzazione: {value}",
+      "country": "Paese di fatturazione: {value}",
+      "locations": "Numero di sedi: {value}",
+      "email": "E-mail: {value}",
+      "needs": "Esigenze: {value}"
+    },
+    "notProvided": "Non specificate",
+    "finalTitle": "Entra nella rete Move4Epilepsy",
+    "finalDescription": "Sviluppa la presenza della tua farmacia su una piattaforma pensata per facilitare l’accesso a informazioni utili.",
+    "footerTitle": "Move4Epilepsy",
+    "footer": {
+      "about": "Informazioni",
+      "contact": "Contatto",
+      "help": "Centro assistenza",
+      "terms": "Condizioni",
+      "privacy": "Privacy"
+    }
+  },
+  "servicesSearch": {
+    "title": "Cerca servizi",
+    "intro": "Consulta le farmacie registrate sulla piattaforma. Conferma direttamente con la farmacia la disponibilità dei medicinali.",
+    "type": "Tipo di servizio",
+    "pharmacies": "Farmacie",
+    "hospitals": "Ospedali",
+    "searchLabel": "Cerca farmacie",
+    "searchPlaceholder": "Nome, indirizzo o città",
+    "results": "Farmacie corrispondenti",
+    "catalogueStock": "{count} voce/i di magazzino attualmente disponibile/i nel catalogo",
+    "loading": "Caricamento delle farmacie…",
+    "loadError": "Impossibile caricare le farmacie.",
+    "retry": "Riprova",
+    "empty": "Nessuna farmacia corrisponde alla ricerca.",
+    "hospitalsUnavailable": "Al momento la piattaforma non è collegata a un elenco ospedaliero verificato. Consulta le risorse locali o contatta un professionista sanitario.",
+    "resourcesLink": "Consulta le risorse",
+    "disclaimer": "Le informazioni sulle farmacie potrebbero non essere aggiornate. Chiama la farmacia e verifica la disponibilità prima di recarti sul posto."
+  },
+  "publicSubmission": {
+    "partner": {
+      "title": "Proponi una partnership",
+      "description": "Presenta la tua organizzazione e le forme di collaborazione che desideri esplorare.",
+      "success": "La proposta di partnership è stata inviata alla piattaforma.",
+      "submitError": "Impossibile inviare la proposta. Controlla la connessione e riprova."
+    },
+    "medicine-report": {
+      "title": "Segnala la disponibilità di un medicinale",
+      "description": "Segnala la disponibilità o il prezzo osservato presso una farmacia.",
+      "success": "La segnalazione è stata inviata. Potrebbe essere verificata prima della pubblicazione.",
+      "submitError": "Impossibile inviare la segnalazione. Riprova."
+    },
+    "medication-registration": {
+      "title": "Condividi la mia esperienza terapeutica",
+      "description": "Compila il questionario sull’accesso e sull’esperienza terapeutica. I campi non essenziali sono facoltativi.",
+      "success": "La tua esperienza è stata inviata. Grazie per contribuire a comprendere le difficoltà di accesso.",
+      "submitError": "Impossibile inviare la risposta. Riprova."
+    },
+    "organizationType": "Tipo di organizzazione",
+    "organizationName": "Nome dell’organizzazione",
+    "contactPerson": "Persona di riferimento",
+    "email": "Indirizzo e-mail",
+    "phone": "Telefono",
+    "website": "Sito web",
+    "address": "Indirizzo",
+    "city": "Città",
+    "postalCode": "Codice postale",
+    "partnershipTypes": "Ambiti di collaborazione",
+    "partnershipKinds": {
+      "health": "Salute",
+      "data": "Dati e ricerca",
+      "financial": "Finanziamento",
+      "communication": "Comunicazione",
+      "other": "Altro"
+    },
+    "descriptionLabel": "Presenta la tua organizzazione",
+    "resourcesLabel": "Risorse che potresti mettere a disposizione",
+    "experience": "Esperienza pertinente",
+    "motivation": "Perché desideri collaborare?",
+    "choose": "Seleziona",
+    "medication": "Medicinale",
+    "pharmacyName": "Nome della farmacia",
+    "price": "Prezzo osservato",
+    "quantityStatus": "Disponibilità osservata",
+    "status": {
+      "available": "Disponibile",
+      "limited": "Scorte limitate",
+      "outOfStock": "Esaurito"
+    },
+    "reporterName": "Il tuo nome",
+    "reporterPhone": "Il tuo numero di telefono",
+    "reportNote": "La segnalazione non garantisce la disponibilità attuale del medicinale. Verifica sempre con la farmacia.",
+    "nameOptional": "Nome o pseudonimo (facoltativo)",
+    "age": "Età",
+    "sex": "Genere",
+    "sexOptions": {
+      "male": "Uomo",
+      "female": "Donna",
+      "other": "Altro",
+      "unspecified": "Preferisco non indicarlo"
+    },
+    "location": "Città o luogo di residenza",
+    "dosage": "Dosaggio prescritto",
+    "frequency": "Frequenza di assunzione",
+    "duration": "Durata del trattamento (mesi)",
+    "startDate": "Data di inizio",
+    "endDate": "Data di fine",
+    "ongoing": "Trattamento ancora in corso",
+    "wantsAlert": "Desidero ricevere un avviso sulla disponibilità",
+    "accessEase": "Facilità di accesso al trattamento",
+    "accessOptions": {
+      "easy": "Facile",
+      "difficult": "Difficile",
+      "veryDifficult": "Molto difficile"
+    },
+    "monthlyCost": "Costo mensile stimato",
+    "unitPrice": "Prezzo per unità",
+    "foundMedication": "Hai trovato il medicinale?",
+    "pharmaciesVisited": "Numero di farmacie visitate",
+    "waitingTime": "Tempo di attesa",
+    "stockoutFrequency": "Frequenza delle interruzioni di disponibilità",
+    "educationLevel": "Livello di istruzione (facoltativo)",
+    "employmentStatus": "Situazione lavorativa (facoltativo)",
+    "minimumSalary": "Reddito mensile minimo (facoltativo)",
+    "financialResources": "Le risorse finanziarie sono sufficienti?",
+    "yes": "Sì",
+    "no": "No",
+    "partially": "Parzialmente",
+    "morningPills": "Assunzioni al mattino",
+    "noonPills": "Assunzioni a mezzogiorno",
+    "eveningPills": "Assunzioni alla sera",
+    "hasAlternative": "Ho un medicinale alternativo",
+    "alternativeName": "Nome del medicinale alternativo",
+    "knowsRestockDelay": "La farmacia ha comunicato i tempi di riassortimento",
+    "preciseRestockDelay": "I tempi sono precisi",
+    "restockDelay": "Tempi comunicati",
+    "actionWhenDelayUnknown": "Cosa fai se i tempi non sono noti o sono imprecisi?",
+    "effectiveness": "Efficacia percepita (da 1 a 10)",
+    "sideEffects": "Effetti collaterali",
+    "difficulties": "Difficoltà incontrate",
+    "additionalComments": "Commenti aggiuntivi",
+    "sections": {
+      "personal": "Informazioni personali",
+      "treatment": "Trattamento",
+      "access": "Accesso e costi",
+      "experience": "La tua esperienza",
+      "dosage": "Assunzioni giornaliere",
+      "restock": "Riassortimento e alternative"
+    },
+    "anonymousNote": "Non è necessario un account. Se desideri restare anonimo, non inserire informazioni che possano identificarti.",
+    "review": "Rivedi la risposta",
+    "reviewTitle": "Controlla le informazioni principali",
+    "edit": "Modifica",
+    "confirm": "Conferma l’invio",
+    "sending": "Invio in corso…",
+    "submit": "Invia",
+    "sendAnother": "Invia un’altra risposta"
+  },
+  "admin": {
+    "dashboard": "Dashboard Amministratore",
+    "platformManagement": "Gestione Piattaforma Move4Epilepsy",
+    "overview": "Panoramica",
+    "users": "Utenti",
+    "reportedMessages": "Messaggi Segnalati",
+    "pharmacies": "Farmacie",
+    "partnerships": "Partnership",
+    "settings": "Impostazioni",
+    "logs": "Log",
+    "accessDenied": "Accesso Negato",
+    "noAdminRights": "Non hai diritti di amministratore",
+    "suspensionReason": "Motivo della sospensione:",
+    "userSuspendedSuccess": "Utente sospeso con successo",
+    "suspensionError": "Errore nella sospensione",
+    "confirmDelete": "Confermare l'eliminazione del messaggio?",
+    "messageDeleted": "Messaggio eliminato",
+    "reportDismissed": "Segnalazione respinta",
+    "pharmacyStatusUpdated": "Stato farmacia aggiornato",
+    "performance": "Prestazioni",
+    "performanceDescription": "Misurazioni di questa sessione nel browser.",
+    "refreshMetrics": "Aggiorna",
+    "pageLoad": "Caricamento pagina",
+    "domReady": "DOM pronto",
+    "resources": "Risorse",
+    "connection": "Connessione",
+    "online": "Online",
+    "offline": "Offline",
+    "transferSize": "Dati trasferiti",
+    "lastMeasured": "Ultima misurazione",
+    "trafficBackendNotice": "Il traffico globale, i visitatori attivi e le tendenze richiedono una raccolta lato server. Queste misurazioni locali non la sostituiscono."
+  },
+  "forms": {
+    "weak": "Debole",
+    "medium": "Medio",
+    "good": "Buono",
+    "veryStrong": "Molto forte",
+    "passwordStrength": "Forza della password",
+    "doctor": "Medico",
+    "pharmacist": "Farmacista",
+    "admin": "Admin",
+    "available": "Disponibile",
+    "limitedStock": "Stock limitato",
+    "lastBox": "Ultima scatola",
+    "onOrder": "In ordinazione",
+    "iAmEpileptic": "Sono epilettico",
+    "closeEpileptic": "Ho un caro con l'epilessia",
+    "healthProfessional": "Sono un professionista sanitario",
+    "noRelation": "Nessuna relazione particolare",
+    "hospital": "Ospedale / Clinica",
+    "pharmacy": "Farmacia / Rete di Farmacie",
+    "association": "Associazione di Pazienti",
+    "research": "Istituto di Ricerca",
+    "tech": "Azienda Tecnologica",
+    "other": "Altro"  }
+}
