@@ -420,6 +420,8 @@
     "awareness": {
       "title": "Epilepsy awareness",
       "intro": "Understanding epilepsy and reducing stigma can help better support people affected by it.",
+      "imageAlt": "Women gathered during a community health activity.",
+      "imageCredit": "Photo: USAID Africa Bureau — public domain",
       "cards": {
         "1": { "title": "Understand epilepsy", "description": "Epilepsy is a neurological condition. Its symptoms and care needs vary from person to person." },
         "2": { "title": "Challenge stigma", "description": "Misconceptions can isolate people and make access to care, education, or work more difficult." },

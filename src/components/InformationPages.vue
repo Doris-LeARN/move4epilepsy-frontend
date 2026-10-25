@@ -54,10 +54,27 @@ const pageIcon = computed(() => pageIcons[props.page] ?? BookOpen);
 
 <template>
   <div class="information-page">
-    <section class="panel information-intro">
-      <span class="round-icon purple"><component :is="pageIcon" :size="24" /></span>
-      <h2>{{ t(`contentPages.${page}.title`) }}</h2>
-      <p>{{ t(`contentPages.${page}.intro`) }}</p>
+    <section class="panel information-intro" :class="{ 'awareness-intro': page === 'awareness' }">
+      <div class="information-intro-copy">
+        <span class="round-icon purple"><component :is="pageIcon" :size="24" /></span>
+        <h2>{{ t(`contentPages.${page}.title`) }}</h2>
+        <p>{{ t(`contentPages.${page}.intro`) }}</p>
+      </div>
+      <figure v-if="page === 'awareness'" class="awareness-visual">
+        <img
+          src="/images/community-health-session.jpg"
+          :alt="t('contentPages.awareness.imageAlt')"
+          width="960"
+          height="720"
+        >
+        <figcaption>
+          <a
+            href="https://commons.wikimedia.org/wiki/File:Women_from_Community_Health_Program_(6096681680).jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >{{ t('contentPages.awareness.imageCredit') }}</a>
+        </figcaption>
+      </figure>
     </section>
 
     <template v-if="page === 'about'">

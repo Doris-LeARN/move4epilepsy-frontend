@@ -420,6 +420,8 @@
     "awareness": {
       "title": "Sensibilizzazione sull’epilessia",
       "intro": "Comprendere l’epilessia e ridurre lo stigma aiuta a sostenere meglio le persone interessate.",
+      "imageAlt": "Donne riunite durante un’attività di salute comunitaria.",
+      "imageCredit": "Foto: USAID Africa Bureau — pubblico dominio",
       "cards": {
         "1": { "title": "Comprendere l’epilessia", "description": "L’epilessia è una condizione neurologica. I sintomi e le esigenze di cura variano da persona a persona." },
         "2": { "title": "Contrastare lo stigma", "description": "Le idee errate possono isolare le persone e rendere più difficile l’accesso alle cure, all’istruzione o al lavoro." },

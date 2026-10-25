@@ -62,10 +62,21 @@ const factIcons = [Users, CheckCircle, Brain, BookOpen];
             </li>
           </ol>
         </div>
-        <aside class="do-not-box">
-          <h3>{{ t('truthPage.doNotTitle') }}</h3>
-          <ul><li v-for="item in doNotItems" :key="item">{{ t(`truthPage.doNotItems.${item}`) }}</li></ul>
-          <p>{{ t('truthPage.emergencyCallout') }}</p>
+        <aside class="first-aid-aside">
+          <img
+            class="first-aid-illustration"
+            src="/images/first-aid-guide.svg"
+            alt=""
+            aria-hidden="true"
+            width="640"
+            height="480"
+            loading="lazy"
+          >
+          <div class="do-not-box">
+            <h3>{{ t('truthPage.doNotTitle') }}</h3>
+            <ul><li v-for="item in doNotItems" :key="item">{{ t(`truthPage.doNotItems.${item}`) }}</li></ul>
+            <p>{{ t('truthPage.emergencyCallout') }}</p>
+          </div>
         </aside>
       </div>
       <p class="first-aid-note">{{ t('truthPage.firstAidNote') }}</p>
