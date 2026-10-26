@@ -352,6 +352,7 @@
       "kicker": "Our commitment to health",
       "title": "The UN Sustainable Development Goals",
       "description": "Move4Epilepsy contributes to UN SDG 3 by promoting more equitable access to care and epilepsy treatment.",
+      "imageAlt": "Original illustration of health and equitable access to care.",
       "goalTitle": "SDG 3 — Good Health and Well-Being",
       "goalDescription": "Ensure healthy lives and promote well-being for all at all ages.",
       "impacts": {
@@ -676,6 +677,7 @@
   "gdpr": {
     "pageIntro": "Understand the GDPR, the data involved, and the rights people have on Move4Epilepsy.",
     "eyebrow": "Personal and health data",
+    "illustrationAlt": "Illustration of personal documents protected by a shield.",
     "introTitle": "Your data tells a personal story. Protecting it matters.",
     "introText": "This page explains what the GDPR is, why it matters especially on a platform dealing with epilepsy and treatment, which data categories the API separate from the frontend provides for, and what rights you may exercise. It complements the privacy policy; it does not replace it.",
     "whatTitle": "What is the GDPR?",

@@ -40,9 +40,18 @@ const rights = computed(() => [
 <template>
   <div class="gdpr-page">
     <section class="panel gdpr-intro">
-      <p class="gdpr-kicker">{{ t('gdpr.eyebrow') }}</p>
-      <h2>{{ t('gdpr.introTitle') }}</h2>
-      <p>{{ t('gdpr.introText') }}</p>
+      <div class="gdpr-intro-copy">
+        <p class="gdpr-kicker">{{ t('gdpr.eyebrow') }}</p>
+        <h2>{{ t('gdpr.introTitle') }}</h2>
+        <p>{{ t('gdpr.introText') }}</p>
+      </div>
+      <img
+        class="gdpr-illustration"
+        src="/images/privacy-protection.svg"
+        :alt="t('gdpr.illustrationAlt')"
+        width="520"
+        height="390"
+      >
     </section>
 
     <section class="gdpr-section">

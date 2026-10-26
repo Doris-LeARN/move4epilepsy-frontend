@@ -352,6 +352,7 @@
       "kicker": "Notre engagement pour la santé",
       "title": "Objectifs de Développement Durable de l’ONU",
       "description": "Move4Epilepsy contribue à l’ODD 3 des Nations Unies en favorisant un accès plus équitable aux soins et aux traitements contre l’épilepsie.",
+      "imageAlt": "Illustration originale de la santé et de l’accès équitable aux soins.",
       "goalTitle": "ODD 3 — Bonne santé et bien-être",
       "goalDescription": "Promouvoir la santé et le bien-être pour tous, à tout âge.",
       "impacts": {
@@ -676,6 +677,7 @@
   "gdpr": {
     "pageIntro": "Comprendre le RGPD, les données concernées et les droits des personnes sur Move4Epilepsy.",
     "eyebrow": "Données personnelles et santé",
+    "illustrationAlt": "Illustration de documents personnels protégés par un bouclier.",
     "introTitle": "Vos données racontent une histoire personnelle. Leur protection est essentielle.",
     "introText": "Cette page explique simplement ce qu’est le RGPD, pourquoi il compte particulièrement pour une plateforme qui aborde l’épilepsie et les traitements, quelles catégories de données l’API séparée du frontend prévoit et quels droits vous pouvez exercer. Elle complète la politique de confidentialité ; elle ne la remplace pas.",
     "whatTitle": "Le RGPD, qu’est-ce que c’est ?",

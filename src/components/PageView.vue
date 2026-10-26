@@ -166,7 +166,18 @@ const isSearch = computed(() => props.page === 'search');
     </section>
     <section class="content-section sdg-section">
       <div class="section-heading"><span class="section-kicker">{{ t('homepage.sdgs.kicker') }}</span><h2>{{ t('homepage.sdgs.title') }}</h2><p>{{ t('homepage.sdgs.description') }}</p></div>
-      <div class="sdg-highlight"><span class="sdg-number">3</span><div><h3>{{ t('homepage.sdgs.goalTitle') }}</h3><p>{{ t('homepage.sdgs.goalDescription') }}</p></div></div>
+      <div class="sdg-highlight">
+        <img
+          class="sdg-illustration"
+          src="/images/sdg-health-equity.svg"
+          :alt="t('homepage.sdgs.imageAlt')"
+          width="200"
+          height="160"
+          loading="lazy"
+        >
+        <span class="sdg-number">3</span>
+        <div><h3>{{ t('homepage.sdgs.goalTitle') }}</h3><p>{{ t('homepage.sdgs.goalDescription') }}</p></div>
+      </div>
       <div class="sdg-grid">
         <article v-for="impact in sdgImpacts" :key="impact" class="sdg-card">
           <span class="sdg-target">3.8</span>
