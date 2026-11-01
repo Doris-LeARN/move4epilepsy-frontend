@@ -1,24 +1,29 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, defineAsyncComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
 import {
   ArrowRight, BarChart3, BookOpen, Brain, Building, CheckCircle, Heart, Lightbulb,
   MapPin, MessageCircle, Network, Shield, ShieldCheck, Sparkles, Target, Users,
 } from 'lucide-vue-next';
-import AccessInequalityMap from './AccessInequalityMap.vue';
-import AccessNetworkAnalysis from './AccessNetworkAnalysis.vue';
-import ChatPage from './ChatPage.vue';
-import InformationPages from './InformationPages.vue';
-import OpinionsPage from './OpinionsPage.vue';
-import PatientSearchPage from './PatientSearchPage.vue';
-import PerceptionsPage from './PerceptionsPage.vue';
-import ProtectedDataPage from './ProtectedDataPage.vue';
-import PublicSubmissionPage from './PublicSubmissionPage.vue';
-import RgpdPage from './RgpdPage.vue';
-import ServicesSearchPage from './ServicesSearchPage.vue';
-import SubscriptionPage from './SubscriptionPage.vue';
-import TruthPage from './TruthPage.vue';
 import type { PageId } from '../router/routes';
+
+const AuthPage = defineAsyncComponent(() => import('./AuthPage.vue'));
+const AccessInequalityMap = defineAsyncComponent(() => import('./AccessInequalityMap.vue'));
+const AccessNetworkAnalysis = defineAsyncComponent(() => import('./AccessNetworkAnalysis.vue'));
+const ChatPage = defineAsyncComponent(() => import('./ChatPage.vue'));
+const EconomicModelPage = defineAsyncComponent(() => import('./EconomicModelPage.vue'));
+const InformationPages = defineAsyncComponent(() => import('./InformationPages.vue'));
+const OpinionsPage = defineAsyncComponent(() => import('./OpinionsPage.vue'));
+const PatientSearchPage = defineAsyncComponent(() => import('./PatientSearchPage.vue'));
+const PerceptionsPage = defineAsyncComponent(() => import('./PerceptionsPage.vue'));
+const PublicAnalyticsDashboard = defineAsyncComponent(() => import('./PublicAnalyticsDashboard.vue'));
+const ProtectedDataPage = defineAsyncComponent(() => import('./ProtectedDataPage.vue'));
+const PublicSubmissionPage = defineAsyncComponent(() => import('./PublicSubmissionPage.vue'));
+const RoleAnalyticsDashboard = defineAsyncComponent(() => import('./RoleAnalyticsDashboard.vue'));
+const RgpdPage = defineAsyncComponent(() => import('./RgpdPage.vue'));
+const ServicesSearchPage = defineAsyncComponent(() => import('./ServicesSearchPage.vue'));
+const SubscriptionPage = defineAsyncComponent(() => import('./SubscriptionPage.vue'));
+const TruthPage = defineAsyncComponent(() => import('./TruthPage.vue'));
 
 const props = defineProps<{ page: PageId }>();
 const emit = defineEmits<{ navigate: [page: string] }>();
@@ -38,6 +43,8 @@ const pageLabelKeys: Partial<Record<PageId, string>> = {
   'predictive-dashboard': 'navigation.predictiveDashboard', subscription: 'navigation.subscriptions',
   'admin-dashboard': 'navigation.administration', 'locations-map': 'navigation.inequalityMap',
   terms: 'footer.termsOfUse', 'network-analysis': 'navigation.networkAnalysis',
+  'economic-model': 'navigation.economicModel',
+  login: 'navigation.login',
 };
 const title = computed(() => t(pageLabelKeys[props.page] ?? 'navigation.home'));
 
@@ -72,11 +79,12 @@ const genericDescription = computed(() => {
     'epilepsy-perceptions': t('perceptions.intro'),
     search: 'Trouvez des services et des ressources utiles près de chez vous.',
     medication: 'Informations et outils pour faciliter l’accès aux traitements antiépileptiques.',
-    trends: 'Explorez les tendances et les indicateurs d’accès aux traitements.',
+    trends: t('analytics.publicDescription'),
     'network-analysis': t('networkAnalysis.intro'),
     chat: 'Un espace de dialogue communautaire respectueux pour partager vos expériences.',
-    'access-dashboard': 'Visualisez les indicateurs globaux de disponibilité et d’accès aux soins.',
-    'predictive-dashboard': t('predictiveDashboard.demoBanner'),
+    'access-dashboard': t('analytics.publicDescription'),
+    'predictive-dashboard': t('analytics.publicDescription'),
+    login: t('auth.description'),
     'locations-map': 'Visualisez les inégalités d’accès et les ressources par territoire.',
     'pharmacy-dashboard': 'Retrouvez les indicateurs essentiels de votre activité officinale.',
     'pharmacy-stock': 'Consultez et gérez les informations de disponibilité des médicaments.',
@@ -98,16 +106,11 @@ const genericDescription = computed(() => {
   return descriptions[props.page] ?? 'Découvrez les ressources et les outils de la plateforme Move4Epilepsy.';
 });
 
-const dashboardStats = [
-  { label: 'Pays couverts', value: '25+', change: '+3.2%' },
-  { label: 'Médicaments suivis', value: '18', change: 'Catalogue' },
-  { label: 'Disponibilité moyenne', value: '72%', change: '+5.4%' },
-  { label: 'Données déclarées', value: '1 248', change: 'Actualisé' },
-];
-
-const isDashboard = computed(() => props.page === 'predictive-dashboard');
+const isDashboard = computed(() => [
+  'access-dashboard', 'trends', 'predictive-dashboard', 'doctor-dashboard',
+].includes(props.page));
 const isProtectedDataPage = computed(() => [
-  'access-dashboard', 'trends', 'pharmacy-dashboard', 'pharmacy-stock', 'doctor-dashboard', 'admin-dashboard',
+  'pharmacy-stock',
 ].includes(props.page));
 const isSearch = computed(() => props.page === 'search');
 </script>
@@ -212,21 +215,15 @@ const isSearch = computed(() => props.page === 'search');
 
     <AccessNetworkAnalysis v-else-if="page === 'network-analysis'" />
 
-    <template v-else-if="isDashboard">
-      <div class="demo-notice"><Sparkles :size="19" /><span>{{ t('predictiveDashboard.demoBanner') }}</span></div>
-      <div class="dashboard-grid">
-        <article v-for="stat in dashboardStats" :key="stat.label" class="dashboard-stat panel"><span>{{ stat.label }}</span><strong>{{ stat.value }}</strong><small>{{ stat.change }}</small></article>
-      </div>
-      <div class="dashboard-content-grid">
-        <article class="panel chart-panel"><div class="panel-heading"><div><h2>{{ page === 'predictive-dashboard' ? t('predictiveDashboard.g1Title') : 'Disponibilité par zone' }}</h2><p>Indicateurs de démonstration</p></div><BarChart3 /></div>
-          <div class="bar-chart" role="img" aria-label="Graphique des indicateurs"><div v-for="(height, index) in [46, 72, 56, 88, 64, 78, 52, 92, 68, 82, 58, 76]" :key="index" class="chart-column"><span :style="{ height: `${height}%` }"></span><small>{{ ['Jan', 'Fév', 'Mar', 'Avr'][index % 4] }}</small></div></div>
-        </article>
-        <article class="panel chart-panel"><div class="panel-heading"><div><h2>{{ page === 'predictive-dashboard' ? t('predictiveDashboard.g4Title') : 'Résumé des données' }}</h2><p>Répartition indicative</p></div><Target /></div>
-          <div class="donut-wrap"><div class="donut-chart"><span>72%<small>accès</small></span></div><ul><li><i class="legend-dot violet-dot"></i>Disponible <strong>72%</strong></li><li><i class="legend-dot blue-dot"></i>Limité <strong>18%</strong></li><li><i class="legend-dot grey-dot"></i>Indisponible <strong>10%</strong></li></ul></div>
-        </article>
-      </div>
-      <div v-if="page === 'predictive-dashboard'" class="dashboard-grid extra-charts"><article class="panel chart-panel"><h2>{{ t('predictiveDashboard.g2Title') }}</h2><p>{{ t('predictiveDashboard.g2Subtitle') }}</p><div class="horizontal-bars"><span>Bénin <i style="--bar: 83%"></i></span><span>France <i style="--bar: 68%"></i></span><span>Italie <i style="--bar: 54%"></i></span></div></article><article class="panel chart-panel"><h2>{{ t('predictiveDashboard.g3Title') }}</h2><p>{{ t('predictiveDashboard.g3Subtitle') }}</p><div class="risk-summary"><strong>12</strong><span>zones prioritaires à surveiller</span></div></article></div>
-    </template>
+    <PublicAnalyticsDashboard v-else-if="isDashboard" />
+
+    <AuthPage v-else-if="page === 'login'" @navigate="emit('navigate', $event)" />
+
+    <RoleAnalyticsDashboard
+      v-else-if="page === 'pharmacy-dashboard' || page === 'admin-dashboard'"
+      :page="page"
+      @navigate="emit('navigate', $event)"
+    />
 
     <PatientSearchPage v-else-if="page === 'patient-search'" />
 
@@ -237,6 +234,8 @@ const isSearch = computed(() => props.page === 'search');
     <PerceptionsPage v-else-if="page === 'epilepsy-perceptions'" />
 
     <SubscriptionPage v-else-if="page === 'subscription'" @navigate="emit('navigate', $event)" />
+
+    <EconomicModelPage v-else-if="page === 'economic-model'" @navigate="emit('navigate', $event)" />
 
     <TruthPage v-else-if="page === 'truth'" />
 

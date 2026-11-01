@@ -2,7 +2,7 @@
 import { computed, onMounted, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import {
-  AlertCircle, ArrowRight, Award, Check, Globe2, Mail, MapPin, Shield,
+  AlertCircle, ArrowRight, Award, BookOpen, Check, Globe2, Mail, MapPin, Shield,
   TrendingUp, Users,
 } from 'lucide-vue-next';
 import { apiRequest } from '../services/api';
@@ -192,6 +192,7 @@ onMounted(loadPlans);
         <p class="subscription-hero-copy">{{ t('subscriptions.heroDescription') }}</p>
         <div class="subscription-hero-actions">
           <a class="button button-white" href="#subscription-plans">{{ t('subscriptions.discoverPlans') }} <ArrowRight :size="17" /></a>
+          <button class="subscription-hero-contact" type="button" @click="emit('navigate', 'economic-model')"><BookOpen :size="16" />{{ t('subscriptions.economicModelLink') }}</button>
           <a class="subscription-hero-contact" href="mailto:move4epilepsy@gmail.com"><Mail :size="16" />{{ t('subscriptions.contactTeam') }}</a>
         </div>
       </div>

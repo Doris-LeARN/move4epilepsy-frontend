@@ -6,10 +6,6 @@ import 'leaflet/dist/leaflet.css';
 import { AlertTriangle, MapPin, Navigation, ShieldCheck } from 'lucide-vue-next';
 import { apiRequest } from '../services/api';
 
-interface PatientTreatment {
-  location?: string;
-}
-
 interface Pharmacy {
   id: string;
   name: string;
@@ -20,6 +16,21 @@ interface Pharmacy {
 }
 
 interface ApiLocation {
+  category: string;
+  count: number;
+}
+
+interface PublicAnalyticsResponse {
+  data_suppressed?: boolean;
+  breakdowns: {
+    locations?: {
+      items: ApiLocation[];
+      has_suppressed_groups: boolean;
+    };
+  };
+}
+
+interface MappedLocation {
   name: string;
   coordinates: [number, number];
   treatmentCount: number;
@@ -38,8 +49,8 @@ const apiLoading = ref(false);
 const apiLoaded = ref(false);
 const treatmentError = ref('');
 const pharmacyError = ref('');
-const unmappedLocations = ref(0);
-const apiLocations = ref<ApiLocation[]>([]);
+const locationsSuppressed = ref(false);
+const apiLocations = ref<MappedLocation[]>([]);
 const apiPharmacies = ref<ApiPharmacy[]>([]);
 const apiMarkerCount = computed(() => apiLocations.value.length + apiPharmacies.value.length);
 const distanceKm = computed(() => {
@@ -179,7 +190,7 @@ function renderApiData() {
 
 function coordinatesForLocation(location: string): [number, number] | null {
   const normalized = location.toLocaleLowerCase().trim();
-  const known = Object.entries(cityCoordinates).find(([city]) => normalized.includes(city.toLocaleLowerCase()));
+  const known = Object.entries(cityCoordinates).find(([city]) => normalized === city.toLocaleLowerCase());
   return known?.[1] ?? null;
 }
 
@@ -190,18 +201,18 @@ async function loadApiData() {
   apiLoading.value = true;
   treatmentError.value = '';
   pharmacyError.value = '';
-  unmappedLocations.value = 0;
+  locationsSuppressed.value = false;
 
   try {
-    const [treatmentsResult, pharmaciesResult] = await Promise.allSettled([
-      apiRequest<PatientTreatment[]>('/patients/treatments?skip=0&limit=1000', { signal }),
+    const [analyticsResult, pharmaciesResult] = await Promise.allSettled([
+      apiRequest<PublicAnalyticsResponse>('/patients/analytics/public', { signal }),
       apiRequest<Pharmacy[]>('/pharmacies', { signal }),
     ]);
     if (signal.aborted) return;
 
-    if (treatmentsResult.status === 'rejected') {
-      treatmentError.value = treatmentsResult.reason instanceof Error
-        ? treatmentsResult.reason.message
+    if (analyticsResult.status === 'rejected') {
+      treatmentError.value = analyticsResult.reason instanceof Error
+        ? analyticsResult.reason.message
         : t('accessMap.apiError');
     }
     if (pharmaciesResult.status === 'rejected') {
@@ -210,16 +221,14 @@ async function loadApiData() {
         : t('accessMap.apiError');
     }
 
-    const grouped = new Map<string, number>();
-    if (treatmentsResult.status === 'fulfilled') {
-      for (const treatment of treatmentsResult.value) {
-        const location = treatment.location?.trim();
-        if (location) grouped.set(location, (grouped.get(location) ?? 0) + 1);
-      }
-    }
-    const locations = [...grouped].flatMap(([name, treatmentCount]) => {
-      const coordinates = coordinatesForLocation(name);
-      return coordinates ? [{ name, coordinates, treatmentCount }] : [];
+    const locationBreakdown = analyticsResult.status === 'fulfilled'
+      ? analyticsResult.value.breakdowns.locations
+      : undefined;
+    const locations = (locationBreakdown?.items ?? []).flatMap(({ category, count }) => {
+      const coordinates = coordinatesForLocation(category);
+      return coordinates
+        ? [{ name: t(`accessMap.cities.${category}`), coordinates, treatmentCount: count }]
+        : [];
     });
     const pharmacies = (pharmaciesResult.status === 'fulfilled' ? pharmaciesResult.value : []).flatMap((pharmacy) => {
       const city = pharmacy.city || pharmacy.commune || '';
@@ -230,8 +239,7 @@ async function loadApiData() {
 
     apiLocations.value = locations;
     apiPharmacies.value = pharmacies;
-    unmappedLocations.value = grouped.size - locations.length +
-      (pharmaciesResult.status === 'fulfilled' ? pharmaciesResult.value.length : 0) - pharmacies.length;
+    locationsSuppressed.value = locationBreakdown?.has_suppressed_groups ?? false;
     apiLoaded.value = true;
     renderApiData();
   } catch (error) {
@@ -239,6 +247,7 @@ async function loadApiData() {
       treatmentError.value = error instanceof Error ? error.message : t('accessMap.apiError');
       apiLocations.value = [];
       apiPharmacies.value = [];
+      locationsSuppressed.value = false;
       apiLoaded.value = false;
       renderApiData();
     }
@@ -342,14 +351,14 @@ onUnmounted(() => {
       </div>
       <p v-if="treatmentError" class="form-alert error-alert" role="alert">
         {{ t('accessMap.treatmentsError') }} {{ treatmentError }}
-        <span>{{ t('accessMap.adminNotice') }}</span>
       </p>
       <p v-if="pharmacyError" class="form-alert error-alert" role="alert">
         {{ t('accessMap.pharmaciesError') }} {{ pharmacyError }}
       </p>
-      <p v-if="unmappedLocations > 0" class="form-alert" role="status">
-        {{ t('accessMap.unmappedLocations', { count: unmappedLocations }) }}
+      <p v-if="locationsSuppressed" class="form-alert" role="status">
+        {{ t('accessMap.suppressedLocations') }}
       </p>
+      <p class="form-alert" role="note">{{ t('accessMap.internationalLimitation') }}</p>
     </div>
 
     <div class="panel access-map-panel">

@@ -4,7 +4,7 @@ export const pageIds = [
   'pharmacy-dashboard', 'privacy', 'pharmacy-stock', 'patient-search', 'partner',
   'medicine-report', 'medication-registration', 'epilepsy-perceptions',
   'doctor-dashboard', 'access-dashboard', 'predictive-dashboard', 'subscription',
-  'admin-dashboard', 'locations-map', 'terms', 'rgpd',
+  'economic-model', 'admin-dashboard', 'locations-map', 'terms', 'rgpd', 'login',
 ] as const;
 
 export type PageId = (typeof pageIds)[number];

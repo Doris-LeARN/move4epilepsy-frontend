@@ -7,7 +7,7 @@ export async function apiRequest<T>(endpoint: string, options: RequestInit = {})
       'Content-Type': 'application/json',
       ...options.headers,
     },
-    credentials: 'omit',
+    credentials: 'include',
   });
 
   if (!response.ok) {

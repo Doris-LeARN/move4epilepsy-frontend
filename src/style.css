@@ -9,10 +9,12 @@
   --lavender-100: #f0ebff;
   --lavender-200: #e6e6fa;
   --lavender-300: #d8bfd8;
-  --lavender-500: #ba55d3;
-  --lavender-600: #9932cc;
+  --lavender-500: #9b63b1;
+  --lavender-600: #742b91;
   --lavender-700: #8b008b;
   --lavender-800: #4b0082;
+  --button-primary-hover: #5c2375;
+  --button-focus-ring: #a65abf;
   --text-muted: #696879;
   --card-shadow: 0 12px 35px rgba(59, 34, 101, .08);
 }
@@ -22,7 +24,7 @@ html { min-width: 320px; scroll-behavior: smooth; }
 body { margin: 0; min-width: 320px; min-height: 100vh; }
 button, input, textarea, select { font: inherit; }
 button { cursor: pointer; }
-button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid #ba55d3; outline-offset: 3px; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--button-focus-ring); outline-offset: 3px; }
 img { max-width: 100%; }
 .app-shell { min-height: 100vh; display: flex; flex-direction: column; background: linear-gradient(135deg, #fbfaff 0%, #f8f6ff 50%, #fff 100%); }
 
@@ -51,7 +53,7 @@ img { max-width: 100%; }
 .button-outline { background: transparent; color: white; border: 1px solid #ffffffad; }
 .button-outline:hover { background: #ffffff19; }
 .button-primary { background: var(--lavender-600); color: white; }
-.button-primary:hover { background: #8524bd; }
+.button-primary:hover { background: var(--button-primary-hover); }
 .button-white { background: white; color: #70219b; border: 1px solid #eadff3; }
 .button-success { background: #24a865; color: white; }
 .button-large { padding: 15px 22px; font-size: .97rem; }
@@ -77,18 +79,20 @@ img { max-width: 100%; }
 .nav-button { min-height: 65px; min-width: 74px; padding: 9px 13px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; border: 0; border-radius: 9px; background: transparent; color: #656071; transition: .2s; }
 .nav-button span { font-size: .68rem; font-weight: 600; max-width: 106px; text-align: center; line-height: 1.1; white-space: nowrap; }
 .nav-button:hover, .nav-button.active, .nav-dropdown button.active { background: #f1e9fb; color: #8020a9; }
+.nav-button[aria-expanded="true"] { background: #f1e9fb; color: #70248d; }
 .nav-dropdown { position: absolute; top: calc(100% + 2px); left: 50%; z-index: 95; transform: translateX(-50%); min-width: 215px; padding: 7px; border: 1px solid #e6daef; border-radius: 10px; background: white; box-shadow: 0 14px 30px #29173726; }
 .nav-dropdown button { display: block; width: 100%; padding: 10px 12px; border: 0; border-radius: 6px; background: white; text-align: left; color: #514958; font-size: .82rem; white-space: nowrap; }
-.nav-dropdown button:hover { background: #faf7fc; color: #7c1fa4; }
+.nav-dropdown button:hover, .nav-dropdown button:focus-visible { background: #f5eef9; color: #70248d; }
 .mobile-nav { display: none; position: relative; padding: 10px 16px; }
 .mobile-nav-brand { display: flex; align-items: center; gap: 10px; }
 .mobile-nav-brand img { width: 34px; height: 34px; border-radius: 8px; object-fit: contain; }
 .mobile-menu-toggle { border: 0; background: transparent; color: #544b5d; }
 .mobile-menu { position: absolute; top: 100%; left: 0; right: 0; max-height: calc(100vh - 60px); overflow-y: auto; padding: 12px 16px; border-top: 1px solid #eee6f1; background: white; box-shadow: 0 12px 20px #2d183116; }
 .mobile-item-button { width: 100%; display: flex; align-items: center; gap: 12px; border: 0; border-radius: 8px; padding: 12px; background: white; color: #564d61; text-align: left; font-weight: 600; }
-.mobile-item-button.active, .mobile-submenu button.active { background: #f1e9fb; color: #8020a9; }
+.mobile-item-button.active, .mobile-submenu button.active { background: #f1e9fb; color: #70248d; }
 .mobile-submenu { padding: 0 0 4px 42px; }
 .mobile-submenu button { display: block; width: 100%; padding: 9px 10px; text-align: left; border: 0; border-radius: 6px; background: white; color: #635b69; font-size: .86rem; }
+.mobile-submenu button:hover, .mobile-submenu button:focus-visible { background: #f5eef9; color: #70248d; }
 
 .page-container { width: min(100% - 40px, 1280px); flex: 1; margin: 0 auto; padding: 30px 0 70px; }
 .home-page { margin: -30px calc((min(100vw - 40px, 1280px) - 100vw) / 2) 0; }
@@ -407,6 +411,10 @@ img { max-width: 100%; }
   .hero-art { right: 4%; transform: translateY(-50%) scale(.85); }
   .hero-content { width: 70%; }
 }
+@media (max-width: 1100px) {
+  .desktop-nav { display: none; }
+  .mobile-nav { display: flex; align-items: center; justify-content: space-between; }
+}
 @media (max-width: 900px) {
   .header-inner { padding: 22px 20px 15px; }
   .brand-row { flex-direction: column; align-items: stretch; }
@@ -442,8 +450,6 @@ img { max-width: 100%; }
   .header-actions .language-select { grid-column: 1 / -1; }
   .header-info { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; font-size: .72rem; }
   .un-goal { grid-column: 1 / -1; }
-  .desktop-nav { display: none; }
-  .mobile-nav { display: flex; align-items: center; justify-content: space-between; }
   .page-container { width: min(100% - 28px, 1280px); padding-top: 18px; }
   .home-page { margin: -18px -14px 0; }
   .hero { min-height: 0; padding: 48px 21px; }
@@ -529,6 +535,9 @@ img { max-width: 100%; }
 .information-timeline p { margin: 0; color: #706a77; font-size: .87rem; line-height: 1.55; }
 .information-contact-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .information-contact-grid .information-card { min-height: 165px; }
+.economic-model-page { display: grid; gap: 20px; }
+.economic-model-range { display: block; margin: 11px 0; color: #742995; font-size: .95rem; }
+.economic-model-caveat { line-height: 1.6; }
 .information-page > .form-alert { margin: 0; padding: 16px; border-radius: 9px; color: #5d5364; background: #f6f1f8; line-height: 1.55; }
 .public-submission-page { display: grid; gap: 20px; max-width: 1050px; margin: 0 auto; }
 .public-submission-heading h2 { margin: 0 0 8px; color: #403546; font-size: 1.3rem; }
@@ -542,6 +551,7 @@ img { max-width: 100%; }
 .public-submission-form fieldset { min-width: 0; padding: 17px; border: 1px solid #e9e1ed; border-radius: 10px; }
 .public-submission-form legend { padding: 0 7px; color: #603878; font-weight: 750; }
 .public-submission-form fieldset .form-grid { margin-top: 5px; }
+.form-section-note { margin: 8px 0 12px; color: #706a77; font-size: .86rem; line-height: 1.55; }
 .public-submission-form .check-field, .partnership-types label { display: flex; align-items: center; gap: 9px; align-self: center; }
 .public-submission-form .check-field input, .partnership-types input { width: 17px; height: 17px; accent-color: #8437a3; }
 .partnership-types { display: flex; flex-wrap: wrap; gap: 12px 20px; }
@@ -551,6 +561,10 @@ img { max-width: 100%; }
 .submission-success p { margin: 0 0 5px; line-height: 1.55; }
 .treatment-review h3 { margin: 0 0 17px; color: #403546; }
 .treatment-review dl { display: grid; gap: 10px; margin: 0; }
+.treatment-consent-flow { display: grid; gap: 12px; margin-top: 18px; padding: 16px; border: 1px solid #e9e1ed; border-radius: 10px; }
+.treatment-consent-flow > label:not(.check-field) { display: grid; gap: 7px; color: #554b5e; font-size: .86rem; font-weight: 600; }
+.treatment-consent-flow input:not([type="checkbox"]) { width: 100%; padding: 11px 12px; border: 1px solid #ded7e5; border-radius: 8px; }
+.treatment-consent-flow .check-field { display: flex; align-items: flex-start; gap: 9px; line-height: 1.45; }
 .treatment-review dl > div { display: grid; grid-template-columns: minmax(130px, .5fr) 1fr; gap: 12px; padding: 12px; border-radius: 8px; background: #faf8fb; }
 .treatment-review dt { color: #756b7d; font-size: .85rem; }
 .treatment-review dd { margin: 0; color: #403546; font-weight: 650; }
@@ -822,6 +836,8 @@ img { max-width: 100%; }
 .subscription-footer button:hover { color: #762a94; text-decoration: underline; }
 @keyframes subscription-spin { to { transform: rotate(360deg); } }
 .button-secondary { border: 1px solid #d9d3de; color: #595360; background: white; }
+.button-secondary:hover { border-color: #bda8c8; background: #faf7fc; }
+.button-white:hover { background: #f8f2fb; }
 @media (max-width: 900px) {
   .chat-page { grid-template-columns: 1fr; }
   .subscription-process-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
