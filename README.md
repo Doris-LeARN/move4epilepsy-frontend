@@ -6,7 +6,7 @@ Le frontend reprend l’identité visuelle et une partie des parcours du portail
 
 ## Prérequis
 
-- Node.js 20 ou une version LTS ultérieure
+- Node.js 22.12 ou une version LTS ultérieure (requis par les outils Vue/TypeScript)
 - npm
 - Une instance de l’API pour tester les fonctions qui en dépendent
 

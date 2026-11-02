@@ -828,8 +828,44 @@
     "globalStatLabel": "personnes concernées dans les pays à faible revenu ne recevraient pas les soins nécessaires selon l’OMS.",
     "whoSource": "Source : fiche d’information de l’OMS sur l’épilepsie",
     "modelKicker": "Notre approche",
-    "modelTitle": "Analyser les relations plutôt que des chiffres isolés",
-    "modelDescription": "Une analyse de réseaux représente les acteurs et les ressources comme des nœuds, et les liens d’accès comme des relations. Elle peut révéler les ruptures de parcours et les zones moins bien desservies.",
+    "modelTitle": "Un réseau enrichi à partir des déclarations de traitement",
+    "modelDescription": "Les réponses consenties relient le profil, les traitements, l’accès aux médicaments, les contraintes économiques et les expériences sociales. Les résultats ci-dessous sont des agrégats réels, jamais des parcours individuels.",
+    "dataNodes": {
+      "profile": {
+        "title": "Personnes et territoires",
+        "description": "Âge, genre déclaré et zone de résidence."
+      },
+      "treatment": {
+        "title": "Traitements",
+        "description": "Catégorie thérapeutique, médicament déclaré, durée et statut."
+      },
+      "access": {
+        "title": "Accès et disponibilité",
+        "description": "Recherche, facilité d’accès, délais, ruptures et pharmacies visitées."
+      },
+      "economic": {
+        "title": "Situation économique",
+        "description": "Ressources, activité professionnelle et effets du coût sur le traitement."
+      },
+      "experience": {
+        "title": "Expérience de santé",
+        "description": "Efficacité perçue, impact émotionnel, stigmatisation et vie professionnelle."
+      },
+      "support": {
+        "title": "Obstacles et accompagnement",
+        "description": "Soutien social, barrières d’accès, discriminations et besoins d’appui."
+      }
+    },
+    "consentedSample": "Déclarations consenties à l’analyse",
+    "minimumSample": "Le détail reste masqué tant que l’échantillon n’atteint pas le seuil de confidentialité.",
+    "minimumGroup": "Seuls les groupes comptant au moins {count} réponses sont affichés.",
+    "responseCount": "{count} réponses",
+    "suppressedGroups": "Groupe masqué pour protéger les groupes de moins de {count} réponses.",
+    "noResponses": "Aucune ventilation agrégée disponible pour ce champ.",
+    "liveCaption": "Chaque nœud regroupe les réponses déclarées lors de la collecte du traitement. Les barres n’apparaissent que lorsque le seuil de confidentialité est atteint.",
+    "loading": "Chargement des données agrégées…",
+    "loadError": "Impossible de charger l’analyse des traitements.",
+    "retry": "Réessayer",
     "conceptualLabel": "Schéma conceptuel — pas une visualisation de données réelles",
     "diagramAlt": "Schéma conceptuel reliant les personnes et témoignages aux pharmacies et à leurs stocks de médicaments, avec les territoires et les obstacles d’accès.",
     "diagramCaption": "Les relations seraient étudiées à partir de déclarations volontaires, de disponibilités vérifiées et de distances géographiques. Ce schéma ne représente aucun patient ni résultat calculé.",
@@ -895,7 +931,7 @@
     "privacyTitle": "Collecte responsable :",
     "privacyDescription": "ne recueillir que les informations nécessaires, expliquer leur usage, protéger les données de santé, regrouper les résultats et éviter toute identification des personnes. Les analyses locales ne seront publiées qu’à partir de données suffisantes, vérifiées et autorisées.",
     "evidenceTitle": "Ce que l’on sait — et ce qu’il reste à mesurer",
-    "evidenceDescription": "L’inégalité mondiale d’accès est documentée par l’OMS. En revanche, cette page ne prétend pas mesurer les écarts par ville ou par pays : aucun résultat local n’est calculé ici. Les analyses territoriales dépendront de données fiables, représentatives, suffisamment nombreuses et accessibles dans le respect des autorisations."
+    "evidenceDescription": "Les résultats affichés proviennent uniquement des déclarations consenties à l’analyse et sont agrégés avec un seuil minimal de confidentialité. Ils décrivent les réponses reçues ; ils ne représentent pas nécessairement toute la population et ne permettent pas de reconstituer le parcours d’une personne."
   },
   "chatPage": {
     "title": "Discussion",

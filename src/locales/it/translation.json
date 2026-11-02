@@ -827,8 +827,44 @@
     "globalStatLabel": "persone con epilessia nei paesi a basso reddito potrebbero non ricevere le cure necessarie, secondo l’OMS.",
     "whoSource": "Fonte: scheda informativa OMS sull’epilessia",
     "modelKicker": "Il nostro approccio",
-    "modelTitle": "Analizzare le relazioni, non numeri isolati",
-    "modelDescription": "L’analisi delle reti rappresenta attori e risorse come nodi e i legami di accesso come relazioni. Può aiutare a individuare interruzioni nei percorsi di cura e territori poco serviti.",
+    "modelTitle": "Una rete più ricca basata sulle dichiarazioni dei trattamenti",
+    "modelDescription": "Le risposte che acconsentono all’analisi collegano profilo, trattamenti, accesso ai medicinali, vincoli economici ed esperienze sociali. I risultati seguenti sono aggregati reali, mai percorsi individuali.",
+    "dataNodes": {
+      "profile": {
+        "title": "Persone e territori",
+        "description": "Età, genere dichiarato e zona di residenza."
+      },
+      "treatment": {
+        "title": "Trattamenti",
+        "description": "Categoria terapeutica, medicinale dichiarato, durata e stato."
+      },
+      "access": {
+        "title": "Accesso e disponibilità",
+        "description": "Ricerca, facilità di accesso, tempi, indisponibilità e farmacie visitate."
+      },
+      "economic": {
+        "title": "Situazione economica",
+        "description": "Risorse, attività professionale ed effetti dei costi sul trattamento."
+      },
+      "experience": {
+        "title": "Esperienza di salute",
+        "description": "Efficacia percepita, impatto emotivo, stigma e vita professionale."
+      },
+      "support": {
+        "title": "Ostacoli e supporto",
+        "description": "Supporto sociale, barriere di accesso, discriminazioni e necessità di sostegno."
+      }
+    },
+    "consentedSample": "Dichiarazioni che acconsentono all’analisi",
+    "minimumSample": "I dettagli restano nascosti finché il campione non raggiunge la soglia di privacy.",
+    "minimumGroup": "Sono mostrati solo i gruppi con almeno {count} risposte.",
+    "responseCount": "{count} risposte",
+    "suppressedGroups": "Gruppo nascosto per proteggere i gruppi con meno di {count} risposte.",
+    "noResponses": "Nessuna ripartizione aggregata disponibile per questo campo.",
+    "liveCaption": "Ogni nodo raggruppa le risposte raccolte nelle dichiarazioni dei trattamenti. Le barre appaiono solo al raggiungimento della soglia di privacy.",
+    "loading": "Caricamento dei dati aggregati…",
+    "loadError": "Impossibile caricare l’analisi dei trattamenti.",
+    "retry": "Riprova",
     "conceptualLabel": "Schema concettuale — non rappresenta dati reali",
     "diagramAlt": "Schema concettuale che collega persone e segnalazioni a farmacie e scorte di medicinali, insieme ai territori e agli ostacoli di accesso.",
     "diagramCaption": "Le relazioni potrebbero essere studiate usando segnalazioni volontarie, disponibilità verificate e distanze geografiche. Lo schema non rappresenta persone né risultati calcolati.",
@@ -894,7 +930,7 @@
     "privacyTitle": "Raccolta responsabile:",
     "privacyDescription": "raccogliere solo le informazioni necessarie, spiegarne l’uso, proteggere i dati sanitari, aggregare i risultati ed evitare l’identificazione. Le analisi locali saranno pubblicate solo con dati sufficienti, verificati e accessibili con le dovute autorizzazioni.",
     "evidenceTitle": "Cosa sappiamo — e cosa resta da misurare",
-    "evidenceDescription": "La disuguaglianza globale di accesso è documentata dall’OMS. Questa pagina non pretende di misurare le differenze tra città o paesi: qui non viene calcolato alcun risultato locale. Le analisi territoriali dipenderanno da dati affidabili, rappresentativi, sufficienti e accessibili con le dovute autorizzazioni."
+    "evidenceDescription": "I risultati mostrati provengono solo da dichiarazioni che acconsentono all’analisi e sono aggregati con una soglia minima di privacy. Descrivono le risposte ricevute; potrebbero non rappresentare l’intera popolazione e non consentono di ricostruire il percorso di cura di una persona."
   },
   "chatPage": {
     "title": "Discussione",

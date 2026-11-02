@@ -828,8 +828,44 @@
     "globalStatLabel": "people with epilepsy in low-income countries may not receive the care they need, according to WHO.",
     "whoSource": "Source: WHO epilepsy fact sheet",
     "modelKicker": "Our approach",
-    "modelTitle": "Analyze relationships, not isolated numbers",
-    "modelDescription": "Network analysis represents actors and resources as nodes, and access links as relationships. It can help reveal gaps in care pathways and underserved areas.",
+    "modelTitle": "A richer network built from treatment reports",
+    "modelDescription": "Consented responses connect patient profiles, treatments, medicine access, economic constraints, and social experiences. The results below are real aggregates, never individual care pathways.",
+    "dataNodes": {
+      "profile": {
+        "title": "People and places",
+        "description": "Age, reported gender, and area of residence."
+      },
+      "treatment": {
+        "title": "Treatments",
+        "description": "Therapeutic category, reported medicine, duration, and status."
+      },
+      "access": {
+        "title": "Access and availability",
+        "description": "Searches, access, waiting times, stockouts, and pharmacies visited."
+      },
+      "economic": {
+        "title": "Economic situation",
+        "description": "Resources, employment, and the effect of cost on treatment."
+      },
+      "experience": {
+        "title": "Health experience",
+        "description": "Perceived effectiveness, emotional impact, stigma, and working life."
+      },
+      "support": {
+        "title": "Barriers and support",
+        "description": "Social support, access barriers, discrimination, and support needs."
+      }
+    },
+    "consentedSample": "Declarations consenting to analysis",
+    "minimumSample": "Details stay hidden until the sample reaches the privacy threshold.",
+    "minimumGroup": "Only groups with at least {count} responses are displayed.",
+    "responseCount": "{count} responses",
+    "suppressedGroups": "Group hidden to protect groups with fewer than {count} responses.",
+    "noResponses": "No aggregate breakdown is available for this field.",
+    "liveCaption": "Each node groups responses collected in treatment reports. Bars appear only when the privacy threshold is met.",
+    "loading": "Loading aggregated data…",
+    "loadError": "Unable to load treatment analysis.",
+    "retry": "Try again",
     "conceptualLabel": "Conceptual diagram — not a visualization of real data",
     "diagramAlt": "Conceptual diagram connecting people and reports to pharmacies and medicine stocks, alongside locations and barriers to access.",
     "diagramCaption": "Relationships could be examined using voluntary reports, verified availability, and geographic distances. This diagram represents no individual and no calculated result.",
@@ -895,7 +931,7 @@
     "privacyTitle": "Responsible data collection:",
     "privacyDescription": "collect only what is necessary, explain its use, protect health information, aggregate results, and prevent identification. Local analyses will be published only when there is enough verified data and access is authorized.",
     "evidenceTitle": "What is known — and what remains to be measured",
-    "evidenceDescription": "Global inequality in access is documented by WHO. This page does not claim to measure gaps by town or country: no local result is calculated here. Local analyses depend on reliable, representative, sufficiently numerous data that can be accessed with proper authorization."
+    "evidenceDescription": "Results shown come only from declarations consenting to analysis and are aggregated with a minimum privacy threshold. They describe the responses received; they may not represent the whole population and cannot be used to reconstruct any individual’s care pathway."
   },
   "chatPage": {
     "title": "Discussion",
