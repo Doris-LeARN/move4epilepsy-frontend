@@ -23,7 +23,7 @@ Le serveur Vite affiche l’adresse locale à ouvrir dans le navigateur. Les rou
 Configurez l’URL de base de l’API dans `.env` :
 
 ```dotenv
-VITE_API_BASE_URL=http://localhost:8000/api/v1
+VITE_API_BASE_URL=http://localhost:8002/api/v1
 ```
 
 En production, cette variable doit désigner une URL joignable depuis le navigateur de l’utilisateur. Elle est intégrée au bundle lors du build. Le serveur API doit autoriser l’origine du frontend via CORS.
@@ -35,12 +35,13 @@ En production, cette variable doit désigner une URL joignable depuis le navigat
 | `npm run dev` | Démarre le serveur de développement Vite. |
 | `npm run build` | Vérifie les types Vue/TypeScript puis génère le bundle dans `dist/`. |
 | `npm run preview` | Sert localement le bundle de production pour vérification. |
+| `npm test` | Exécute les tests unitaires frontend. |
 
 ## État et limites actuels
 
 - L’interface est parcourable sans connexion frontend ; cela ne désactive ni ne remplace les contrôles d’accès que l’API doit appliquer.
 - Plusieurs pages publiques et visualisations sont disponibles, mais certaines données et certains dashboards dépendent de l’API ou restent en démonstration/indisponibles.
-- Le formulaire Vue de déclaration de traitement ne met pas encore en œuvre l’e-mail vérifié, la preuve du double consentement ni le parcours de gestion ultérieure. Ces exigences et le contrat API proposé sont documentés dans [`documentation/TREATMENT_MANAGEMENT_API.md`](./documentation/TREATMENT_MANAGEMENT_API.md). La page RGPD distingue cet état actuel des exigences à venir.
+- Le formulaire de déclaration de traitement vérifie l’adresse e-mail et recueille séparément les consentements facultatifs aux analyses et aux alertes. Le parcours de gestion ultérieure des déclarations n’est pas encore intégré.
 - Le frontend peut être construit et servi avec Docker Compose. Le dépôt Git autonome est disponible sur GitHub ; `main` contient la base et les évolutions sont proposées par pull request vers `develop`.
 
 ## Documentation

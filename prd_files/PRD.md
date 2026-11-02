@@ -1,10 +1,10 @@
 # Product Requirements Document (PRD)
 ## Move4Epilepsy - Plateforme Mondiale d'Accès aux Médicaments Antiépileptiques
 
-**Version:** 1.7
-**Date:** Octobre 2026
+**Version:** 1.8
+**Date:** Novembre 2026
 **Statut:** Référentiel produit du portail React historique et du frontend Vue ; les exigences et références de code ne sont pas toutes implémentées dans Vue.  
-**Dernière mise à jour:** Octobre 2026 — gestion des traitements par e-mail vérifié, enregistrement du consentement et retrait
+**Dernière mise à jour:** Novembre 2026 — intégration du formulaire Vue de déclaration, vérification de l'e-mail et consentements séparés
 
 > **Périmètre de ce document :** ce PRD conserve les exigences et références historiques du portail React. Les chemins `src/pages/*.tsx` sont des références à cette version, pas à l’application Vue. Les exigences non encore disponibles dans le frontend Vue ne doivent pas être interprétées comme des fonctionnalités livrées. Voir [`documentation/README.md`](../documentation/README.md) pour l’architecture et l’état effectif du frontend final.
 
@@ -314,16 +314,23 @@ Nous utilisons l'échelle TRL (Technology Readiness Level) pour évaluer le nive
   - `pharmacies_visited` : Nombre de pharmacies visitées **avant de trouver le médicament** (parcours patient)
   - `waiting_time` : Délai d'obtention (immédiat, jours, semaines)
   - `stockout_frequency` : Fréquence des ruptures (jamais/rarement/souvent)
-  - Alertes de disponibilité : l'envoi par e-mail est requis dans le parcours retenu ; l'adresse doit être vérifiée et rattachée aux déclarations concernées. Le booléen historique `wants_alert` ne constitue ni la preuve de vérification, ni celle du consentement.
+  - Alertes de disponibilité : elles sont facultatives. Si la personne en demande une, elle doit donner un accord distinct et explicite à l'utilisation de son adresse vérifiée pour ces alertes. Le booléen `wants_alert` ne constitue ni la preuve de vérification, ni celle du consentement.
 - **Données socio-économiques et cliniques** (optionnelles) : niveau d'études, revenus, statut d'emploi, effets secondaires, difficultés, commentaires libres, nombre de comprimés (matin/midi/soir), médicament sans alternative, etc.
-- **Adresse e-mail** : requise et vérifiée pour l'envoi des alertes de disponibilité et pour permettre au déclarant de retrouver et gérer ses traitements. Aucun nom ni compte patient n'est requis. L'e-mail est une donnée personnelle et son association à un traitement révèle potentiellement une information de santé ; il ne doit pas être exposé dans les dashboards, exports analytiques ou courriels au-delà du nécessaire.
+- **Adresse e-mail** : requise et vérifiée pour enregistrer une déclaration et permettre au déclarant de retrouver et gérer ses traitements. Aucun nom ni compte patient n'est requis. L'e-mail est une donnée personnelle et son association à un traitement révèle potentiellement une information de santé ; il ne doit pas être exposé dans les dashboards, exports analytiques ou courriels au-delà du nécessaire.
 
 **Consentement et confirmation :**
-- Conserver le double contrôle du parcours React : case de consentement explicite, non précochée, dans le formulaire ; puis récapitulatif complet et confirmation finale avant écriture définitive.
-- La confirmation finale est la seule étape qui crée le traitement. L'adresse e-mail doit être vérifiée avant cette confirmation ; aucun traitement définitif ne doit être créé au stade du formulaire ou de la demande de code. Les codes et états de vérification sont temporaires.
-- L'API doit enregistrer une preuve minimale et vérifiable : finalité(s), version du texte présenté, horodatage du consentement, horodatage de la confirmation finale, vérification de l'e-mail et, le cas échéant, horodatage du retrait. Les décisions relatives aux usages analytiques et aux alertes doivent être identifiables séparément, même si les alertes sont requises par le parcours produit.
+- Le formulaire Vue recueille un accord facultatif, non précoché, pour les analyses agrégées. Si une alerte est demandée, un second accord distinct, non précoché, est requis pour l'envoi de cette alerte ; demander une alerte ne vaut pas consentement.
+- Le parcours vérifie l'adresse par un code à usage unique à six chiffres, valable 10 minutes et soumis à une limite de tentatives et de renvois. La vérification est requise avant la confirmation finale ; aucun traitement définitif n'est créé au stade du formulaire, de la demande ou de la vérification du code.
+- Après vérification, le formulaire présente un récapitulatif. La confirmation finale est la seule étape qui crée le traitement. L'API enregistre séparément les choix d'analyse et d'alerte, la version du texte (actuellement `v3`), les horodatages et la vérification de l'e-mail.
+- Le service d'e-mail doit être configuré pour livrer les codes. En développement, un serveur SMTP local de capture peut être utilisé ; ne pas afficher ni journaliser les codes ou jetons.
 - Les traitements et coordonnées ne sont pas réputés anonymes du seul fait qu'aucun nom ou compte n'est demandé. Les champs de santé, la localisation et l'e-mail peuvent permettre une identification directe ou indirecte ; limiter les accès et agréger les statistiques avant publication.
-- Le formulaire explique que l'envoi des alertes par e-mail est requis, les événements qui déclenchent un message et l'usage de l'adresse. La base légale et la condition applicable aux données de santé, ainsi que le caractère requis de l'e-mail et des alertes, doivent être validés par le responsable du traitement avant mise en production. La case de consentement et la confirmation de formulaire ne remplacent pas cette validation.
+- Le formulaire explique l'utilisation de l'adresse et, lorsque la personne la demande, les alertes par e-mail. La base légale et la condition applicable aux données de santé doivent être validées par le responsable du traitement avant mise en production. La case de consentement et la confirmation de formulaire ne remplacent pas cette validation.
+
+**État de livraison du frontend Vue (novembre 2026) :**
+- ✅ Déclaration publique : demande et confirmation du code, récapitulatif, consentement facultatif aux analyses et consentement distinct aux alertes lorsqu'elles sont demandées, puis création après confirmation finale.
+- ✅ Les champs obligatoires incomplets sont bloqués avant l'accès au récapitulatif. Les réponses d'erreur de validation de l'API sont présentées de façon lisible.
+- ⏳ La gestion ultérieure (liste, modification, suppression, retrait et révocation de session) est exposée par l'API mais n'est pas encore intégrée dans le frontend Vue.
+- Les routes de vérification, consentement et création sont disponibles dans l'API : `POST /api/v1/patients/treatments/email-verification/request`, `POST /api/v1/patients/treatments/email-verification/confirm`, `POST /api/v1/patients/treatments/consent` et `POST /api/v1/patients/treatments`.
 
 **Gestion ultérieure :**
 - La personne saisit son adresse puis la vérifie à nouveau par un code à usage unique avant de consulter ses traitements associés, les modifier ou les supprimer. Les réponses de l'API ne révèlent pas si une adresse ou une déclaration existe.
@@ -335,9 +342,10 @@ Nous utilisons l'échelle TRL (Technology Readiness Level) pour évaluer le nive
 **Critères d'acceptation :**
 - ✅ Formulaire accessible sans authentification
 - ✅ Toutes les données d'accès collectées
-- ✅ E-mail vérifié pour les alertes et la gestion du traitement
+- ✅ E-mail vérifié avant l'enregistrement de la déclaration
+- ✅ Consentement d'analyse facultatif et consentement aux alertes séparé, uniquement si une alerte est demandée
 - ✅ Consentement et confirmation finale conservés avec version et horodatage
-- ✅ Gestion autorisée uniquement après vérification de l'e-mail
+- ⏳ Gestion self-service dans le frontend, après vérification de l'e-mail (API disponible, interface à intégrer)
 - ✅ Validation des données
 
 **Fichiers associés :**
@@ -727,7 +735,7 @@ Nous utilisons l'échelle TRL (Technology Readiness Level) pour évaluer le nive
 - `stockout_alerts` : Suivi des ruptures de stock
 
 #### Données Cliniques
-- `patient_treatments` : Déclarations de traitements et données d'accès/santé, potentiellement ré-identifiantes. Champs principaux : `medication_name`, `treatment_start_date`, `treatment_end_date`, `treatment_is_ongoing`, `found_medication`, `pharmacies_visited` (nombre de pharmacies visitées avant de trouver le médicament), `waiting_time`, `stockout_frequency`, `effectiveness`, `education_level`, `minimum_salary`, `employment_status`, `has_alternative_medication`, `morning_pills` / `noon_pills` / `evening_pills`, `side_effects`, `difficulties`, `additional_comments`, etc. Évolutions requises : e-mail d'alerte vérifié lié aux déclarations, consentement versionné et horodaté, et mécanisme temporaire de vérification pour la gestion par la personne.
+- `patient_treatments` : Déclarations de traitements et données d'accès/santé, potentiellement ré-identifiantes. Champs principaux : `medication_name`, `treatment_start_date`, `treatment_end_date`, `treatment_is_ongoing`, `found_medication`, `pharmacies_visited` (nombre de pharmacies visitées avant de trouver le médicament), `waiting_time`, `stockout_frequency`, `effectiveness`, `education_level`, `minimum_salary`, `employment_status`, `has_alternative_medication`, `morning_pills` / `noon_pills` / `evening_pills`, `side_effects`, `difficulties`, `additional_comments`, etc. État : l'API enregistre l'e-mail vérifié, les choix de consentement séparés avec leur version et leurs horodatages, et utilise des codes/jetons temporaires pour la vérification. Le frontend Vue intègre la déclaration ; la gestion ultérieure reste à intégrer.
 - Une preuve de consentement distincte des données cliniques doit conserver les finalités, les versions de texte, les horodatages des deux confirmations et le retrait éventuel, selon une durée documentée. Les codes OTP et sessions de gestion sont temporaires et ne sont pas stockés en clair.
 
 #### Communauté
@@ -998,7 +1006,17 @@ Nous utilisons l'échelle TRL (Technology Readiness Level) pour évaluer le nive
 - Les opérations sont journalisées avec un minimum de métadonnées, sans conserver le contenu médical supprimé ni les codes OTP.
 
 **Contrats API attendus :**
-- Routes à définir pour l'envoi et la vérification des codes e-mail, la création du traitement après confirmation, la liste des traitements associés, leur modification, la suppression individuelle/groupée et le retrait du consentement.
+- Parcours de déclaration déjà intégré au frontend Vue :
+  - `POST /api/v1/patients/treatments/email-verification/request`
+  - `POST /api/v1/patients/treatments/email-verification/confirm`
+  - `POST /api/v1/patients/treatments/consent`
+  - `POST /api/v1/patients/treatments`
+- Routes de gestion disponibles dans l'API, interface frontend à intégrer :
+  - `GET /api/v1/patients/treatments/mine`
+  - `PATCH /api/v1/patients/treatments/mine/{treatment_id}`
+  - `DELETE /api/v1/patients/treatments/mine`
+  - `POST /api/v1/patients/treatments/mine/consent/withdraw`
+  - `POST /api/v1/patients/treatments/mine/session/revoke`
 - `DELETE /api/v1/patients/treatments/{treatment_id}`
 - `DELETE /api/v1/opinions/{opinion_id}`
 - `DELETE /api/v1/auth/me`
@@ -1036,6 +1054,7 @@ Nous utilisons l'échelle TRL (Technology Readiness Level) pour évaluer le nive
 | 1.5 | Juin 2026 | Équipe Move4Epilepsy | Clarification Chat communautaire (4.8) : chat simple, salons publics + messagerie privée (inbox), modération humaine, espace sans tabou. |
 | 1.6 | Juin 2026 | Équipe Move4Epilepsy | Suppression complète de la section 4.12 (analyse automatique des opinions) et de toutes les références associées dans le TRL, la roadmap et le chat. |
 | 1.7 | Octobre 2026 | Équipe Move4Epilepsy | Parcours traitements : e-mail vérifié requis pour alertes et gestion, double confirmation et preuve de consentement, modification/suppression self-service, retrait et purge analytique ; correction des affirmations non vérifiées d'anonymisation totale/conformité. |
+| 1.8 | Novembre 2026 | Équipe Move4Epilepsy | Mise à jour du PRD après intégration du parcours de déclaration dans le frontend Vue : vérification par code e-mail, récapitulatif avant création, consentement d'analyse facultatif et consentement distinct aux alertes, état livré/non livré et routes API réelles. |
 
 ---
 
@@ -1051,5 +1070,5 @@ Ce document est un document vivant et sera mis à jour au fur et à mesure de l'
 ---
 
 **Document créé le :** Janvier 2025  
-**Dernière mise à jour :** Février 2025  
+**Dernière mise à jour :** Novembre 2026
 **Statut :** ✅ Approuvé pour développement

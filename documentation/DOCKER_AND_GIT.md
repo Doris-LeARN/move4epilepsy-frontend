@@ -15,7 +15,7 @@ cp .env.example .env
 Renseigner les variables dans `.env` :
 
 ```dotenv
-VITE_API_BASE_URL=http://localhost:8000/api/v1
+VITE_API_BASE_URL=http://localhost:8002/api/v1
 FRONTEND_PORT=8080
 ```
 
@@ -52,9 +52,9 @@ Le port `8080` était libre avant le démarrage du frontend : `lsof -nP -iTCP:80
 Le build de production (`npm run build`), la validation Compose (`docker compose config`) et la construction de l’image ont réussi. Pour le contrôle, l’URL de l’API a été fournie dans l’environnement de chaque commande :
 
 ```bash
-VITE_API_BASE_URL=http://localhost:8000/api/v1 docker compose ps
-VITE_API_BASE_URL=http://localhost:8000/api/v1 docker compose logs -f frontend
-VITE_API_BASE_URL=http://localhost:8000/api/v1 docker compose down
+VITE_API_BASE_URL=http://localhost:8002/api/v1 docker compose ps
+VITE_API_BASE_URL=http://localhost:8002/api/v1 docker compose logs -f frontend
+VITE_API_BASE_URL=http://localhost:8002/api/v1 docker compose down
 ```
 
 Sans fichier `.env`, Compose exige cette variable même pour des commandes telles que `ps` et `down`. Pour éviter de la répéter, copiez `.env.example` en `.env` et adaptez ses valeurs comme décrit plus haut.

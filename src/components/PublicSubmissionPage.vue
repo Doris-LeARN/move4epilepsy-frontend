@@ -30,6 +30,7 @@ const emailVerificationToken = ref('');
 const emailVerificationSent = ref(false);
 const emailVerified = ref(false);
 const consentAnalysis = ref(false);
+const consentAlerts = ref(false);
 const monthlyCostNotReported = ref(false);
 const unitPriceNotReported = ref(false);
 const minimumSalaryNotReported = ref(false);
@@ -135,6 +136,10 @@ watch(() => treatment.medication_name, () => {
   customMedicationName.value = '';
 });
 
+watch(() => treatment.wants_alert, (wantsAlert) => {
+  if (!wantsAlert) consentAlerts.value = false;
+});
+
 watch(contactEmail, () => {
   emailCode.value = '';
   emailVerificationToken.value = '';
@@ -158,6 +163,16 @@ function selectedMedicationName() {
 }
 
 function goToReview() {
+  if (
+    treatment.treatment_is_ongoing === null
+    || treatment.wants_alert === null
+    || treatment.has_alternative_medication === null
+    || treatment.knows_restock_delay === null
+    || (treatment.knows_restock_delay && treatment.is_restock_delay_precise === null)
+  ) {
+    error.value = t('publicSubmission.completeRequiredFields');
+    return;
+  }
   reviewing.value = true;
   error.value = '';
 }
@@ -197,6 +212,7 @@ function resetForms() {
   if (props.page === 'medication-registration') {
     contactEmail.value = '';
     consentAnalysis.value = false;
+    consentAlerts.value = false;
   }
 }
 
@@ -248,6 +264,10 @@ async function submitTreatment() {
     error.value = t('publicSubmission.verifyEmailFirst');
     return;
   }
+  if (treatment.wants_alert && !consentAlerts.value) {
+    error.value = t('publicSubmission.alertConsentRequired');
+    return;
+  }
   submitting.value = true;
   error.value = '';
   success.value = false;
@@ -261,7 +281,7 @@ async function submitTreatment() {
           email: contactEmail.value,
           email_verification_token: emailVerificationToken.value,
           consent_analysis: consentAnalysis.value,
-          consent_alerts: treatment.wants_alert,
+          consent_alerts: treatment.wants_alert === true && consentAlerts.value,
           consent_text_version: consentTextVersion,
         }),
       },
@@ -644,12 +664,18 @@ async function submit() {
             {{ t('publicSubmission.analysisConsent') }}
           </label>
           <p class="form-section-note">{{ t('publicSubmission.privacyNotice') }}</p>
-          <p v-if="treatment.wants_alert" class="form-section-note">{{ t('publicSubmission.alertConsentNotice') }}</p>
+          <template v-if="treatment.wants_alert">
+            <label class="check-field">
+              <input v-model="consentAlerts" type="checkbox">
+              {{ t('publicSubmission.alertConsent') }}
+            </label>
+            <p class="form-section-note">{{ t('publicSubmission.alertConsentNotice') }}</p>
+          </template>
         </div>
         <p v-if="error" class="form-alert error-alert" role="alert">{{ error }}</p>
         <div class="information-actions">
           <button class="button button-secondary" type="button" @click="reviewing = false"><ArrowLeft :size="16" />{{ t('publicSubmission.edit') }}</button>
-          <button class="button button-primary" type="button" :disabled="submitting || !emailVerified" @click="submit">{{ submitting ? t('publicSubmission.sending') : t('publicSubmission.confirm') }} <Send :size="16" /></button>
+          <button class="button button-primary" type="button" :disabled="submitting || !emailVerified || (treatment.wants_alert === true && !consentAlerts)" @click="submit">{{ submitting ? t('publicSubmission.sending') : t('publicSubmission.confirm') }} <Send :size="16" /></button>
         </div>
       </section>
     </template>
